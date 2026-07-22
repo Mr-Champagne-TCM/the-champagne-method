@@ -4,7 +4,7 @@ export default function Footer() {
       <p className="text-sm text-center text-violet-400/60">
         &copy; 2026 The Champagne Method. All rights reserved.
       </p>
-      <p className="text-xs text-center text-violet-400/30 mt-1">V1.2</p>
+      <p className="text-xs text-center text-violet-400/30 mt-1">V1.3</p>
     </footer>
   );
 }

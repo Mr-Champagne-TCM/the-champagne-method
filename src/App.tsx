@@ -51,7 +51,7 @@ function WavyBackground() {
       </svg>
 
       <svg
-        className="wave-animate absolute bottom-0 left-0 w-[200%] h-[30%] opacity-25"
+        className="wave-animate-slow absolute bottom-0 left-0 w-[200%] h-[30%] opacity-25"
         viewBox="0 0 1440 400"
         preserveAspectRatio="none"
       >

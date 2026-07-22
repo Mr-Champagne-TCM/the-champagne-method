@@ -16,18 +16,27 @@
 
 @keyframes wave-shift {
   0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-30px); }
+  50% { transform: translateX(-40px); }
 }
 
 @keyframes wave-shift-alt {
   0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(30px); }
+  50% { transform: translateX(40px); }
+}
+
+@keyframes wave-shift-slow {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-25px); }
 }
 
 .wave-animate {
-  animation: wave-shift 6s ease-in-out infinite;
+  animation: wave-shift 1s ease-in-out infinite;
 }
 
 .wave-animate-alt {
-  animation: wave-shift-alt 7.5s ease-in-out infinite;
+  animation: wave-shift-alt 1.25s ease-in-out infinite;
+}
+
+.wave-animate-slow {
+  animation: wave-shift-slow 1.6s ease-in-out infinite;
 }

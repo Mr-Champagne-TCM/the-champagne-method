@@ -3,21 +3,21 @@ import { Quote } from 'lucide-react';
 const testimonials = [
   {
     quote:
-      "Working with The Champagne Method completely shifted how I approach challenges in my life. I went from feeling stuck and overwhelmed to having a clear sense of direction and the confidence to take meaningful steps forward.",
-    name: 'Sarah M.',
-    role: 'Career Transition Client',
+      "Thank you for holding space, and helping me see where I can make improvements. And thank you for helping me process, and see that I am not acting from a space of love or peace.",
+    name: 'Jessie Santos',
+    role: 'Relationship Transition Client',
   },
   {
     quote:
-      "The personalized approach made all the difference. I never felt like I was being put through a program\u2014every session felt tailored to exactly what I needed that day. That kind of attentiveness is rare and incredibly powerful.",
-    name: 'David R.',
-    role: 'Personal Growth Client',
+      "I came into this conversation feeling anxious and overwhelmed. After our 1-hour discussion, I feel confident, motivated and relieved. I'm ready to get started on my project!",
+    name: 'Charley S.',
+    role: 'Confidence and Efficacy Improvement Client',
   },
   {
     quote:
-      "I came in struggling with communication in my most important relationships. Through our work together, I learned not just how to express myself, but how to truly listen. The impact has been profound and lasting.",
-    name: 'Amara K.',
-    role: 'Communication Coaching Client',
+      "Thank you for reminding me to honor myself. I see now that I was giving too much of myself to the event space. Now I understand that setting healthy boundaries around how much I engage—without falling out of honor with myself—helps me maintain a healthy balance between what I give to myself and what I contribute outward.",
+    name: 'D. C.',
+    role: 'Confidence and Efficacy Improvement Client',
   },
 ];
 

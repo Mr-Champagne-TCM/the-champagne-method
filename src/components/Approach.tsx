@@ -1,4 +1,5 @@
 import { Fingerprint, Lightbulb, Route } from 'lucide-react';
+import approachCandid from '../assets/approach-candid.jpg';
 
 const points = [
   {
@@ -21,7 +22,7 @@ const points = [
 export default function Approach() {
   return (
     <section className="py-24 sm:py-32">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-4 leading-snug text-balance">
           An Individualized Approach, Based on Your Unique Circumstances
         </h2>
@@ -32,20 +33,35 @@ export default function Approach() {
           formula, but with curiosity, empathy, and intentionality.
         </p>
 
-        <div className="space-y-10">
-          {points.map((p) => (
-            <div key={p.title} className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-14 h-14 bg-white/5 border border-violet-500/25 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                <p.icon size={24} className="text-teal-400" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-1">
-                  {p.title}
-                </h3>
-                <p className="text-violet-200/70 leading-relaxed">{p.text}</p>
-              </div>
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Candid photo */}
+          <div className="relative mx-auto md:mx-0 w-full max-w-sm md:max-w-none">
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-xl shadow-violet-950/50 border border-white/10">
+              <img
+                src={approachCandid}
+                alt="Jeremy, founder of The Champagne Method"
+                className="w-full h-full object-cover"
+              />
             </div>
-          ))}
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-lavender-500/20 rounded-2xl -z-10" />
+          </div>
+
+          {/* Points */}
+          <div className="space-y-8">
+            {points.map((p) => (
+              <div key={p.title} className="flex gap-5 items-start">
+                <div className="flex-shrink-0 w-14 h-14 bg-white/5 border border-violet-500/25 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                  <p.icon size={24} className="text-teal-400" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-1">
+                    {p.title}
+                  </h3>
+                  <p className="text-violet-200/70 leading-relaxed">{p.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Sparkles } from 'lucide-react';
+import storyPortrait from '../assets/story-portrait.jpg';
 
 export default function MyStory() {
   return (
@@ -9,13 +10,13 @@ export default function MyStory() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Photo placeholder */}
+          {/* Portrait */}
           <div className="relative">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl shadow-violet-950/50">
+            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl shadow-violet-950/50 border border-white/10">
               <img
-                src="https://images.pexels.com/photos/3756165/pexels-photo-3756165.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Professional coaching environment"
-                className="w-full h-full object-cover"
+                src={storyPortrait}
+                alt="Jeremy, founder of The Champagne Method"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-violet-600/20 rounded-2xl -z-10" />
@@ -44,9 +45,18 @@ export default function MyStory() {
               belief that every person holds the capacity for profound growth.
             </p>
             <p className="text-violet-100/80 leading-relaxed">
-              Today, I bring that unique blend of analytical rigor and human
-              compassion to every client relationship, creating a space where
-              challenges are met with understanding and possibilities are
+              But the deepest lessons didn&rsquo;t come from study. My path took a
+              turn I never planned for: a heart attack stopped me cold&mdash;and the
+              strain of it rippled into my closest relationships. Both could have
+              been the hardest season of my life. Instead, they became its most
+              honest invitation: to look inward and do the growth and healing I
+              didn&rsquo;t know I needed. The tools I share now aren&rsquo;t theory.
+              They&rsquo;re what carried me through.
+            </p>
+            <p className="text-violet-100/80 leading-relaxed">
+              Today, I bring that blend of analytical rigor, hard-won perspective,
+              and human compassion to every client relationship, creating a space
+              where challenges are met with understanding and possibilities are
               uncovered together.
             </p>
           </div>
