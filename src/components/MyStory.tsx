@@ -39,10 +39,11 @@ export default function MyStory() {
             <p className="text-violet-100/80 leading-relaxed">
               Through years of study and practice in conflict resolution,
               communication strategies, and personalized coaching, I discovered
-              that the most meaningful transformations happen when people feel
-              truly heard. That insight became the foundation of The Champagne
-              Method&mdash;a practice rooted in empathy, intentionality, and the
-              belief that every person holds the capacity for profound growth.
+              that the most meaningful transformations happen when people see a
+              new perspective. That insight became the foundation of The
+              Champagne Method&mdash;a practice rooted in empathy,
+              intentionality, and the belief that every person holds the
+              capacity for profound growth.
             </p>
             <p className="text-violet-100/80 leading-relaxed">
               But the deepest lessons didn&rsquo;t come from study. My path took a
