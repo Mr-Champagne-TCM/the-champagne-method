@@ -1,0 +1,65 @@
+<!doctype html>
+<!--
+  Fallback for the Verbal Reflections app link.
+
+  On the phone Android never renders this: /.well-known/assetlinks.json vouches for the app, so
+  https://thechampagnemethod.co/r/?d=YYYY-MM-DD opens the journal directly. This is what is left
+  when that cannot happen — the app is not installed, or the link was opened on a laptop.
+
+  Deliberately plain HTML in public/ rather than a React route. It is copied verbatim by the build,
+  so it cannot break the site's bundle, and it still answers when the app is missing. A 404 here
+  would make a working link look broken.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verbal Reflections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root { color-scheme: dark; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0b1020;
+        color: #e8e9f3;
+        font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+        padding: 24px;
+      }
+      main { max-width: 30rem; }
+      h1 { font-size: 1.4rem; font-weight: 600; margin: 0 0 0.75rem; }
+      p { line-height: 1.6; color: #b9bdd4; margin: 0 0 0.75rem; }
+      .day { color: #a78bfa; font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Verbal Reflections</h1>
+      <p id="line">
+        This link opens a day in Verbal Reflections on the phone it was recorded on.
+      </p>
+      <p>
+        Nothing to see here otherwise — the writing lives in the app, and in the day's document in
+        Drive.
+      </p>
+    </main>
+    <script>
+      // Progressive, not required: the page reads correctly with scripting off.
+      var day = new URLSearchParams(location.search).get("d");
+      if (day && /^\d{4}-\d{2}-\d{2}$/.test(day)) {
+        document.getElementById("line").innerHTML =
+          'This link opens <span class="day">' +
+          day +
+          "</span> in Verbal Reflections on the phone it was recorded on.";
+      }
+    </script>
+  </body>
+</html>

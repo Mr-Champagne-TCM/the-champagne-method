@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "co.thechampagnemethod.verbaljournal",
+      "sha256_cert_fingerprints": [
+        "E3:ED:3E:97:B9:6A:28:F0:51:E9:52:09:00:85:22:6F:A9:75:9C:96:11:56:0E:04:DB:3E:29:DF:D3:C2:B7:11"
+      ]
+    }
+  }
+]
