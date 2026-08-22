@@ -6,6 +6,15 @@
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    font-weight: 300;
+  }
+
+  /* Sticky nav must not cover anchor targets. */
+  [id] {
+    scroll-margin-top: 86px;
+  }
 }
 
 @layer utilities {
@@ -13,6 +22,12 @@
     text-wrap: balance;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Waves — the v1.3 fixed background, retained deliberately.
+   The 1s / 1.25s / 1.6s timings are INTENTIONAL and owner-confirmed.
+   Do not "fix" them by slowing them down.
+   --------------------------------------------------------------------------- */
 
 @keyframes wave-shift {
   0%, 100% { transform: translateX(0); }
@@ -39,4 +54,52 @@
 
 .wave-animate-slow {
   animation: wave-shift-slow 1.6s ease-in-out infinite;
+}
+
+/* ---------------------------------------------------------------------------
+   Bubbles — the v2.0 signature element. Rise in front of the waves, behind
+   content. This is the one place the champagne name shows up without being said.
+   --------------------------------------------------------------------------- */
+
+@keyframes bubble-rise {
+  0%   { transform: translateY(0) translateX(0); opacity: 0; }
+  8%   { opacity: 0.75; }
+  92%  { opacity: 0.55; }
+  100% { transform: translateY(-105vh) translateX(18px); opacity: 0; }
+}
+
+.bubble {
+  position: absolute;
+  bottom: -40px;
+  display: block;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at 32% 30%,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.18) 42%,
+    rgba(255, 255, 255, 0.05) 70%
+  );
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.18);
+  animation: bubble-rise linear infinite;
+}
+
+/* Older phones: fewer bubbles is a paint-cost decision, not a visual one.
+   The field still reads as a field at half the count. */
+@media (max-width: 640px) {
+  .bubble:nth-child(even) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave-animate,
+  .wave-animate-alt,
+  .wave-animate-slow {
+    animation: none;
+  }
+
+  .bubble {
+    animation: none;
+    opacity: 0.28;
+  }
 }

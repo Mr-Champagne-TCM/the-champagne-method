@@ -1,40 +1,43 @@
-import { ArrowDown } from 'lucide-react';
-import heroPortrait from '../assets/hero-portrait.jpg';
+import { Cta } from './ui';
 
+/**
+ * Layout B: the hero stays pure type over the bubble field. No portrait here —
+ * the first face arrives one beat later, in The Premise.
+ */
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16">
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* Text */}
-        <div className="text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight text-balance">
-            Discover Possibilities and Realize Your Potential
-          </h1>
-          <p className="mt-6 text-lg sm:text-xl text-violet-200/80 leading-relaxed max-w-xl mx-auto md:mx-0">
-            Welcome to a space of transformation. Here, we believe in your innate
-            ability to grow, evolve, and thrive.
-          </p>
-          <a
-            href="#possibilities"
-            className="inline-flex items-center gap-2 mt-10 px-8 py-3.5 bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-full transition-all duration-200 shadow-lg shadow-teal-500/30 hover:shadow-teal-600/35 hover:-translate-y-0.5"
-          >
-            Explore the Possibilities
-            <ArrowDown size={18} />
-          </a>
+    <header className="relative min-h-[90vh] flex items-center pt-28 pb-16">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 w-full">
+        <div className="mb-6">
+          <span className="block mb-2.5 font-sans text-xs font-semibold uppercase tracking-[0.34em] text-brand-teal">
+            Coaching
+          </span>
+          <span className="block font-sans text-[11px] font-medium uppercase tracking-[0.24em] text-brand-gold/85">
+            Agency &middot; Communication &middot; Empathy
+          </span>
         </div>
 
-        {/* Portrait */}
-        <div className="relative mx-auto md:mx-0 w-full max-w-xs sm:max-w-sm">
-          <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-violet-950/50 border border-white/10">
-            <img
-              src={heroPortrait}
-              alt="Jeremy, founder of The Champagne Method"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-teal-500/20 rounded-3xl -z-10" />
+        <h1 className="font-display font-medium tracking-tight leading-[1.1] text-[clamp(2.375rem,6.4vw,3.75rem)] text-brand-paper text-balance">
+          Nothing changes until you{' '}
+          <span className="text-brand-teal italic">see it differently</span>.
+        </h1>
+
+        <p className="mt-6 max-w-[60ch] text-[clamp(1.125rem,2.1vw,1.3125rem)] leading-relaxed text-brand-paper/90">
+          Not more effort. Not a harder push. A different set of eyes on the same situation &mdash;
+          and suddenly the thing that felt immovable has a door in it.
+        </p>
+
+        <p className="mt-4 font-display italic text-lg sm:text-xl text-brand-gold">
+          My work is asking the questions that open it.
+        </p>
+
+        <div className="mt-9 flex flex-wrap gap-3.5">
+          <Cta href="#connect">Book a free 30-minute conversation</Cta>
+          <Cta href="#tools" ghost>
+            Start with the free tools
+          </Cta>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
