@@ -2,7 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
 import { Eyebrow, SectionTitle, Lede, Section, PhotoRow } from './ui';
 import approachCandid from '../assets/approach-candid.jpg';
-import CalendlyEmbed from './CalendlyEmbed';
+import BookingCta from './BookingCta';
 
 /** v1.3 backend, retained. A submit that fails silently is the worst possible
  *  first impression from a coach whose pitch is being reliably present. */
@@ -56,7 +56,7 @@ export default function LetsConnect() {
       </PhotoRow>
 
       <div className="mt-10">
-        <CalendlyEmbed />
+        <BookingCta />
       </div>
 
       <div className="mt-12 max-w-xl">
