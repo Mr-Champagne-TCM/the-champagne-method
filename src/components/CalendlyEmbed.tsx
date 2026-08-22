@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 
-const BOOKING_URL = 'https://calendly.com/thechampagnemethod/30min';
+/** The 30-minute free intake event. Note there is also a 1-hour event in the
+ *  Calendly account — the site deliberately points only at the intake one. */
+const BOOKING_URL =
+  'https://calendly.com/thechampagnemethod/the-champagne-method-30-min-free-intake-session';
 
 /** Colours as supplied by the owner. See the note in Drive if these are revisited. */
 const PARAMS = new URLSearchParams({
