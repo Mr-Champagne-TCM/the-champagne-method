@@ -30,11 +30,9 @@ export default function BookingCta() {
         rel="noopener noreferrer"
         className="inline-block rounded-full px-6 py-3.5 font-sans text-[16px] font-semibold bg-brand-teal text-[#0d1b1a] shadow-lg shadow-brand-teal/25 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-brand-teal/35"
       >
-        Pick a time &rarr;
+        Schedule your 30 min free session &rarr;
       </a>
-      <p className="mt-3 text-[16px] text-brand-muted">
-        Opens my calendar in a new tab. Thirty minutes, free.
-      </p>
+      <p className="mt-3 text-[16px] text-brand-muted">Opens my calendar in a new tab.</p>
     </div>
   );
 }
