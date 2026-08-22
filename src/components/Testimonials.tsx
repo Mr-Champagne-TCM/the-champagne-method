@@ -35,8 +35,8 @@ export default function Testimonials() {
       <div className="mt-8 space-y-8">
         {testimonials.map((t) => (
           <blockquote key={t.name} className="border-l-2 border-brand-teal pl-6 max-w-[62ch]">
-            <p className="leading-relaxed text-brand-paper/85">&ldquo;{t.quote}&rdquo;</p>
-            <cite className="block mt-3 not-italic font-sans text-[13px] tracking-wide text-brand-gold">
+            <p className="text-[18px] leading-relaxed text-brand-paper/85">&ldquo;{t.quote}&rdquo;</p>
+            <cite className="block mt-3 not-italic font-sans text-[15px] tracking-wide text-brand-gold">
               {t.name} &middot; {t.role}
             </cite>
           </blockquote>

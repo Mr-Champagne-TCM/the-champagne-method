@@ -9,10 +9,10 @@ export default function Hero() {
     <header className="relative min-h-[90vh] flex items-center pt-28 pb-16">
       <div className="max-w-5xl mx-auto px-6 sm:px-8 w-full">
         <div className="mb-6">
-          <span className="block mb-2.5 font-sans text-xs font-semibold uppercase tracking-[0.34em] text-brand-teal">
+          <span className="block mb-2.5 font-sans text-[15px] font-semibold uppercase tracking-[0.26em] text-brand-teal">
             Coaching
           </span>
-          <span className="block font-sans text-[11px] font-medium uppercase tracking-[0.24em] text-brand-gold/85">
+          <span className="block font-sans text-[13px] font-medium uppercase tracking-[0.2em] text-brand-gold/85">
             Agency &middot; Communication &middot; Empathy
           </span>
         </div>
@@ -22,12 +22,12 @@ export default function Hero() {
           <span className="text-brand-teal italic">see it differently</span>.
         </h1>
 
-        <p className="mt-6 max-w-[60ch] text-[clamp(1.125rem,2.1vw,1.3125rem)] leading-relaxed text-brand-paper/90">
+        <p className="mt-6 max-w-[60ch] text-[clamp(1.25rem,2.2vw,1.4375rem)] leading-relaxed text-brand-paper/90">
           Not more effort. Not a harder push. A different set of eyes on the same situation &mdash;
           and suddenly the thing that felt immovable has a door in it.
         </p>
 
-        <p className="mt-4 font-display italic text-lg sm:text-xl text-brand-gold">
+        <p className="mt-4 font-display italic text-xl sm:text-[1.375rem] text-brand-gold">
           My work is asking the questions that open it.
         </p>
 

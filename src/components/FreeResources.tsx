@@ -40,8 +40,8 @@ export default function FreeResources() {
               {t.n}
             </span>
             <div>
-              <b className="block font-sans font-semibold text-brand-paper">{t.name}</b>
-              <span className="block text-sm leading-relaxed text-brand-paper/70">{t.note}</span>
+              <b className="block font-sans font-semibold text-[17px] text-brand-paper">{t.name}</b>
+              <span className="block text-[16px] leading-relaxed text-brand-paper/70">{t.note}</span>
             </div>
           </div>
         ))}
@@ -54,7 +54,7 @@ export default function FreeResources() {
         </Pull>
       </div>
 
-      <Cta href="/library" ghost>
+      <Cta href="/library/" ghost>
         Open the full library &rarr;
       </Cta>
     </Section>

@@ -70,10 +70,10 @@ export default function HowItAdapts() {
                 &middot;
               </span>
               <div>
-                <b className="block font-sans font-semibold text-[15px] text-brand-paper">
+                <b className="block font-sans font-semibold text-[17px] text-brand-paper">
                   {d.name}
                 </b>
-                <span className="block text-sm leading-relaxed text-brand-paper/70">{d.note}</span>
+                <span className="block text-[16px] leading-relaxed text-brand-paper/70">{d.note}</span>
               </div>
             </div>
           ))}

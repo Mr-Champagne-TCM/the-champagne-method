@@ -11,7 +11,7 @@ const fieldClass =
   'w-full px-4 py-3 rounded-xl border border-brand-gold/25 bg-white/5 text-brand-paper placeholder-brand-muted/60 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal/50 transition-all backdrop-blur-sm';
 
 const labelClass =
-  'block font-sans text-xs uppercase tracking-[0.14em] text-brand-muted mb-1.5';
+  'block font-sans text-sm uppercase tracking-[0.12em] text-brand-muted mb-1.5';
 
 export default function LetsConnect() {
   const [submitted, setSubmitted] = useState(false);
@@ -61,11 +61,11 @@ export default function LetsConnect() {
             <h3 className="font-display font-medium text-xl text-brand-paper mb-2">
               Thank you for reaching out.
             </h3>
-            <p className="text-brand-paper/70">I&rsquo;ll read this properly and be in touch.</p>
+            <p className="text-[18px] text-brand-paper/70">I&rsquo;ll read this properly and be in touch.</p>
           </div>
         ) : (
           <>
-            <p className="text-brand-muted mb-6">
+            <p className="text-[18px] text-brand-muted mb-6">
               Write to me first &mdash; these questions help me show up prepared.
             </p>
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -137,7 +137,7 @@ export default function LetsConnect() {
                 />
               </div>
 
-              {error && <p className="text-red-400 text-sm">{error}</p>}
+              {error && <p className="text-red-400 text-[16px]">{error}</p>}
 
               <button
                 type="submit"

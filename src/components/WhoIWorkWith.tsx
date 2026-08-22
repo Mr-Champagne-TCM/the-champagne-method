@@ -23,7 +23,7 @@ export default function WhoIWorkWith() {
         {lines.map((line) => (
           <li
             key={line}
-            className="relative max-w-[62ch] py-3 pl-7 border-b border-brand-gold/15 text-brand-paper/85 leading-relaxed"
+            className="relative max-w-[62ch] py-3 pl-7 border-b border-brand-gold/15 text-[18px] text-brand-paper/85 leading-relaxed"
           >
             <span
               aria-hidden="true"
@@ -36,7 +36,7 @@ export default function WhoIWorkWith() {
         ))}
       </ul>
 
-      <p className="max-w-[60ch] text-[clamp(1.125rem,2vw,1.3125rem)] leading-relaxed text-brand-paper/90">
+      <p className="max-w-[60ch] text-[clamp(1.25rem,2.15vw,1.4375rem)] leading-relaxed text-brand-paper/90">
         Underneath a lot of this sits an old, quiet assumption about what we&rsquo;re worth &mdash;
         usually picked up long ago, rarely examined since.{' '}
         <span className="font-display italic text-brand-gold">

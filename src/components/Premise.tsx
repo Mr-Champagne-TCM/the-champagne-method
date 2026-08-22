@@ -17,7 +17,7 @@ export default function Premise() {
           while we work together to find yours, because the answers you arrive at yourself are the
           ones that hold.
         </Body>
-        <p className="max-w-[60ch] text-brand-muted leading-relaxed">
+        <p className="max-w-[60ch] text-[18px] text-brand-muted leading-relaxed">
           Expanding your awareness and expanding your consciousness are the same motion. Everything
           else follows from there.
         </p>

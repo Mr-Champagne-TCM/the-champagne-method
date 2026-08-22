@@ -44,7 +44,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="font-sans text-sm text-brand-muted hover:text-brand-teal transition-colors"
+              className="font-sans text-[15px] text-brand-muted hover:text-brand-teal transition-colors"
             >
               {l.label}
             </a>
@@ -69,7 +69,7 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-sans text-brand-muted hover:text-brand-teal transition-colors"
+                className="font-sans text-[17px] text-brand-muted hover:text-brand-teal transition-colors"
               >
                 {l.label}
               </a>

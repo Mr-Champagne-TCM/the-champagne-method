@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <span className="block mb-3.5 font-sans text-xs font-semibold uppercase tracking-[0.3em] text-brand-teal">
+    <span className="block mb-4 font-sans text-[15px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
       {children}
     </span>
   );
@@ -20,14 +20,16 @@ export function SectionTitle({ children }: { children: ReactNode }) {
 
 export function Lede({ children }: { children: ReactNode }) {
   return (
-    <p className="max-w-[60ch] mb-5 text-[clamp(1.125rem,2vw,1.3125rem)] leading-relaxed text-brand-paper/90">
+    <p className="max-w-[60ch] mb-5 text-[clamp(1.25rem,2.15vw,1.4375rem)] leading-relaxed text-brand-paper/90">
       {children}
     </p>
   );
 }
 
 export function Body({ children }: { children: ReactNode }) {
-  return <p className="max-w-[60ch] mb-5 leading-relaxed text-brand-paper/80">{children}</p>;
+  return (
+    <p className="max-w-[60ch] mb-5 text-[18px] leading-relaxed text-brand-paper/80">{children}</p>
+  );
 }
 
 /** The italic display voice — used for the pull lines and the name-note. */
@@ -41,7 +43,7 @@ export function NameNote({ children }: { children: ReactNode }) {
 
 export function Pull({ children }: { children: ReactNode }) {
   return (
-    <p className="font-display italic text-lg sm:text-xl leading-relaxed text-brand-gold max-w-[52ch] mb-5">
+    <p className="font-display italic text-xl sm:text-[1.375rem] leading-relaxed text-brand-gold max-w-[52ch] mb-5">
       {children}
     </p>
   );
@@ -57,7 +59,7 @@ export function Cta({
   ghost?: boolean;
 }) {
   const base =
-    'inline-block rounded-full px-6 py-3.5 font-sans text-[15px] font-semibold transition-all duration-200 hover:-translate-y-0.5';
+    'inline-block rounded-full px-6 py-3.5 font-sans text-[16px] font-semibold transition-all duration-200 hover:-translate-y-0.5';
   return (
     <a
       href={href}

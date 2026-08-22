@@ -43,11 +43,11 @@ export default function Method() {
       <div className="mt-8 grid sm:grid-cols-2 gap-x-10">
         {stages.map((s) => (
           <div key={s.title} className="py-5 border-t border-brand-gold/15">
-            <span className="block font-sans text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold/80 mb-1.5">
+            <span className="block font-sans text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-gold/80 mb-1.5">
               {s.label}
             </span>
             <h3 className="font-display font-medium text-lg text-brand-paper mb-1.5">{s.title}</h3>
-            <p className="leading-relaxed text-brand-paper/80 text-[15px]">{s.body}</p>
+            <p className="leading-relaxed text-brand-paper/80 text-[16px]">{s.body}</p>
           </div>
         ))}
       </div>

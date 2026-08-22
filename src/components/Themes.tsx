@@ -39,8 +39,8 @@ export default function Themes() {
               {t.num}
             </span>
             <h3 className="font-display font-medium text-xl text-brand-paper mb-2">{t.title}</h3>
-            <p className="font-display italic text-lg text-brand-gold mb-3">{t.question}</p>
-            <p className="max-w-[62ch] leading-relaxed text-brand-paper/80">{t.body}</p>
+            <p className="font-display italic text-xl text-brand-gold mb-3">{t.question}</p>
+            <p className="max-w-[62ch] text-[18px] leading-relaxed text-brand-paper/80">{t.body}</p>
           </div>
         ))}
       </div>
