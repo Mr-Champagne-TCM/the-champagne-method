@@ -4,9 +4,26 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        // v2.0: Fraunces carries the display voice, Outfit the body.
+        sans: ['Outfit', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
       },
       colors: {
+        // v2.0 accent palette, kept over the v1.3 gradient ground.
+        // Gold is load-bearing: eyebrow pillars, the name-note, the third wave layer.
+        brand: {
+          violet: '#7C5CE0',
+          teal: '#3FE0C5',
+          gold: '#E8CBA0',
+          paper: '#F3EFF7',
+          muted: '#B4A8CE',
+        },
+        // The three stops of the fixed background gradient (v1.3, retained).
+        ground: {
+          top: '#0b1428',
+          mid: '#1a1040',
+          bottom: '#2d1155',
+        },
         navy: {
           50: '#f0f3f9',
           100: '#dce3f0',

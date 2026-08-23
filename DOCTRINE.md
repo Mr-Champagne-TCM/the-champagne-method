@@ -4,7 +4,8 @@
 > making any change. Its top priority is: **do not break the build or the deployment.**
 > Live site: **https://thechampagnemethod.co**
 > Repo: `github.com/Mr-Champagne-TCM/the-champagne-method`
-> Last audited at commit `7dcbf74` (feat: add personal photos, refresh testimonials and story — v1.3).
+> Last audited at **v2.0** (Aug 2026) — the redesign: new palette and type, layered
+> waves + bubbles background, Calendly link-out, and a static library page at `/library/`.
 
 ---
 
@@ -99,12 +100,25 @@ These settings are load-bearing. Changing them can break the site or the custom 
 
 ## 3. Source layout
 
-Single-page site. `src/App.tsx` renders a fixed animated `WavyBackground` plus 8 sections
-in order:
+`src/App.tsx` renders a fixed `Background` (see below) plus 10 sections in order:
 
 ```
-Navbar → Hero → MyStory → Possibilities → Approach → Testimonials → LetsConnect → Footer
+Navbar → Hero → Premise → WhoIWorkWith → Themes → Method → HowItAdapts
+       → FreeResources → MyStory → Testimonials → LetsConnect → Footer
 ```
+
+**`Background.tsx` is a deliberate z-index stack** — `z0` gradient ground + glow, `z1`
+three animated wave SVGs, `z2` 60 rising bubbles, with all content above at `z10`.
+The wave timings (1s / 1.25s / 1.6s) are **owner-confirmed and intentional** — do not
+"fix" them by slowing them down.
+
+**Second page:** `public/library/index.html`, served at `/library/`. Standalone static
+HTML on purpose, so it adds zero build risk. It carries **its own copy of the design
+tokens** — a palette change must be made in both there and `tailwind.config.js`.
+Note that `npm run dev` does not serve it (the SPA fallback wins); use `npm run preview`.
+
+**Version marker:** the footer of both pages shows `v2.0 · Aug 2026`, and `package.json`
+carries the matching version. Keep all three in step when releasing.
 
 - Components live in `src/components/*.tsx` (one file per section).
 - Global styles + Tailwind layers: `src/index.css`.
