@@ -51,7 +51,7 @@ export default function Footer() {
           <span className="text-[15px] text-brand-muted/70">
             &copy; 2026 The Champagne Method. All rights reserved.
           </span>
-          <span className="text-xs text-brand-muted/40">v2.0 &middot; Aug 2026</span>
+          <span className="text-xs text-brand-muted/40">v2.1 &middot; Aug 2026</span>
         </div>
       </div>
     </footer>

@@ -1,0 +1,145 @@
+export interface Card { tag: string; title: string; html: string; tool?: string }
+export interface Shelf { id: string; title: string; blurb: string; cards: Card[] }
+
+export const shelves: Shelf[] = [
+  {
+    "id": "awareness",
+    "title": "Awareness",
+    "blurb": "Where you are before you decide anything.",
+    "cards": [
+      {
+        "tag": "Concept",
+        "title": "The wheel of emotions",
+        "html": "<p>Before navigation comes awareness &mdash; and awareness has resolution. Some people feel in two sizes: pleasant and unpleasant. Others can tell disappointment from discouragement from dismay. Neither is wrong. But it&rsquo;s worth knowing your own resolution, because you can&rsquo;t work with more precision than you currently have.</p>\n    <p>The emotions wheel is a map of feeling, arranged in rings &mdash; a few broad families at the center, finer and finer distinctions toward the edge. Your granularity is simply the ring you can genuinely feel and comprehend &mdash; not just read. Anyone can read the outer ring. Feeling the differences it names is the skill.</p>\n    <p>There&rsquo;s an asymmetry worth noticing: far more of the wheel is unpleasant than pleasant. That&rsquo;s not a flaw in the design &mdash; or in you. Unpleasant emotions are guides away from what doesn&rsquo;t serve your true self. Pleasant ones tell you you&rsquo;re moving toward what does. One small region says <em>stay</em>; everything else is directions.</p>\n    <p>And the wheel is a ladder as much as a map. Naming today&rsquo;s feeling one ring more precisely than yesterday&rsquo;s is the whole practice &mdash; because the more awareness you have, the more say you get in what happens to you. Not aware, can&rsquo;t make the call.</p>\n    <p class=\"close\">A fish doesn&rsquo;t know the value of water until it meets air. Contrast is how awareness begins &mdash; and this is a map of contrasts.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "The health continuum",
+        "html": "<p>Most of us were taught that health is the opposite of disease. The word itself suggests otherwise: the opposite of dis-ease is ease. Health isn&rsquo;t the opposite of anything &mdash; it&rsquo;s your current location on the line between ease and dis-ease.</p>\n    <p>And you have more than one location. A marriage can be easy while a career is dis-easy, in the same afternoon. <em>Where am I on this?</em> &mdash; asked per part of your life, not overall &mdash; is a more useful question than <em>am I healthy?</em></p>\n    <p>Emotions are the needle on this gauge. Pleasant means you&rsquo;re moving toward ease; unpleasant means toward dis-ease, in whatever part of life the feeling is pointing at. Which is why whatever is driving an unpleasant emotion is usually the real place that needs tending &mdash; not the emotion itself.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "The three points of ease",
+        "html": "<p>If emotions are the gauge, here is what the gauge measures. Three things, when present, tend to produce ease &mdash; and when missing, dis-ease: safety, connection, fulfillment.</p>\n    <p>That gives you three honest questions for any hard moment, your own or someone else&rsquo;s: <em>Am I feeling safe? Am I feeling connected? Am I feeling fulfilled?</em> Whatever the feeling is, at least one of the three is usually missing &mdash; and now you know where to look.</p>\n    <p>One more thing, because it matters: emotions aren&rsquo;t there to be managed down. The feeling is the signal, doing exactly its job. The response is where your choice lives.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "Emotions as navigation",
+        "html": "<p>Cells in a dish move toward nutrients and away from toxins. No judgment, no story &mdash; just signal and response. Pleasant means move closer. Unpleasant means move away.</p>\n    <p>Feelings deserve at least the dignity we give a cell. An unpleasant emotion isn&rsquo;t a malfunction to argue with or rule invalid &mdash; it&rsquo;s data about direction: <em>something here isn&rsquo;t serving me.</em> A feeling doesn&rsquo;t need to be justified to be useful.</p>\n    <p>In practice: when a feeling arrives, before <em>what&rsquo;s wrong with me?</em> there&rsquo;s a better question &mdash; <em>what is this pointing at, and which way is it inviting me to move?</em></p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "Your nervous system, briefly",
+        "html": "<p>Everything on this shelf runs on hardware, and it helps to know a little about it. Your nervous system runs the whole show &mdash; heartbeat, digestion, healing, mood &mdash; mostly without asking you.</p>\n    <p>The part worth knowing has two settings. The sympathetic system mobilizes you: heart up, muscles ready, attention narrowed. It&rsquo;s built for handling threats, and it&rsquo;s very good at it. The parasympathetic system is rest, digest, and repair &mdash; built for everything else, including healing, connection, and clear thought.</p>\n    <p>Neither setting is good or bad. But they don&rsquo;t run well at the same time &mdash; and a body that&rsquo;s still braced can&rsquo;t do the quiet work. It&rsquo;s why the method begins by checking where your nervous system actually is before touching anything else. It&rsquo;s also why a walk, a slow exhale, or a night of sleep sometimes does what an hour of thinking can&rsquo;t: you weren&rsquo;t lacking insight. You were in the wrong setting for it.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "The trauma continuum",
+        "html": "<p>Trauma is not the event. It&rsquo;s the body&rsquo;s response to an event that threatened safety &mdash; an emergency protocol, and a remarkably good one.</p>\n    <p>Part of that protocol is cutting the thinking brain out of the loop &mdash; on purpose. When you jump back from a bicycle you never consciously saw, that was the system working. Which explains something important: a response that lives below thinking can&rsquo;t be fully resolved by thinking. The body has to be in the conversation.</p>\n    <p>It also retires the word <em>overreacting</em>. A nervous system responding strongly to an old signal is doing exactly what it was built to do &mdash; with outdated information. That&rsquo;s not a flaw of character. It&rsquo;s a feature running past its context.</p>\n    <p>And honestly: this is ground where coaching ends and therapy begins. If trauma is live in your life, a trauma-trained professional is the right room. This entry is here so the map is honest.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "The logic ceiling",
+        "html": "<p>There&rsquo;s a limit to how much sense you can make of things at any given moment &mdash; call it your logic ceiling. It isn&rsquo;t fixed. Rested and calm, the ceiling is high: nuance fits, new ideas fit, other people&rsquo;s perspectives fit. Exhausted, frightened, or flooded, the ceiling drops toward the basics.</p>\n    <p>Ever been too scared to process what someone was saying? Too angry to follow a perfectly fair point? That wasn&rsquo;t a failure of intelligence. The ceiling had dropped, and information without a place to land just bounces.</p>\n    <p>Knowing this about yourself is a quiet superpower: <em>what am I able to see right now &mdash; and why?</em> Some conclusions are worth re-checking after the ceiling comes back up. And when a conversation matters, the other person has a ceiling too &mdash; which is where the next shelf begins.</p>"
+      }
+    ]
+  },
+  {
+    "id": "communication",
+    "title": "Communication",
+    "blurb": "The gap between what you meant and what landed.",
+    "cards": [
+      {
+        "tag": "Concept",
+        "title": "Message sent &ne; message received",
+        "html": "<p>The message you sent is almost never the message they received. That gap is where most conflict actually lives &mdash; two people, each responding faithfully to a message the other never sent.</p>\n    <p>Small examples, real strain: a short reply reads as cold when it was only busy. &ldquo;Do whatever you want&rdquo; lands as surrender &mdash; or as a dare. A suggestion arrives as criticism because it came in a parent&rsquo;s tone. Nobody lied. The message changed in transit.</p>\n    <p>Both sides carry some of this. The sender owns the packaging; the receiver owns the unpacking &mdash; the story they added before deciding what was meant. When a message lands wrong, the useful question isn&rsquo;t <em>whose fault?</em> It&rsquo;s <em>where did it change?</em></p>\n    <p>Three checks before the conversations that matter. <em>Timing</em> &mdash; is now a moment they can actually hear me? <em>Tone</em> &mdash; is this the tone that gives my meaning its best chance of landing the way I intend? <em>Approach</em> &mdash; is the way I&rsquo;m coming at this conducive to being sincerely received? Ten seconds of checking saves an hour of repair.</p>\n    <p class=\"close\">And one borrowed rule worth keeping close &mdash; the first of the Four Agreements: be impeccable with your word. Impeccable packaging is the sender&rsquo;s half of the bargain, kept.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "Nonviolent Communication",
+        "html": "<p>NVC &mdash; Marshall Rosenberg&rsquo;s framework &mdash; is some of the best empathy training there is, and it&rsquo;s also the craft of making requests instead of commands. We tend to get more of what we want when we ask for it in a shape the other person can actually receive.</p>\n    <p>The shape has four parts, and the order matters:</p>\n    <ol>\n      <li><b>Observation</b> &mdash; what happened, stated objectively. No story, no verdict.</li>\n      <li><b>Feeling</b> &mdash; what came up in you. <em>When this happens, I feel&hellip;</em></li>\n      <li><b>Need</b> &mdash; what the feeling is pointing at. <em>&hellip;because I need more&hellip;</em></li>\n      <li><b>Request</b> &mdash; an invitation, not a demand. <em>It would mean a lot to me if you could support me in this.</em></li>\n    </ol>\n    <p>What the shape avoids is the point: no accusation to defend against, no command to resist. The observation keeps the facts clean, the feeling and need make you legible instead of dangerous &mdash; and a true request leaves the other person free to say yes.</p>\n    <p class=\"close\">A request that can&rsquo;t hear a no was never a request.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "The Four Agreements",
+        "html": "<p>These aren&rsquo;t mine &mdash; they&rsquo;re don Miguel Ruiz&rsquo;s, from his book of the same name &mdash; but they pair so cleanly with this work that they&rsquo;ve earned a shelf spot.</p>\n    <ol>\n      <li><b>Be impeccable with your word.</b> Words build or corrode &mdash; including the ones you aim at yourself.</li>\n      <li><b>Don&rsquo;t take anything personally.</b> What others say and do is a projection of their own reality. Most of what lands on you was never about you.</li>\n      <li><b>Don&rsquo;t make assumptions.</b> The stories we invent to fill gaps cause more pain than the truths they stand in for &mdash; a question is the kinder tool.</li>\n      <li><b>Always do your best.</b> And your best changes &mdash; hour to hour, season to season. Your best within today&rsquo;s capacity is the whole assignment. Shame has no role in it.</li>\n    </ol>\n    <p class=\"close\">Four sentences, a lifetime of practice. The book is short, if you feel drawn to it.</p>"
+      }
+    ]
+  },
+  {
+    "id": "beliefs",
+    "title": "Beliefs &amp; Stories",
+    "blurb": "The things we decided once and stopped revisiting.",
+    "cards": [
+      {
+        "tag": "Concept",
+        "title": "Constructs &mdash; and what happens when they collide",
+        "html": "<p>A construct is a structure that serves a function. Buildings are constructs. So are marriages, jobs, religions, countries &mdash; and identities. Some are made of brick; most are made of agreement. They&rsquo;re useful precisely because they&rsquo;re invisible: a good construct saves you from having to re-decide everything daily.</p>\n    <p>You live inside many at once &mdash; the family&rsquo;s version of you, the job&rsquo;s version, the faith&rsquo;s version, your own. Most days they cooperate. But constructs can disagree: who your family needs you to be versus who you are. What the job requires versus what the body can give. The belief you inherited versus the life in front of you.</p>\n    <p>Here&rsquo;s the part that surprised me most: the collision isn&rsquo;t just uncomfortable &mdash; it&rsquo;s expensive. Your nervous system serves every construct you participate in, all at once, while also running your body. When they conflict, it pays the bill in real currency &mdash; sleep, energy, patience, clarity. Feeling stuck in an emotion with no strategy out is often the signature of constructs at war. I call it multi-construct strain.</p>\n    <p>The way through isn&rsquo;t demolition. Constructs can be renegotiated &mdash; and a new strategy is itself a new construct, built on purpose this time. Much of coaching is exactly this: someone outside your framework helping your structures cooperate.</p>\n    <p class=\"close\">The structures you live in are part of your health &mdash; worth tending like they are.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "Oppression, plainly",
+        "html": "<p>Stripped of the history-book pictures, oppression has a plain mechanic: it is manipulation &mdash; by shame or any other means &mdash; that buys convenience for the oppressor at the cost of the oppressed.</p>\n    <p>What that definition doesn&rsquo;t require is worth noticing: no villain, no cruelty, not even intent. It&rsquo;s often quiet and routine. A guilt trip that saves someone an honest request. A <em>that&rsquo;s just how we do things</em> that saves a system from explaining itself. You can even run it on yourself &mdash; the inner voice that shames you into line is buying somebody&rsquo;s convenience, and it&rsquo;s rarely yours.</p>\n    <p>Shame is oppression&rsquo;s cheapest instrument, and it comes in exactly five flavors: something about you is <em>wrong, bad, broken, not enough,</em> or <em>too much</em>. Five costumes, one tool &mdash; and its whole function is compliance at a discount. There is no version of growth that requires it.</p>\n    <p>The exit is the same measuring stick as always: <em>whose convenience is this arrangement buying?</em> If the answer is consistently &ldquo;not mine,&rdquo; you&rsquo;ve located the pressure &mdash; and naming it is most of the work.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "Words, without the charge",
+        "html": "<p>Some words arrive pre-loaded with judgment, and the load makes them useless for seeing clearly. Set the charge down, and they start working again.</p>\n    <p><b>Vulnerable</b> &mdash; openness to opportunity, not necessarily openness to harm. An open door lets in weather and guests alike; the openness itself is neutral &mdash; and it&rsquo;s the only posture that lets anything new arrive.</p>\n    <p><b>Violence</b> &mdash; anything impacting anything else. A branch snapping back across your skin commits violence with no ill intent at all. With the judgment removed, an impact can be assessed honestly &mdash; what happened, what it cost &mdash; without first holding a trial over intent.</p>\n    <p class=\"close\">Words are constructs too. They can be renegotiated.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "Serves me / doesn&rsquo;t serve me",
+        "html": "<p>Right and wrong are someone else&rsquo;s measuring stick &mdash; inherited, enforced from outside, and always arriving with a verdict about you attached. <em>Serves me / doesn&rsquo;t serve me</em> is a different instrument entirely: built by you, calibrated to your life, and carrying no verdict at all.</p>\n    <p>The question does its best work on beliefs. A belief that once protected you may be costing you now &mdash; and asking <em>is this true?</em> usually starts a fight no one wins. <em>Is this serving me?</em> skips the courtroom. You&rsquo;re not proving the belief false; you&rsquo;re noticing what it costs to keep.</p>\n    <p>That&rsquo;s the deeper power of the swap: right/wrong is someone else&rsquo;s assessment. Serves/doesn&rsquo;t serve is <em>your construction</em>. The moment the measuring stick is yours, restructuring a belief stops being a betrayal of anyone &mdash; it becomes maintenance.</p>\n    <p class=\"close\">One way in: something you do on autopilot, asked directly &mdash; is this serving me, or am I serving it?</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "The stories we fill gaps with",
+        "html": "<p>Stories are running in us all the time &mdash; most of them without our awareness, none of them waiting for permission. A story is what the mind builds when it doesn&rsquo;t have quality data: something is happening, the picture is incomplete, and the gap gets filled with authored material. Then we forget we authored it.</p>\n    <p>A husband leaves the house quickly, no goodbye. Without noticing she&rsquo;s doing it, his wife composes: <em>he couldn&rsquo;t wait to get away from me &mdash; he doesn&rsquo;t value what we have.</em> One courageous question later, the same morning reads: <em>he was in a hurry and needed to leave. He cares for me well, outside this one moment.</em> Same data. Different story. Very different day.</p>\n    <p>The move isn&rsquo;t to stop making stories &mdash; minds don&rsquo;t work that way. It&rsquo;s awareness first: <em>what story am I running right now, and what data is it actually standing on?</em> Where the data is thin, a courageous question beats a confident story every time.</p>\n    <p class=\"close\">Change the story, change your life.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "When a rationalization hardens into a belief",
+        "html": "<p>A rationalization is an explanation that made sense once &mdash; built in a real moment, for a real reason. The trouble isn&rsquo;t making one. It&rsquo;s keeping it past the situation that produced it, until it stops being an explanation and starts being a belief, running quietly in the background.</p>\n    <p><em>I don&rsquo;t speak up in meetings &mdash; last time it went badly.</em> Reasonable, once. Years later it has quietly become <em>I&rsquo;m not someone who speaks up</em> &mdash; and nobody remembers the meeting that built it.</p>\n    <p>A place to look: a sentence about yourself that starts with <em>I&rsquo;m just not&hellip;</em> &mdash; and the question of when it was written, and by whom. If it has a date on it, it isn&rsquo;t a fact about you. It&rsquo;s a rationalization that hardened &mdash; and what hardened can be reworked.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "The components of shame",
+        "html": "<p>Too much. Not enough. Wrong. Bad. Broken. Every arrival of shame is wearing one of these five costumes &mdash; and underneath, they&rsquo;re the same tool.</p>\n    <p>And it is a tool &mdash; of oppression: it creates convenience for the person applying it at the cost of the person carrying it. A shamed person is a compliant person, and compliance is cheap to maintain.</p>\n    <p>The use here is recognition. When one of the five shows up &mdash; in someone&rsquo;s words, or in your own inner voice &mdash; naming the costume takes most of its charge: <em>that&rsquo;s not &ldquo;too much.&rdquo; That&rsquo;s shame, wearing costume number five.</em> There&rsquo;s no version of growth that requires it.</p>"
+      }
+    ]
+  },
+  {
+    "id": "empathy",
+    "title": "Empathy",
+    "blurb": "Outward comes easily to most people. Inward is the work.",
+    "cards": [
+      {
+        "tag": "Concept",
+        "title": "Three wounds, and what heals each",
+        "html": "<ol>\n      <li><b>Abandonment &rarr; commitment to self.</b> Committed to yourself, you cannot be abandoned &mdash; the one person who matters is staying. You are enough on your own; no one else is needed for you to be whole.</li>\n      <li><b>Betrayal &rarr; loyalty to self.</b> Loyal to yourself, no one can betray you again &mdash; and true loyalty to self brings awareness of where, and when, you can open vulnerably.</li>\n      <li><b>Shame &rarr; honor to self.</b> Honor yourself and shame has nowhere to land.</li>\n    </ol>\n    <p>Three wounds run under most of the pain people bring to this work, and they braid &mdash; one triggers another, feeds it, keeps it warm. Which is why <em>just get over it</em> has never once worked on any of them.</p>\n    <p>Abandonment is a cold wound &mdash; loneliness, distrust, a body that literally runs cool and pulls inward. Its medicine isn&rsquo;t finding someone who&rsquo;ll promise to stay. It&rsquo;s commitment to yourself: when you stop abandoning you, the oldest version of the fear loses its anchor. You are enough on your own &mdash; wholeness was never something another person was holding for you.</p>\n    <p>Betrayal runs hot. Its medicine is loyalty to yourself &mdash; honesty with yourself first, and the awareness that grows from it: where, when, and with whom it&rsquo;s yours to open vulnerably. Loyal to yourself, you can still be disappointed by someone. You can no longer be dismantled by them.</p>\n    <p>Shame is the hottest of the three &mdash; flushed skin, racing heart, the urge to disappear. It runs on the claim that something about you is fundamentally wrong, bad, broken, not enough, or too much. Its medicine is honor: treating yourself as someone whose worth is not on trial. Shame needs a hearing to survive. Honor adjourns the court.</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "Empathy &mdash; with yourself first",
+        "html": "<p>Empathy does its work in two places: with others, and with yourself. Most of us are fluent in the first and beginners at the second &mdash; and the order matters more than it seems.</p>\n    <p>Empathy with yourself is what makes room for the rest. Met with your own humanness first, you can return to center &mdash; and from center there is space inside to genuinely hold someone else&rsquo;s experience, rather than managing it or absorbing it.</p>\n    <p>The two kinds are worth knowing apart: <em>cognitive</em> empathy understands what someone feels; <em>emotional</em> empathy feels it with them. Both are useful. Knowing which one you&rsquo;re offering changes what it gives &mdash; and what it costs you.</p>\n    <p>And in an emotionally charged moment, receiving empathy &mdash; from someone else, or eventually from yourself &mdash; is step one of emotional processing. It&rsquo;s what allows relief from an emotion without bypassing it or shutting it down. The feeling gets witnessed &mdash; and witnessed feelings can move.</p>\n    <p class=\"close\">Empathy is a reminder of your own humanness &mdash; and a lens that finds it in the other.</p>"
+      }
+    ]
+  },
+  {
+    "id": "agency",
+    "title": "Agency",
+    "blurb": "Who&rsquo;s been holding the wheel.",
+    "cards": [
+      {
+        "tag": "Concept",
+        "title": "The confidence continuum",
+        "html": "<p>I dropped something recently and caught it before it hit the floor &mdash; and noticed, for once, why I&rsquo;d even tried: a thought arrived first that said <em>I can catch this</em>. The reach only happened because the thought came before it.</p>\n    <p>Here&rsquo;s the reframe that changed how I hear the word: nobody lacks confidence. Confidence that you can&rsquo;t, won&rsquo;t, and don&rsquo;t is still confidence &mdash; pointed backward, with a well-kept file of evidence. <em>I can&rsquo;t do this, and here&rsquo;s proof</em> is a confident sentence.</p>\n    <p>So the work isn&rsquo;t acquiring confidence. It&rsquo;s sliding where yours points. And the mechanism is practical, not magical: an <em>I can</em> doesn&rsquo;t guarantee the catch &mdash; it guarantees the reach. You can&rsquo;t succeed at an attempt you never make.</p>\n    <p class=\"close\">Where is your confidence pointed right now &mdash; and what is it citing as evidence?</p>"
+      },
+      {
+        "tag": "Concept",
+        "title": "Stop outsourcing your agency",
+        "html": "<p>There are questions we never stop asking: <em>Am I a good person? Do I deserve good things?</em> The quiet move most of us made &mdash; long ago, without noticing &mdash; was handing that verdict to someone else. A parent. A partner. A boss. An audience.</p>\n    <p>At the high level, the cost is structural: whoever holds your verdict holds your wheel. You can&rsquo;t rest, because the court never adjourns. You can&rsquo;t be still, because the judges keep rotating. And no ruling is ever final &mdash; tomorrow requires a fresh hearing.</p>\n    <p>At the low level, it&rsquo;s a hundred daily micro-referenda: rereading a text to see if they&rsquo;re mad. Dressing for critics who aren&rsquo;t in the room. The decision you can&rsquo;t make until someone approves it. Outsourcing so routine it feels like personality.</p>\n    <p>The deepest cost isn&rsquo;t the anxiety. It&rsquo;s that you become governable &mdash; by anyone willing to withhold the ruling you need. The return isn&rsquo;t arrogance; it&rsquo;s repatriation: the questions were never theirs to answer. And <em>serves me / doesn&rsquo;t serve me</em> is a measuring stick that doesn&rsquo;t require a jury.</p>"
+      }
+    ]
+  }
+];

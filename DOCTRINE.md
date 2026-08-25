@@ -4,7 +4,7 @@
 > making any change. Its top priority is: **do not break the build or the deployment.**
 > Live site: **https://thechampagnemethod.co**
 > Repo: `github.com/Mr-Champagne-TCM/the-champagne-method`
-> Last audited at **v2.0** (Aug 2026) — the redesign: new palette and type, layered
+> Last audited at **v2.1** (Aug 2026) — the redesign: new palette and type, layered
 > waves + bubbles background, Calendly link-out, and a static library page at `/library/`.
 
 ---
