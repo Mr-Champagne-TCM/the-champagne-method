@@ -8,6 +8,11 @@ const PNG_SIZE = 2080; // 2x the SVG's natural 1040 — prints and shares cleanl
 export default function EmotionWheel() {
   const [open, setOpen] = useState(false);
   const [zoom, setZoom] = useState(1);
+  /** Half-steps are fine on a touch screen, where pinch does the fine work anyway.
+   *  With a mouse the buttons are the only control, so they step finer. */
+  const [step] = useState(() =>
+    typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches ? 0.25 : 0.5,
+  );
   const [busy, setBusy] = useState(false);
   const [note, setNote] = useState('');
   const scroller = useRef<HTMLDivElement>(null);
@@ -16,8 +21,8 @@ export default function EmotionWheel() {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false);
-      if (e.key === '+' || e.key === '=') setZoom((z) => Math.min(4, z + 0.25));
-      if (e.key === '-') setZoom((z) => Math.max(1, z - 0.25));
+      if (e.key === '+' || e.key === '=') setZoom((z) => Math.min(4, z + step));
+      if (e.key === '-') setZoom((z) => Math.max(1, z - step));
     };
     window.addEventListener('keydown', onKey);
     const prev = document.body.style.overflow;
@@ -26,7 +31,7 @@ export default function EmotionWheel() {
       window.removeEventListener('keydown', onKey);
       document.body.style.overflow = prev;
     };
-  }, [open]);
+  }, [open, step]);
 
   /** Rasterise the SVG in the browser so the PNG needs no server. */
   const toPng = useCallback(async (): Promise<Blob | null> => {
@@ -51,26 +56,28 @@ export default function EmotionWheel() {
     }
   }, []);
 
-  const save = (blob: Blob | string, filename: string) => {
-    const href = typeof blob === 'string' ? blob : URL.createObjectURL(blob);
+  const save = (blob: Blob, filename: string) => {
+    const href = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = href;
     a.download = filename;
     document.body.appendChild(a);
     a.click();
     a.remove();
-    if (typeof blob !== 'string') setTimeout(() => URL.revokeObjectURL(href), 4000);
+    setTimeout(() => URL.revokeObjectURL(href), 4000);
   };
 
+  /** PNG only, deliberately. An SVG download looks tidy and then will not open on a
+   *  phone or in most photo apps — it stranded people we sent it to. */
   const downloadPng = async () => {
     setBusy(true);
     setNote('');
     try {
       const blob = await toPng();
       if (blob) save(blob, 'emotion-wheel.png');
-      else setNote('That didn’t render — the SVG download below always works.');
+      else setNote('That didn’t render — a second try usually does it.');
     } catch {
-      setNote('That didn’t render — the SVG download below always works.');
+      setNote('That didn’t render — a second try usually does it.');
     }
     setBusy(false);
   };
@@ -137,9 +144,6 @@ export default function EmotionWheel() {
         <button onClick={downloadPng} disabled={busy} className={btn}>
           {busy ? 'Preparing…' : 'Download as image'}
         </button>
-        <button onClick={() => save(SRC, 'emotion-wheel.svg')} className={btn}>
-          Download as SVG
-        </button>
         <button onClick={share} className={btn}>
           Share it
         </button>
@@ -163,7 +167,7 @@ export default function EmotionWheel() {
             </span>
             <div className="flex items-center gap-2">
               <button
-                onClick={() => setZoom((z) => Math.max(1, z - 0.5))}
+                onClick={() => setZoom((z) => Math.max(1, z - step))}
                 className="w-11 h-11 rounded-full border border-brand-gold/35 text-brand-paper text-[20px] leading-none"
                 aria-label="Zoom out"
               >
@@ -173,7 +177,7 @@ export default function EmotionWheel() {
                 {Math.round(zoom * 100)}%
               </span>
               <button
-                onClick={() => setZoom((z) => Math.min(4, z + 0.5))}
+                onClick={() => setZoom((z) => Math.min(4, z + step))}
                 className="w-11 h-11 rounded-full border border-brand-gold/35 text-brand-paper text-[20px] leading-none"
                 aria-label="Zoom in"
               >

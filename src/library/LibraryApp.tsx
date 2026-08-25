@@ -7,6 +7,7 @@ import QuizConfidence from './tools/QuizConfidence';
 import Breather from './tools/Breather';
 import ServesMeCheck from './tools/ServesMeCheck';
 import EmotionWheel from './tools/EmotionWheel';
+import { SITE_VERSION } from '../site/version';
 
 /** Interactive tools, slotted after the concept card that teaches their idea.
  *  The wheel entry carries two: the wheel to look at, then the quiz that reads it. */
@@ -218,7 +219,7 @@ export default function LibraryApp() {
               <span className="text-[15px] text-brand-muted/70">
                 &copy; 2026 The Champagne Method. All rights reserved.
               </span>
-              <span className="text-xs text-brand-muted/40">v2.1 &middot; Aug 2026</span>
+              <span className="text-xs text-brand-muted/40">{SITE_VERSION}</span>
             </div>
           </div>
         </footer>

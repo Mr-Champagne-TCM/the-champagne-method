@@ -141,5 +141,22 @@ export const shelves: Shelf[] = [
         "html": "<p>There are questions we never stop asking: <em>Am I a good person? Do I deserve good things?</em> The quiet move most of us made &mdash; long ago, without noticing &mdash; was handing that verdict to someone else. A parent. A partner. A boss. An audience.</p>\n    <p>At the high level, the cost is structural: whoever holds your verdict holds your wheel. You can&rsquo;t rest, because the court never adjourns. You can&rsquo;t be still, because the judges keep rotating. And no ruling is ever final &mdash; tomorrow requires a fresh hearing.</p>\n    <p>At the low level, it&rsquo;s a hundred daily micro-referenda: rereading a text to see if they&rsquo;re mad. Dressing for critics who aren&rsquo;t in the room. The decision you can&rsquo;t make until someone approves it. Outsourcing so routine it feels like personality.</p>\n    <p>The deepest cost isn&rsquo;t the anxiety. It&rsquo;s that you become governable &mdash; by anyone willing to withhold the ruling you need. The return isn&rsquo;t arrogance; it&rsquo;s repatriation: the questions were never theirs to answer. And <em>serves me / doesn&rsquo;t serve me</em> is a measuring stick that doesn&rsquo;t require a jury.</p>"
       }
     ]
+  },
+  {
+    "id": "human-design",
+    "title": "Human Design",
+    "blurb": "A lens, offered &mdash; never a verdict.",
+    "cards": [
+      {
+        "tag": "Guide",
+        "title": "Human Design, plainly",
+        "html": "<p>A map of how your energy works, drawn from the moment you were born. Not a personality test, and it predicts nothing &mdash; what it describes is mechanics: where your energy is consistent, where it is variable, and how you are built to arrive at a yes or a no.</p>\n    <p>Nothing on a chart is a limit. The parts that look empty are the parts you run <em>through other people</em>, and they are usually the ones that explain the last ten years.</p>\n    <p>About six minutes, and no jargon you have to look up. <a href=\"/library/human-design/\">Human Design, plainly &rarr;</a></p>"
+      },
+      {
+        "tag": "Guide",
+        "title": "Reading your bodygraph",
+        "html": "<p>For anyone already holding a chart and wondering what they are looking at. What the colours mean, what the shapes mean, and what it means when a line is only half filled in.</p>\n    <p>More is not better here &mdash; every mark adds detail, not value, and nobody is scoring yours. <a href=\"/library/bodygraph/\">Reading your bodygraph &rarr;</a></p>"
+      }
+    ]
   }
 ];

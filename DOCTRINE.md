@@ -4,8 +4,10 @@
 > making any change. Its top priority is: **do not break the build or the deployment.**
 > Live site: **https://thechampagnemethod.co**
 > Repo: `github.com/Mr-Champagne-TCM/the-champagne-method`
-> Last audited at **v2.1** (Aug 2026) — the redesign: new palette and type, layered
-> waves + bubbles background, Calendly link-out, and a static library page at `/library/`.
+> Last audited at **v2.2** (Aug 2026) — the React library at `/library/` with its
+> interactive tools and the emotion wheel, plus two long-form article pages at
+> `/library/human-design/` and `/library/bodygraph/`. Palette, type, layered
+> waves + bubbles background and the Calendly link-out are unchanged from v2.1.
 
 ---
 
@@ -109,16 +111,37 @@ Navbar → Hero → Premise → WhoIWorkWith → Themes → Method → HowItAdap
 
 **`Background.tsx` is a deliberate z-index stack** — `z0` gradient ground + glow, `z1`
 three animated wave SVGs, `z2` 60 rising bubbles, with all content above at `z10`.
-The wave timings (1s / 1.25s / 1.6s) are **owner-confirmed and intentional** — do not
-"fix" them by slowing them down.
 
-**Second page:** `public/library/index.html`, served at `/library/`. Standalone static
-HTML on purpose, so it adds zero build risk. It carries **its own copy of the design
-tokens** — a palette change must be made in both there and `tailwind.config.js`.
-Note that `npm run dev` does not serve it (the SPA fallback wins); use `npm run preview`.
+> **Wave speed — owner-set, 2026-08-25.** The waves run **slow: 14s / 17.5s / 22.4s**
+> (defined in `src/index.css`). The owner reviewed the fast version and ruled it
+> "WAY too fast". **Never speed them up.** An earlier revision of this file claimed
+> 1s / 1.25s / 1.6s were "owner-confirmed and intentional" — that note is **VOID** and
+> was the opposite of his decision. `prefers-reduced-motion` is honoured.
 
-**Version marker:** the footer of both pages shows `v2.0 · Aug 2026`, and `package.json`
-carries the matching version. Keep all three in step when releasing.
+**Additional pages (Vite MPA).** The site is multi-page. Every page is React and shares
+the same design system; `build.rollupOptions.input` in `vite.config.ts` is **load-bearing**
+— an entry missing from that map simply does not get built.
+
+| Route | HTML entry | React root |
+|---|---|---|
+| `/` | `index.html` | `src/main.tsx` |
+| `/library/` | `library/index.html` | `src/library/main.tsx` |
+| `/library/human-design/` | `library/human-design/index.html` | `src/library/article/human-design-main.tsx` |
+| `/library/bodygraph/` | `library/bodygraph/index.html` | `src/library/article/bodygraph-main.tsx` |
+
+The old `public/library/index.html` static page is **gone** — the library is React now.
+Note that `npm run dev` does not serve the secondary pages (the SPA fallback wins);
+use `npm run preview` to check them.
+
+**Long-form articles** live in `src/library/article/`. They share `ArticleUI.tsx`, which
+holds the nav, footer, and typographic primitives. Style articles with utilities on the
+element itself — **never with a rule that reaches descendants**. The static mock these
+were ported from had a `.cta a { …gold pill… }` rule that caught the quiet text link as
+well as the button and rendered two overlapping pills.
+
+**Version marker:** `src/site/version.ts` exports `SITE_VERSION`, and **both footers
+import it** so they cannot drift. Keep it in step with the `version` field in
+`package.json` and with the audit line at the top of this file when releasing.
 
 - Components live in `src/components/*.tsx` (one file per section).
 - Global styles + Tailwind layers: `src/index.css`.

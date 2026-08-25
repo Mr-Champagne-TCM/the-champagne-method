@@ -57,8 +57,44 @@ FAMILIES = [
 ]
 
 SIZE, C = 1040, 520
-R0, R1, R2, R3 = 0, 188, 316, 476          # ring boundaries
+HUB = 50
+R0, R1, R2, R3 = 0, 190, 336, 476          # ring boundaries
 PAPER, INK = "#F3EFF7", "#160A33"
+
+# Widest word in each ring, measured in the real face (Outfit, the weight that ring
+# uses) via canvas measureText at 100px, then divided by 100 — so these are widths in
+# px per 1px of font size. Re-measure if the word lists or the font ever change.
+#   core   "Disgusted"      @600  449.6 / 100
+#   middle "Embarrassed"    @500  596.5 / 100
+#   outer  "Self-conscious" @400  637.1 / 100
+WIDEST = {"core": 4.496, "middle": 5.965, "outer": 6.371}
+PAD = 16                                    # clearance from the ring boundary lines
+
+
+def fit(ring: str, r_in: float, r_out: float) -> int:
+    """Largest whole font size whose widest word still clears both boundary lines."""
+    return int((r_out - r_in - PAD) / WIDEST[ring])
+
+
+# Sizes are derived, never guessed. Ring widths were rebalanced so the three sizes
+# descend properly — the outer ring had slack the middle ring needed.
+FS_CORE = min(fit("core", HUB, R1), 27)
+FS_MID = fit("middle", R1, R2)
+FS_OUT = fit("outer", R2, R3)
+assert FS_CORE > FS_MID > FS_OUT, (FS_CORE, FS_MID, FS_OUT)
+
+
+def assert_no_collision(ring, fs, r_in, r_out, span_deg):
+    """Radial: the word fits between the boundary lines. Angular: the line height fits
+    inside the wedge at its narrowest point, which is the text's inner end."""
+    import math as _m
+    w = fs * WIDEST[ring]
+    assert w + PAD <= r_out - r_in, f"{ring}: {w:.0f}px word in {r_out - r_in}px ring"
+    r_mid = (r_in + r_out) / 2
+    inner = r_mid - w / 2
+    arc = 2 * _m.pi * inner * (span_deg / 360)
+    assert fs * 1.15 + 4 <= arc, f"{ring}: {fs}px line in {arc:.0f}px arc"
+
 
 
 def mix(hex_color: str, toward: str, t: float) -> str:
@@ -113,6 +149,9 @@ def build() -> str:
     ]
 
     span = 360 / len(FAMILIES)
+    assert_no_collision('core', FS_CORE, HUB, R1, span)
+    assert_no_collision('middle', FS_MID, R1, R2, span / 3)
+    assert_no_collision('outer', FS_OUT, R2, R3, span / 6)
     for fi, (family, base, middles) in enumerate(FAMILIES):
         a0 = fi * span
         c_core = base
@@ -121,24 +160,24 @@ def build() -> str:
 
         parts.append(f'<path d="{wedge(R0, R1, a0, a0 + span)}" fill="{c_core}" '
                      f'stroke="{INK}" stroke-width="2"/>')
-        parts.append(radial_label(family, 122, a0 + span / 2, 20, INK, "600"))
+        parts.append(radial_label(family, (HUB + R1) / 2, a0 + span / 2, FS_CORE, INK, "600"))
 
         for mi, (middle, outers) in enumerate(middles):
             m_span = span / len(middles)
             m0 = a0 + mi * m_span
             parts.append(f'<path d="{wedge(R1, R2, m0, m0 + m_span)}" fill="{c_mid}" '
                          f'stroke="{INK}" stroke-width="1.5"/>')
-            parts.append(radial_label(middle, (R1 + R2) / 2, m0 + m_span / 2, 17, INK, "500"))
+            parts.append(radial_label(middle, (R1 + R2) / 2, m0 + m_span / 2, FS_MID, INK, "500"))
 
             for oi, outer in enumerate(outers):
                 o_span = m_span / len(outers)
                 o0 = m0 + oi * o_span
                 parts.append(f'<path d="{wedge(R2, R3, o0, o0 + o_span)}" fill="{c_out}" '
                              f'stroke="{INK}" stroke-width="1"/>')
-                parts.append(radial_label(outer, (R2 + R3) / 2, o0 + o_span / 2, 14, INK, "400"))
+                parts.append(radial_label(outer, (R2 + R3) / 2, o0 + o_span / 2, FS_OUT, INK, "400"))
 
     # hub
-    parts.append(f'<circle cx="{C}" cy="{C}" r="52" fill="#160A33" stroke="{PAPER}" '
+    parts.append(f'<circle cx="{C}" cy="{C}" r="{HUB}" fill="#160A33" stroke="{PAPER}" '
                  f'stroke-opacity="0.25" stroke-width="1.5"/>')
     parts.append(f'<text x="{C}" y="{C - 9}" text-anchor="middle" font-size="15" '
                  f'fill="{PAPER}" font-family="Fraunces, Georgia, serif" '
@@ -159,6 +198,7 @@ if __name__ == "__main__":
     OUT.write_text(svg, encoding="utf-8")
     words = sum(1 + len(m) * 3 for _, _, m in [(f, b, ms) for f, b, ms in FAMILIES])
     print(f"wrote {OUT}  ({len(svg):,} bytes)")
+    print(f"font sizes  core={FS_CORE}  middle={FS_MID}  outer={FS_OUT}")
     print(f"families={len(FAMILIES)}  "
           f"middle={sum(len(m) for _, _, m in FAMILIES)}  "
           f"outer={sum(len(o) for _, _, ms in FAMILIES for _, o in ms)}")
