@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 1040" width="1040" height="1040" role="img" aria-label="The Champagne Method emotion wheel: eight families of feeling in three rings of increasing precision">
+<title>The emotion wheel — The Champagne Method</title>
+<defs><radialGradient id="ground" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#2d1155"/><stop offset="100%" stop-color="#0b1428"/></radialGradient></defs>
+<rect width="1040" height="1040" fill="url(#ground)"/>
+<path d="M 520.00 520.00 L 520.00 332.00 A 188.00 188.00 0 0 1 652.94 387.06 Z" fill="#3FE0C5" stroke="#160A33" stroke-width="2"/>
+<text x="566.69" y="407.29" transform="rotate(-67.50 566.69 407.29)" font-size="20" font-weight="600" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Joyful</text>
+<path d="M 520.00 204.00 A 316.00 316.00 0 0 1 601.79 214.77 L 568.66 338.41 A 188.00 188.00 0 0 0 520.00 332.00 Z" fill="#7ce5d6" stroke="#160A33" stroke-width="1.5"/>
+<text x="552.89" y="270.16" transform="rotate(-82.50 552.89 270.16)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Content</text>
+<path d="M 520.00 44.00 A 476.00 476.00 0 0 1 582.13 48.07 L 561.25 206.70 A 316.00 316.00 0 0 0 520.00 204.00 Z" fill="#afe9e4" stroke="#160A33" stroke-width="1"/>
+<text x="545.90" y="124.85" transform="rotate(-86.25 545.90 124.85)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Satisfied</text>
+<path d="M 582.13 48.07 A 476.00 476.00 0 0 1 643.20 60.22 L 601.79 214.77 A 316.00 316.00 0 0 0 561.25 206.70 Z" fill="#afe9e4" stroke="#160A33" stroke-width="1"/>
+<text x="597.26" y="131.61" transform="rotate(-78.75 597.26 131.61)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Grateful</text>
+<path d="M 601.79 214.77 A 316.00 316.00 0 0 1 678.00 246.34 L 614.00 357.19 A 188.00 188.00 0 0 0 568.66 338.41 Z" fill="#7ce5d6" stroke="#160A33" stroke-width="1.5"/>
+<text x="616.44" y="287.18" transform="rotate(-67.50 616.44 287.18)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Excited</text>
+<path d="M 643.20 60.22 A 476.00 476.00 0 0 1 702.16 80.23 L 640.93 228.05 A 316.00 316.00 0 0 0 601.79 214.77 Z" fill="#afe9e4" stroke="#160A33" stroke-width="1"/>
+<text x="647.29" y="145.02" transform="rotate(-71.25 647.29 145.02)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Eager</text>
+<path d="M 702.16 80.23 A 476.00 476.00 0 0 1 758.00 107.77 L 678.00 246.34 A 316.00 316.00 0 0 0 640.93 228.05 Z" fill="#afe9e4" stroke="#160A33" stroke-width="1"/>
+<text x="695.15" y="164.84" transform="rotate(-63.75 695.15 164.84)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Playful</text>
+<path d="M 678.00 246.34 A 316.00 316.00 0 0 1 743.45 296.55 L 652.94 387.06 A 188.00 188.00 0 0 0 614.00 357.19 Z" fill="#7ce5d6" stroke="#160A33" stroke-width="1.5"/>
+<text x="673.41" y="320.07" transform="rotate(-52.50 673.41 320.07)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Loving</text>
+<path d="M 758.00 107.77 A 476.00 476.00 0 0 1 809.77 142.36 L 712.37 269.30 A 316.00 316.00 0 0 0 678.00 246.34 Z" fill="#afe9e4" stroke="#160A33" stroke-width="1"/>
+<text x="740.01" y="190.74" transform="rotate(-56.25 740.01 190.74)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Tender</text>
+<path d="M 809.77 142.36 A 476.00 476.00 0 0 1 856.58 183.42 L 743.45 296.55 A 316.00 316.00 0 0 0 712.37 269.30 Z" fill="#afe9e4" stroke="#160A33" stroke-width="1"/>
+<text x="781.10" y="222.27" transform="rotate(-48.75 781.10 222.27)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Connected</text>
+<path d="M 520.00 520.00 L 652.94 387.06 A 188.00 188.00 0 0 1 708.00 520.00 Z" fill="#E8CBA0" stroke="#160A33" stroke-width="2"/>
+<text x="632.71" y="473.31" transform="rotate(-22.50 632.71 473.31)" font-size="20" font-weight="600" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Powerful</text>
+<path d="M 743.45 296.55 A 316.00 316.00 0 0 1 793.66 362.00 L 682.81 426.00 A 188.00 188.00 0 0 0 652.94 387.06 Z" fill="#ecd7be" stroke="#160A33" stroke-width="1.5"/>
+<text x="719.93" y="366.59" transform="rotate(-37.50 719.93 366.59)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Confident</text>
+<path d="M 856.58 183.42 A 476.00 476.00 0 0 1 897.64 230.23 L 770.70 327.63 A 316.00 316.00 0 0 0 743.45 296.55 Z" fill="#efe1d6" stroke="#160A33" stroke-width="1"/>
+<text x="817.73" y="258.90" transform="rotate(-41.25 817.73 258.90)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Capable</text>
+<path d="M 897.64 230.23 A 476.00 476.00 0 0 1 932.23 282.00 L 793.66 362.00 A 316.00 316.00 0 0 0 770.70 327.63 Z" fill="#efe1d6" stroke="#160A33" stroke-width="1"/>
+<text x="849.26" y="299.99" transform="rotate(-33.75 849.26 299.99)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Assured</text>
+<path d="M 793.66 362.00 A 316.00 316.00 0 0 1 825.23 438.21 L 701.59 471.34 A 188.00 188.00 0 0 0 682.81 426.00 Z" fill="#ecd7be" stroke="#160A33" stroke-width="1.5"/>
+<text x="752.82" y="423.56" transform="rotate(-22.50 752.82 423.56)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Proud</text>
+<path d="M 932.23 282.00 A 476.00 476.00 0 0 1 959.77 337.84 L 811.95 399.07 A 316.00 316.00 0 0 0 793.66 362.00 Z" fill="#efe1d6" stroke="#160A33" stroke-width="1"/>
+<text x="875.16" y="344.85" transform="rotate(-26.25 875.16 344.85)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Respected</text>
+<path d="M 959.77 337.84 A 476.00 476.00 0 0 1 979.78 396.80 L 825.23 438.21 A 316.00 316.00 0 0 0 811.95 399.07 Z" fill="#efe1d6" stroke="#160A33" stroke-width="1"/>
+<text x="894.98" y="392.71" transform="rotate(-18.75 894.98 392.71)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Valued</text>
+<path d="M 825.23 438.21 A 316.00 316.00 0 0 1 836.00 520.00 L 708.00 520.00 A 188.00 188.00 0 0 0 701.59 471.34 Z" fill="#ecd7be" stroke="#160A33" stroke-width="1.5"/>
+<text x="769.84" y="487.11" transform="rotate(-7.50 769.84 487.11)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Free</text>
+<path d="M 979.78 396.80 A 476.00 476.00 0 0 1 991.93 457.87 L 833.30 478.75 A 316.00 316.00 0 0 0 825.23 438.21 Z" fill="#efe1d6" stroke="#160A33" stroke-width="1"/>
+<text x="908.39" y="442.74" transform="rotate(-11.25 908.39 442.74)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Open</text>
+<path d="M 991.93 457.87 A 476.00 476.00 0 0 1 996.00 520.00 L 836.00 520.00 A 316.00 316.00 0 0 0 833.30 478.75 Z" fill="#efe1d6" stroke="#160A33" stroke-width="1"/>
+<text x="915.15" y="494.10" transform="rotate(-3.75 915.15 494.10)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Expansive</text>
+<path d="M 520.00 520.00 L 708.00 520.00 A 188.00 188.00 0 0 1 652.94 652.94 Z" fill="#7FD8E8" stroke="#160A33" stroke-width="2"/>
+<text x="632.71" y="566.69" transform="rotate(22.50 632.71 566.69)" font-size="20" font-weight="600" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Peaceful</text>
+<path d="M 836.00 520.00 A 316.00 316.00 0 0 1 825.23 601.79 L 701.59 568.66 A 188.00 188.00 0 0 0 708.00 520.00 Z" fill="#a6e0ed" stroke="#160A33" stroke-width="1.5"/>
+<text x="769.84" y="552.89" transform="rotate(7.50 769.84 552.89)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Calm</text>
+<path d="M 996.00 520.00 A 476.00 476.00 0 0 1 991.93 582.13 L 833.30 561.25 A 316.00 316.00 0 0 0 836.00 520.00 Z" fill="#c7e6f1" stroke="#160A33" stroke-width="1"/>
+<text x="915.15" y="545.90" transform="rotate(3.75 915.15 545.90)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Settled</text>
+<path d="M 991.93 582.13 A 476.00 476.00 0 0 1 979.78 643.20 L 825.23 601.79 A 316.00 316.00 0 0 0 833.30 561.25 Z" fill="#c7e6f1" stroke="#160A33" stroke-width="1"/>
+<text x="908.39" y="597.26" transform="rotate(11.25 908.39 597.26)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Relaxed</text>
+<path d="M 825.23 601.79 A 316.00 316.00 0 0 1 793.66 678.00 L 682.81 614.00 A 188.00 188.00 0 0 0 701.59 568.66 Z" fill="#a6e0ed" stroke="#160A33" stroke-width="1.5"/>
+<text x="752.82" y="616.44" transform="rotate(22.50 752.82 616.44)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Safe</text>
+<path d="M 979.78 643.20 A 476.00 476.00 0 0 1 959.77 702.16 L 811.95 640.93 A 316.00 316.00 0 0 0 825.23 601.79 Z" fill="#c7e6f1" stroke="#160A33" stroke-width="1"/>
+<text x="894.98" y="647.29" transform="rotate(18.75 894.98 647.29)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Held</text>
+<path d="M 959.77 702.16 A 476.00 476.00 0 0 1 932.23 758.00 L 793.66 678.00 A 316.00 316.00 0 0 0 811.95 640.93 Z" fill="#c7e6f1" stroke="#160A33" stroke-width="1"/>
+<text x="875.16" y="695.15" transform="rotate(26.25 875.16 695.15)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Trusting</text>
+<path d="M 793.66 678.00 A 316.00 316.00 0 0 1 743.45 743.45 L 652.94 652.94 A 188.00 188.00 0 0 0 682.81 614.00 Z" fill="#a6e0ed" stroke="#160A33" stroke-width="1.5"/>
+<text x="719.93" y="673.41" transform="rotate(37.50 719.93 673.41)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Clear</text>
+<path d="M 932.23 758.00 A 476.00 476.00 0 0 1 897.64 809.77 L 770.70 712.37 A 316.00 316.00 0 0 0 793.66 678.00 Z" fill="#c7e6f1" stroke="#160A33" stroke-width="1"/>
+<text x="849.26" y="740.01" transform="rotate(33.75 849.26 740.01)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Focused</text>
+<path d="M 897.64 809.77 A 476.00 476.00 0 0 1 856.58 856.58 L 743.45 743.45 A 316.00 316.00 0 0 0 770.70 712.37 Z" fill="#c7e6f1" stroke="#160A33" stroke-width="1"/>
+<text x="817.73" y="781.10" transform="rotate(41.25 817.73 781.10)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Present</text>
+<path d="M 520.00 520.00 L 652.94 652.94 A 188.00 188.00 0 0 1 520.00 708.00 Z" fill="#9B4FD0" stroke="#160A33" stroke-width="2"/>
+<text x="566.69" y="632.71" transform="rotate(67.50 566.69 632.71)" font-size="20" font-weight="600" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Angry</text>
+<path d="M 743.45 743.45 A 316.00 316.00 0 0 1 678.00 793.66 L 614.00 682.81 A 188.00 188.00 0 0 0 652.94 652.94 Z" fill="#b985dd" stroke="#160A33" stroke-width="1.5"/>
+<text x="673.41" y="719.93" transform="rotate(52.50 673.41 719.93)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Frustrated</text>
+<path d="M 856.58 856.58 A 476.00 476.00 0 0 1 809.77 897.64 L 712.37 770.70 A 316.00 316.00 0 0 0 743.45 743.45 Z" fill="#d2b2e8" stroke="#160A33" stroke-width="1"/>
+<text x="781.10" y="817.73" transform="rotate(48.75 781.10 817.73)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Blocked</text>
+<path d="M 809.77 897.64 A 476.00 476.00 0 0 1 758.00 932.23 L 678.00 793.66 A 316.00 316.00 0 0 0 712.37 770.70 Z" fill="#d2b2e8" stroke="#160A33" stroke-width="1"/>
+<text x="740.01" y="849.26" transform="rotate(56.25 740.01 849.26)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Exasperated</text>
+<path d="M 678.00 793.66 A 316.00 316.00 0 0 1 601.79 825.23 L 568.66 701.59 A 188.00 188.00 0 0 0 614.00 682.81 Z" fill="#b985dd" stroke="#160A33" stroke-width="1.5"/>
+<text x="616.44" y="752.82" transform="rotate(67.50 616.44 752.82)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Resentful</text>
+<path d="M 758.00 932.23 A 476.00 476.00 0 0 1 702.16 959.77 L 640.93 811.95 A 316.00 316.00 0 0 0 678.00 793.66 Z" fill="#d2b2e8" stroke="#160A33" stroke-width="1"/>
+<text x="695.15" y="875.16" transform="rotate(63.75 695.15 875.16)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Bitter</text>
+<path d="M 702.16 959.77 A 476.00 476.00 0 0 1 643.20 979.78 L 601.79 825.23 A 316.00 316.00 0 0 0 640.93 811.95 Z" fill="#d2b2e8" stroke="#160A33" stroke-width="1"/>
+<text x="647.29" y="894.98" transform="rotate(71.25 647.29 894.98)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Betrayed</text>
+<path d="M 601.79 825.23 A 316.00 316.00 0 0 1 520.00 836.00 L 520.00 708.00 A 188.00 188.00 0 0 0 568.66 701.59 Z" fill="#b985dd" stroke="#160A33" stroke-width="1.5"/>
+<text x="552.89" y="769.84" transform="rotate(82.50 552.89 769.84)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Irritated</text>
+<path d="M 643.20 979.78 A 476.00 476.00 0 0 1 582.13 991.93 L 561.25 833.30 A 316.00 316.00 0 0 0 601.79 825.23 Z" fill="#d2b2e8" stroke="#160A33" stroke-width="1"/>
+<text x="597.26" y="908.39" transform="rotate(78.75 597.26 908.39)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Annoyed</text>
+<path d="M 582.13 991.93 A 476.00 476.00 0 0 1 520.00 996.00 L 520.00 836.00 A 316.00 316.00 0 0 0 561.25 833.30 Z" fill="#d2b2e8" stroke="#160A33" stroke-width="1"/>
+<text x="545.90" y="915.15" transform="rotate(86.25 545.90 915.15)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Impatient</text>
+<path d="M 520.00 520.00 L 520.00 708.00 A 188.00 188.00 0 0 1 387.06 652.94 Z" fill="#6A63DC" stroke="#160A33" stroke-width="2"/>
+<text x="473.31" y="632.71" transform="rotate(292.50 473.31 632.71)" font-size="20" font-weight="600" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Sad</text>
+<path d="M 520.00 836.00 A 316.00 316.00 0 0 1 438.21 825.23 L 471.34 701.59 A 188.00 188.00 0 0 0 520.00 708.00 Z" fill="#9993e5" stroke="#160A33" stroke-width="1.5"/>
+<text x="487.11" y="769.84" transform="rotate(277.50 487.11 769.84)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Lonely</text>
+<path d="M 520.00 996.00 A 476.00 476.00 0 0 1 457.87 991.93 L 478.75 833.30 A 316.00 316.00 0 0 0 520.00 836.00 Z" fill="#bfbaed" stroke="#160A33" stroke-width="1"/>
+<text x="494.10" y="915.15" transform="rotate(273.75 494.10 915.15)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Isolated</text>
+<path d="M 457.87 991.93 A 476.00 476.00 0 0 1 396.80 979.78 L 438.21 825.23 A 316.00 316.00 0 0 0 478.75 833.30 Z" fill="#bfbaed" stroke="#160A33" stroke-width="1"/>
+<text x="442.74" y="908.39" transform="rotate(281.25 442.74 908.39)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Abandoned</text>
+<path d="M 438.21 825.23 A 316.00 316.00 0 0 1 362.00 793.66 L 426.00 682.81 A 188.00 188.00 0 0 0 471.34 701.59 Z" fill="#9993e5" stroke="#160A33" stroke-width="1.5"/>
+<text x="423.56" y="752.82" transform="rotate(292.50 423.56 752.82)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Disappointed</text>
+<path d="M 396.80 979.78 A 476.00 476.00 0 0 1 337.84 959.77 L 399.07 811.95 A 316.00 316.00 0 0 0 438.21 825.23 Z" fill="#bfbaed" stroke="#160A33" stroke-width="1"/>
+<text x="392.71" y="894.98" transform="rotate(288.75 392.71 894.98)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Let down</text>
+<path d="M 337.84 959.77 A 476.00 476.00 0 0 1 282.00 932.23 L 362.00 793.66 A 316.00 316.00 0 0 0 399.07 811.95 Z" fill="#bfbaed" stroke="#160A33" stroke-width="1"/>
+<text x="344.85" y="875.16" transform="rotate(296.25 344.85 875.16)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Deflated</text>
+<path d="M 362.00 793.66 A 316.00 316.00 0 0 1 296.55 743.45 L 387.06 652.94 A 188.00 188.00 0 0 0 426.00 682.81 Z" fill="#9993e5" stroke="#160A33" stroke-width="1.5"/>
+<text x="366.59" y="719.93" transform="rotate(307.50 366.59 719.93)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Grieving</text>
+<path d="M 282.00 932.23 A 476.00 476.00 0 0 1 230.23 897.64 L 327.63 770.70 A 316.00 316.00 0 0 0 362.00 793.66 Z" fill="#bfbaed" stroke="#160A33" stroke-width="1"/>
+<text x="299.99" y="849.26" transform="rotate(303.75 299.99 849.26)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Heartbroken</text>
+<path d="M 230.23 897.64 A 476.00 476.00 0 0 1 183.42 856.58 L 296.55 743.45 A 316.00 316.00 0 0 0 327.63 770.70 Z" fill="#bfbaed" stroke="#160A33" stroke-width="1"/>
+<text x="258.90" y="817.73" transform="rotate(311.25 258.90 817.73)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Empty</text>
+<path d="M 520.00 520.00 L 387.06 652.94 A 188.00 188.00 0 0 1 332.00 520.00 Z" fill="#4F79D8" stroke="#160A33" stroke-width="2"/>
+<text x="407.29" y="566.69" transform="rotate(337.50 407.29 566.69)" font-size="20" font-weight="600" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Scared</text>
+<path d="M 296.55 743.45 A 316.00 316.00 0 0 1 246.34 678.00 L 357.19 614.00 A 188.00 188.00 0 0 0 387.06 652.94 Z" fill="#87a1e3" stroke="#160A33" stroke-width="1.5"/>
+<text x="320.07" y="673.41" transform="rotate(322.50 320.07 673.41)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Anxious</text>
+<path d="M 183.42 856.58 A 476.00 476.00 0 0 1 142.36 809.77 L 269.30 712.37 A 316.00 316.00 0 0 0 296.55 743.45 Z" fill="#b5c2eb" stroke="#160A33" stroke-width="1"/>
+<text x="222.27" y="781.10" transform="rotate(318.75 222.27 781.10)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Restless</text>
+<path d="M 142.36 809.77 A 476.00 476.00 0 0 1 107.77 758.00 L 246.34 678.00 A 316.00 316.00 0 0 0 269.30 712.37 Z" fill="#b5c2eb" stroke="#160A33" stroke-width="1"/>
+<text x="190.74" y="740.01" transform="rotate(326.25 190.74 740.01)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Overwhelmed</text>
+<path d="M 246.34 678.00 A 316.00 316.00 0 0 1 214.77 601.79 L 338.41 568.66 A 188.00 188.00 0 0 0 357.19 614.00 Z" fill="#87a1e3" stroke="#160A33" stroke-width="1.5"/>
+<text x="287.18" y="616.44" transform="rotate(337.50 287.18 616.44)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Insecure</text>
+<path d="M 107.77 758.00 A 476.00 476.00 0 0 1 80.23 702.16 L 228.05 640.93 A 316.00 316.00 0 0 0 246.34 678.00 Z" fill="#b5c2eb" stroke="#160A33" stroke-width="1"/>
+<text x="164.84" y="695.15" transform="rotate(333.75 164.84 695.15)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Inadequate</text>
+<path d="M 80.23 702.16 A 476.00 476.00 0 0 1 60.22 643.20 L 214.77 601.79 A 316.00 316.00 0 0 0 228.05 640.93 Z" fill="#b5c2eb" stroke="#160A33" stroke-width="1"/>
+<text x="145.02" y="647.29" transform="rotate(341.25 145.02 647.29)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Exposed</text>
+<path d="M 214.77 601.79 A 316.00 316.00 0 0 1 204.00 520.00 L 332.00 520.00 A 188.00 188.00 0 0 0 338.41 568.66 Z" fill="#87a1e3" stroke="#160A33" stroke-width="1.5"/>
+<text x="270.16" y="552.89" transform="rotate(352.50 270.16 552.89)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Threatened</text>
+<path d="M 60.22 643.20 A 476.00 476.00 0 0 1 48.07 582.13 L 206.70 561.25 A 316.00 316.00 0 0 0 214.77 601.79 Z" fill="#b5c2eb" stroke="#160A33" stroke-width="1"/>
+<text x="131.61" y="597.26" transform="rotate(348.75 131.61 597.26)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Trapped</text>
+<path d="M 48.07 582.13 A 476.00 476.00 0 0 1 44.00 520.00 L 204.00 520.00 A 316.00 316.00 0 0 0 206.70 561.25 Z" fill="#b5c2eb" stroke="#160A33" stroke-width="1"/>
+<text x="124.85" y="545.90" transform="rotate(356.25 124.85 545.90)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Helpless</text>
+<path d="M 520.00 520.00 L 332.00 520.00 A 188.00 188.00 0 0 1 387.06 387.06 Z" fill="#7A52C2" stroke="#160A33" stroke-width="2"/>
+<text x="407.29" y="473.31" transform="rotate(382.50 407.29 473.31)" font-size="20" font-weight="600" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Ashamed</text>
+<path d="M 204.00 520.00 A 316.00 316.00 0 0 1 214.77 438.21 L 338.41 471.34 A 188.00 188.00 0 0 0 332.00 520.00 Z" fill="#a387d4" stroke="#160A33" stroke-width="1.5"/>
+<text x="270.16" y="487.11" transform="rotate(367.50 270.16 487.11)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Guilty</text>
+<path d="M 44.00 520.00 A 476.00 476.00 0 0 1 48.07 457.87 L 206.70 478.75 A 316.00 316.00 0 0 0 204.00 520.00 Z" fill="#c5b3e3" stroke="#160A33" stroke-width="1"/>
+<text x="124.85" y="494.10" transform="rotate(363.75 124.85 494.10)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Remorseful</text>
+<path d="M 48.07 457.87 A 476.00 476.00 0 0 1 60.22 396.80 L 214.77 438.21 A 316.00 316.00 0 0 0 206.70 478.75 Z" fill="#c5b3e3" stroke="#160A33" stroke-width="1"/>
+<text x="131.61" y="442.74" transform="rotate(371.25 131.61 442.74)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Regretful</text>
+<path d="M 214.77 438.21 A 316.00 316.00 0 0 1 246.34 362.00 L 357.19 426.00 A 188.00 188.00 0 0 0 338.41 471.34 Z" fill="#a387d4" stroke="#160A33" stroke-width="1.5"/>
+<text x="287.18" y="423.56" transform="rotate(382.50 287.18 423.56)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Embarrassed</text>
+<path d="M 60.22 396.80 A 476.00 476.00 0 0 1 80.23 337.84 L 228.05 399.07 A 316.00 316.00 0 0 0 214.77 438.21 Z" fill="#c5b3e3" stroke="#160A33" stroke-width="1"/>
+<text x="145.02" y="392.71" transform="rotate(378.75 145.02 392.71)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Self-conscious</text>
+<path d="M 80.23 337.84 A 476.00 476.00 0 0 1 107.77 282.00 L 246.34 362.00 A 316.00 316.00 0 0 0 228.05 399.07 Z" fill="#c5b3e3" stroke="#160A33" stroke-width="1"/>
+<text x="164.84" y="344.85" transform="rotate(386.25 164.84 344.85)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Foolish</text>
+<path d="M 246.34 362.00 A 316.00 316.00 0 0 1 296.55 296.55 L 387.06 387.06 A 188.00 188.00 0 0 0 357.19 426.00 Z" fill="#a387d4" stroke="#160A33" stroke-width="1.5"/>
+<text x="320.07" y="366.59" transform="rotate(397.50 320.07 366.59)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Small</text>
+<path d="M 107.77 282.00 A 476.00 476.00 0 0 1 142.36 230.23 L 269.30 327.63 A 316.00 316.00 0 0 0 246.34 362.00 Z" fill="#c5b3e3" stroke="#160A33" stroke-width="1"/>
+<text x="190.74" y="299.99" transform="rotate(393.75 190.74 299.99)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Inferior</text>
+<path d="M 142.36 230.23 A 476.00 476.00 0 0 1 183.42 183.42 L 296.55 296.55 A 316.00 316.00 0 0 0 269.30 327.63 Z" fill="#c5b3e3" stroke="#160A33" stroke-width="1"/>
+<text x="222.27" y="258.90" transform="rotate(401.25 222.27 258.90)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Unwanted</text>
+<path d="M 520.00 520.00 L 387.06 387.06 A 188.00 188.00 0 0 1 520.00 332.00 Z" fill="#8A63A8" stroke="#160A33" stroke-width="2"/>
+<text x="473.31" y="407.29" transform="rotate(427.50 473.31 407.29)" font-size="20" font-weight="600" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Disgusted</text>
+<path d="M 296.55 296.55 A 316.00 316.00 0 0 1 362.00 246.34 L 426.00 357.19 A 188.00 188.00 0 0 0 387.06 387.06 Z" fill="#ae93c3" stroke="#160A33" stroke-width="1.5"/>
+<text x="366.59" y="320.07" transform="rotate(412.50 366.59 320.07)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Repelled</text>
+<path d="M 183.42 183.42 A 476.00 476.00 0 0 1 230.23 142.36 L 327.63 269.30 A 316.00 316.00 0 0 0 296.55 296.55 Z" fill="#cbbad9" stroke="#160A33" stroke-width="1"/>
+<text x="258.90" y="222.27" transform="rotate(408.75 258.90 222.27)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Revolted</text>
+<path d="M 230.23 142.36 A 476.00 476.00 0 0 1 282.00 107.77 L 362.00 246.34 A 316.00 316.00 0 0 0 327.63 269.30 Z" fill="#cbbad9" stroke="#160A33" stroke-width="1"/>
+<text x="299.99" y="190.74" transform="rotate(416.25 299.99 190.74)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Sickened</text>
+<path d="M 362.00 246.34 A 316.00 316.00 0 0 1 438.21 214.77 L 471.34 338.41 A 188.00 188.00 0 0 0 426.00 357.19 Z" fill="#ae93c3" stroke="#160A33" stroke-width="1.5"/>
+<text x="423.56" y="287.18" transform="rotate(427.50 423.56 287.18)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Disapproving</text>
+<path d="M 282.00 107.77 A 476.00 476.00 0 0 1 337.84 80.23 L 399.07 228.05 A 316.00 316.00 0 0 0 362.00 246.34 Z" fill="#cbbad9" stroke="#160A33" stroke-width="1"/>
+<text x="344.85" y="164.84" transform="rotate(423.75 344.85 164.84)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Critical</text>
+<path d="M 337.84 80.23 A 476.00 476.00 0 0 1 396.80 60.22 L 438.21 214.77 A 316.00 316.00 0 0 0 399.07 228.05 Z" fill="#cbbad9" stroke="#160A33" stroke-width="1"/>
+<text x="392.71" y="145.02" transform="rotate(431.25 392.71 145.02)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Dismissive</text>
+<path d="M 438.21 214.77 A 316.00 316.00 0 0 1 520.00 204.00 L 520.00 332.00 A 188.00 188.00 0 0 0 471.34 338.41 Z" fill="#ae93c3" stroke="#160A33" stroke-width="1.5"/>
+<text x="487.11" y="270.16" transform="rotate(442.50 487.11 270.16)" font-size="17" font-weight="500" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Withdrawn</text>
+<path d="M 396.80 60.22 A 476.00 476.00 0 0 1 457.87 48.07 L 478.75 206.70 A 316.00 316.00 0 0 0 438.21 214.77 Z" fill="#cbbad9" stroke="#160A33" stroke-width="1"/>
+<text x="442.74" y="131.61" transform="rotate(438.75 442.74 131.61)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Numb</text>
+<path d="M 457.87 48.07 A 476.00 476.00 0 0 1 520.00 44.00 L 520.00 204.00 A 316.00 316.00 0 0 0 478.75 206.70 Z" fill="#cbbad9" stroke="#160A33" stroke-width="1"/>
+<text x="494.10" y="124.85" transform="rotate(446.25 494.10 124.85)" font-size="14" font-weight="400" fill="#160A33" text-anchor="middle" dominant-baseline="central" font-family="Outfit, Segoe UI, sans-serif">Detached</text>
+<circle cx="520" cy="520" r="52" fill="#160A33" stroke="#F3EFF7" stroke-opacity="0.25" stroke-width="1.5"/>
+<text x="520" y="511" text-anchor="middle" font-size="15" fill="#F3EFF7" font-family="Fraunces, Georgia, serif" font-style="italic">the</text>
+<text x="520" y="533" text-anchor="middle" font-size="17" fill="#E8CBA0" font-family="Fraunces, Georgia, serif" font-style="italic">wheel</text>
+<text x="520" y="1024" text-anchor="middle" font-size="13" fill="#F3EFF7" fill-opacity="0.5" font-family="Outfit, Segoe UI, sans-serif">thechampagnemethod.co</text>
+</svg>

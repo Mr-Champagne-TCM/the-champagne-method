@@ -2,27 +2,34 @@ import { useState } from 'react';
 import ShareResults from './ShareResults';
 
 /** Which ring are you on? — emotional granularity, felt not read.
- *  Each moment offers three true-ish words at rising resolution. */
+ *  Every trio is one single family read off the wheel above, at three depths:
+ *  the centre word, then its middle-ring word, then that word's outer-ring word.
+ *  Same arc throughout, so a pick measures resolution and nothing else. */
 const MOMENTS = [
   {
     prompt: 'A friend cancels plans at the last minute.',
-    words: ['Bad', 'Disappointed', 'Dismissed'],
+    // Sad → Disappointed → Let down
+    words: ['Sad', 'Disappointed', 'Let down'],
   },
   {
     prompt: 'A project you care about finally moves forward.',
-    words: ['Good', 'Relieved', 'Vindicated'],
+    // Joyful → Content → Satisfied
+    words: ['Joyful', 'Content', 'Satisfied'],
   },
   {
     prompt: 'Someone talks over you in a conversation that matters.',
-    words: ['Annoyed', 'Frustrated', 'Discounted'],
+    // Angry → Frustrated → Exasperated
+    words: ['Angry', 'Frustrated', 'Exasperated'],
   },
   {
-    prompt: 'An evening alone stretches out in front of you.',
-    words: ['Fine', 'Restless', 'Untethered'],
+    prompt: 'You’re about to speak in front of people whose opinion you value.',
+    // Scared → Insecure → Exposed
+    words: ['Scared', 'Insecure', 'Exposed'],
   },
   {
-    prompt: 'A person you admire compliments your work.',
-    words: ['Happy', 'Proud', 'Seen'],
+    prompt: 'Someone you admire compliments your work.',
+    // Powerful → Proud → Valued
+    words: ['Powerful', 'Proud', 'Valued'],
   },
 ];
 
@@ -47,8 +54,10 @@ export default function QuizRing() {
   return (
     <div>
       <p className="text-[15px] text-brand-paper/80 mb-3">
-        Five moments. For each, the word that you would most <em>genuinely feel</em> &mdash;
-        not the one that reads best. All three are honest answers.
+        Five moments. For each, the word you would most <em>genuinely feel</em> &mdash; not the
+        one that reads best. In every set, all three words come from the same family on the
+        wheel above: the centre word, then one ring out, then one ring further. All three are
+        honest answers &mdash; they differ only in resolution.
       </p>
       {MOMENTS.map((m, i) => (
         <div key={i} className="mb-3 border-t border-brand-gold/10 pt-2.5">
@@ -90,8 +99,8 @@ export default function QuizRing() {
             <em className="text-brand-gold">{ring} ring</em>. {ringLine}
           </p>
           <p className="text-[14px] text-brand-muted mt-2">
-            One invitation: this week, when a feeling arrives, a name one ring finer than
-            the first word that comes. That&rsquo;s the whole ladder.
+            One invitation: when a feeling arrives this week, there may be a name for it one
+            ring finer than the first word that comes. That&rsquo;s the whole ladder.
           </p>
           <ShareResults quiz="Which ring are you on?" summary={summary} />
         </div>

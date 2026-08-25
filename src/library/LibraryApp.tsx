@@ -6,20 +6,23 @@ import QuizRing from './tools/QuizRing';
 import QuizConfidence from './tools/QuizConfidence';
 import Breather from './tools/Breather';
 import ServesMeCheck from './tools/ServesMeCheck';
+import EmotionWheel from './tools/EmotionWheel';
 
-/** Interactive tools, slotted after the concept card that teaches their idea. */
-const TOOLS_AFTER: Record<string, { title: string; node: ReactNode }> = {
-  'The wheel of emotions': { title: 'Which ring are you on?', node: <QuizRing /> },
-  'The three points of ease': { title: 'Where&rsquo;s your ease?', node: <QuizEase /> },
-  'Your nervous system, briefly': { title: 'The 4-7-8 breather', node: <Breather /> },
-  'Serves me / doesn&rsquo;t serve me': {
-    title: 'Serves-Me Belief Check',
-    node: <ServesMeCheck />,
-  },
-  'The confidence continuum': {
-    title: 'Where&rsquo;s your confidence pointed?',
-    node: <QuizConfidence />,
-  },
+/** Interactive tools, slotted after the concept card that teaches their idea.
+ *  The wheel entry carries two: the wheel to look at, then the quiz that reads it. */
+const TOOLS_AFTER: Record<string, { title: string; node: ReactNode }[]> = {
+  'The wheel of emotions': [
+    { title: 'The wheel itself', node: <EmotionWheel /> },
+    { title: 'Which ring are you on?', node: <QuizRing /> },
+  ],
+  'The three points of ease': [{ title: 'Where&rsquo;s your ease?', node: <QuizEase /> }],
+  'Your nervous system, briefly': [{ title: 'The 4-7-8 breather', node: <Breather /> }],
+  'Serves me / doesn&rsquo;t serve me': [
+    { title: 'Serves-Me Belief Check', node: <ServesMeCheck /> },
+  ],
+  'The confidence continuum': [
+    { title: 'Where&rsquo;s your confidence pointed?', node: <QuizConfidence /> },
+  ],
 };
 
 function Nav() {
@@ -129,16 +132,19 @@ export default function LibraryApp() {
                         />
                         <div className="libcard" dangerouslySetInnerHTML={{ __html: card.html }} />
                       </div>
-                      {TOOLS_AFTER[card.title] && (
-                        <div className="border-l-2 border-brand-gold/45 pl-5 mb-7 max-w-[64ch] rounded-r-2xl bg-white/[0.03] py-4 pr-5">
+                      {(TOOLS_AFTER[card.title] ?? []).map((tool) => (
+                        <div
+                          key={tool.title}
+                          className="border-l-2 border-brand-gold/45 pl-5 mb-7 max-w-[64ch] rounded-r-2xl bg-white/[0.03] py-4 pr-5"
+                        >
                           <Tag gold>Try it</Tag>
                           <h3
                             className="font-display font-medium text-xl mb-2"
-                            dangerouslySetInnerHTML={{ __html: TOOLS_AFTER[card.title].title }}
+                            dangerouslySetInnerHTML={{ __html: tool.title }}
                           />
-                          {TOOLS_AFTER[card.title].node}
+                          {tool.node}
                         </div>
-                      )}
+                      ))}
                     </div>
                   ))}
                   {shelf.id === 'agency' && (
