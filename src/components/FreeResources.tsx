@@ -15,16 +15,16 @@ const tools = [
     hidden: true,
   },
   {
-    name: 'NVC in four steps',
-    note: 'Observation, feeling, need, request — with real examples.',
+    name: 'The wheel of emotions',
+    note: 'A map of feeling, in rings — and a ladder: the more precisely you can name it, the more say you get.',
   },
   {
-    name: 'Emotions as navigation',
-    note: 'Reading what a feeling is pointing at, instead of arguing with it or ruling it invalid.',
+    name: 'Serves me / doesn’t serve me',
+    note: 'The measuring stick you build yourself — where right and wrong always belonged to someone else.',
   },
   {
-    name: 'Where your boundaries actually are',
-    note: 'Finding the line before you need to hold it. The words are yours to find — this helps you locate what you’re protecting.',
+    name: 'Three wounds, and what heals each',
+    note: 'Abandonment, betrayal, shame — met with commitment, loyalty, and honor to self.',
   },
 ];
 
