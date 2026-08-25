@@ -7,7 +7,7 @@ overriding the docs-only doctrine for this folder.
 
 | File | What |
 |---|---|
-| [TIMELINE.md](TIMELINE.md) | Who used the name when — Jeremy vs. Kristie Christensen, with sources |
+| [TIMELINE.md](TIMELINE.md) | Our first-use history + state of the federal register |
 | [EVIDENCE.md](EVIDENCE.md) | Jeremy's first-use evidence inventory (what exists, what to collect) |
 | [FILING.md](FILING.md) | How to register with the USPTO, classes, fees, expansion strategy |
 
@@ -15,8 +15,8 @@ overriding the docs-only doctrine for this folder.
 - 2026-08-24: USPTO searched — **nobody has filed "The Champagne Method" in any
   coaching/education class.** All existing "champagne method" records are Class 033
   wine marks. The federal slot is open.
-- Kristie Christensen (kristiechristensen.com) uses "The Champagne Method™" for a
-  branding/authority framework. **™ only — no federal application found.**
+- Third-party use of the name exists in an adjacent field (™ claim only — no federal
+  application found). Competitive research is kept offline by owner decision.
 - Open action: trademark attorney consult, then decide whether to file.
 
 *Research notes, not legal advice.*
