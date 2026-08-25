@@ -102,3 +102,28 @@
     opacity: 0.28;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Library card bodies (React library page renders card prose as raw HTML).
+   --------------------------------------------------------------------------- */
+
+.libcard p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(243, 239, 247, 0.82);
+}
+.libcard p + p { margin-top: 0.7rem; }
+.libcard .close {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  color: #E8CBA0;
+  margin-top: 0.7rem;
+}
+.libcard ol {
+  margin: 0.2rem 0 0.5rem;
+  padding-left: 1.2rem;
+  font-size: 1rem;
+  color: rgba(243, 239, 247, 0.85);
+}
+.libcard ol li { margin-bottom: 0.45rem; line-height: 1.6; }
