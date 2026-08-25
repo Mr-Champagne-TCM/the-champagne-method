@@ -25,8 +25,7 @@
 
 /* ---------------------------------------------------------------------------
    Waves — the v1.3 fixed background, retained deliberately.
-   The 1s / 1.25s / 1.6s timings are INTENTIONAL and owner-confirmed.
-   Do not "fix" them by slowing them down.
+   Slowed to a drift 2026-08-25 by owner direction ("waves are WAY too fast").
    --------------------------------------------------------------------------- */
 
 @keyframes wave-shift {
@@ -45,15 +44,15 @@
 }
 
 .wave-animate {
-  animation: wave-shift 1s ease-in-out infinite;
+  animation: wave-shift 14s ease-in-out infinite;
 }
 
 .wave-animate-alt {
-  animation: wave-shift-alt 1.25s ease-in-out infinite;
+  animation: wave-shift-alt 17.5s ease-in-out infinite;
 }
 
 .wave-animate-slow {
-  animation: wave-shift-slow 1.6s ease-in-out infinite;
+  animation: wave-shift-slow 22.4s ease-in-out infinite;
 }
 
 /* ---------------------------------------------------------------------------

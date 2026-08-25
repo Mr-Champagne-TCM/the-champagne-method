@@ -38,7 +38,7 @@ export default function Footer() {
                 <a
                   key={l.label}
                   href={l.href}
-                  className="block py-1 text-[15px] text-brand-muted hover:text-brand-teal transition-colors"
+                  className="block py-2.5 sm:py-1 text-[15px] text-brand-muted hover:text-brand-teal transition-colors"
                 >
                   {l.label}
                 </a>

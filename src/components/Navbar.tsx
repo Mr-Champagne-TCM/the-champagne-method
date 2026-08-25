@@ -53,7 +53,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-brand-paper p-1"
+          className="md:hidden text-brand-paper p-3 -m-1"
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
         >
