@@ -1,0 +1,5 @@
+# thechampagnemethod.co
+User-agent: *
+Allow: /
+
+Sitemap: https://thechampagnemethod.co/sitemap.xml

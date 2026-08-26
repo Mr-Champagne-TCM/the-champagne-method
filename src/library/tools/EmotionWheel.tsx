@@ -141,10 +141,15 @@ export default function EmotionWheel() {
       </button>
 
       <div className="mt-4 flex flex-wrap gap-2.5">
-        <button onClick={downloadPng} disabled={busy} className={btn}>
+        <button
+          onClick={downloadPng}
+          disabled={busy}
+          data-umami-event="wheel-download"
+          className={btn}
+        >
           {busy ? 'Preparing…' : 'Download as image'}
         </button>
-        <button onClick={share} className={btn}>
+        <button onClick={share} data-umami-event="wheel-share" className={btn}>
           Share it
         </button>
       </div>
@@ -203,10 +208,15 @@ export default function EmotionWheel() {
           </div>
 
           <div className="px-4 py-3 border-t border-brand-gold/15 flex flex-wrap gap-2.5 justify-center">
-            <button onClick={downloadPng} disabled={busy} className={btn}>
+            <button
+          onClick={downloadPng}
+          disabled={busy}
+          data-umami-event="wheel-download"
+          className={btn}
+        >
               {busy ? 'Preparing…' : 'Download as image'}
             </button>
-            <button onClick={share} className={btn}>
+            <button onClick={share} data-umami-event="wheel-share" className={btn}>
               Share it
             </button>
           </div>

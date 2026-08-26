@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { track } from '../../site/track';
 
 /** Option B share block: private by default; sending is the visitor's request.
  *  Same Formspree endpoint as the contact form; _subject separates the streams. */
@@ -21,6 +22,7 @@ export default function ShareResults({ quiz, summary }: { quiz: string; summary:
         body: data,
         headers: { Accept: 'application/json' },
       });
+      if (res.ok) track('quiz-results-sent', { quiz });
       setState(res.ok ? 'sent' : 'error');
     } catch {
       setState('error');

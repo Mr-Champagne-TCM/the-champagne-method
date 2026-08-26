@@ -265,6 +265,7 @@ export default function HumanDesignPlainly() {
         title="See your own"
         buttonHref="/#connect"
         buttonLabel="Get your Human Design interpretation"
+        event="hd-interpretation-click"
         aside={
           <>
             Already have your chart?{' '}

@@ -3,6 +3,7 @@ import { Send, CheckCircle, Loader2 } from 'lucide-react';
 import { Eyebrow, SectionTitle, Lede, Section, PhotoRow } from './ui';
 import approachCandid from '../assets/approach-candid.jpg';
 import BookingCta from './BookingCta';
+import { track } from '../site/track';
 
 /** v1.3 backend, retained. A submit that fails silently is the worst possible
  *  first impression from a coach whose pitch is being reliably present. */
@@ -32,6 +33,7 @@ export default function LetsConnect() {
         headers: { Accept: 'application/json' },
       });
       if (res.ok) {
+        track('contact-form-sent');
         setSubmitted(true);
       } else {
         const json = await res.json().catch(() => ({}));

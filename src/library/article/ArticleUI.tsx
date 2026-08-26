@@ -235,12 +235,15 @@ export function ClosingBox({
   children,
   buttonHref,
   buttonLabel,
+  event,
   aside,
 }: {
   title: string;
   children: ReactNode;
   buttonHref: string;
   buttonLabel: string;
+  /** Conversion name, if this button is worth counting. */
+  event?: string;
   aside?: ReactNode;
 }) {
   return (
@@ -251,6 +254,7 @@ export function ClosingBox({
       <p className="mb-6 text-[18px] leading-relaxed text-brand-paper/85">{children}</p>
       <a
         href={buttonHref}
+        data-umami-event={event}
         className="inline-block rounded-full px-6 py-3.5 font-sans text-[16px] font-semibold bg-brand-gold text-[#1a1040] shadow-lg shadow-brand-gold/20 transition-all duration-200 hover:-translate-y-0.5"
       >
         {buttonLabel}
