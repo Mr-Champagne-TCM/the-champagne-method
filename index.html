@@ -23,6 +23,42 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <!-- Structured data: tells Google that "The Champagne Method" is a coaching
+         practice run by a person, not the sparkling-wine process of the same name.
+         Deliberately carries no address or phone number. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://thechampagnemethod.co/#website",
+            "url": "https://thechampagnemethod.co/",
+            "name": "The Champagne Method",
+            "description": "Coaching in agency, communication, and empathy.",
+            "publisher": { "@id": "https://thechampagnemethod.co/#person" },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://thechampagnemethod.co/#person",
+            "name": "Jeremy Champagne",
+            "url": "https://thechampagnemethod.co/",
+            "jobTitle": "Coach",
+            "description": "Coach working in agency, communication, and empathy.",
+            "knowsAbout": ["Coaching", "Communication", "Empathy", "Personal agency", "Human Design"]
+          },
+          {
+            "@type": "Service",
+            "name": "The Champagne Method coaching",
+            "serviceType": "Personal and professional coaching",
+            "provider": { "@id": "https://thechampagnemethod.co/#person" },
+            "areaServed": "US",
+            "url": "https://thechampagnemethod.co/"
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="antialiased">
     <div id="root"></div>
