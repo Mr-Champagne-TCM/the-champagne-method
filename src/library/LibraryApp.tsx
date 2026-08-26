@@ -8,6 +8,7 @@ import Breather from './tools/Breather';
 import ServesMeCheck from './tools/ServesMeCheck';
 import EmotionWheel from './tools/EmotionWheel';
 import { SITE_VERSION } from '../site/version';
+import { useHashScroll } from '../site/useHashScroll';
 
 /** Interactive tools, slotted after the concept card that teaches their idea.
  *  The wheel entry carries two: the wheel to look at, then the quiz that reads it. */
@@ -77,6 +78,8 @@ function Tag({ children, gold = false }: { children: ReactNode; gold?: boolean }
 }
 
 export default function LibraryApp() {
+  useHashScroll();
+
   return (
     <div className="font-sans text-brand-paper">
       <Background />

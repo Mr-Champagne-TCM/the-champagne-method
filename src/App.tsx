@@ -11,8 +11,11 @@ import MyStory from './components/MyStory';
 import Testimonials from './components/Testimonials';
 import LetsConnect from './components/LetsConnect';
 import Footer from './components/Footer';
+import { useHashScroll } from './site/useHashScroll';
 
 export default function App() {
+  useHashScroll();
+
   return (
     <div className="font-sans text-brand-paper">
       <Background />

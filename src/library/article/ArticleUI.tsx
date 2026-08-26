@@ -1,6 +1,7 @@
 import { useState, useEffect, type ReactNode } from 'react';
 import Background from '../../components/Background';
 import { SITE_VERSION } from '../../site/version';
+import { useHashScroll } from '../../site/useHashScroll';
 
 /** Shared chrome and primitives for the long-form library articles.
  *
@@ -96,6 +97,7 @@ export function ArticlePage({
   footerNote?: ReactNode;
   children: ReactNode;
 }) {
+  useHashScroll();
   return (
     <div className="font-sans text-brand-paper">
       <Background />
