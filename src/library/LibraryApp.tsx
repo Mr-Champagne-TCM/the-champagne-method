@@ -42,21 +42,23 @@ function Nav() {
       }`}
     >
       <div
-        className={`max-w-5xl mx-auto px-6 sm:px-8 flex items-center justify-between transition-all duration-300 ${
+        className={`max-w-5xl mx-auto px-6 sm:px-8 flex items-center justify-between gap-4 transition-all duration-300 ${
           scrolled ? 'py-3' : 'py-5'
         }`}
       >
+        {/* Starts smaller than on desktop: at every common phone width (390/414/430) a
+            26px brand plus the right-hand link overruns the bar and the two collide. */}
         <a
           href="/"
           className={`font-display font-medium tracking-tight whitespace-nowrap text-brand-paper transition-all duration-300 ${
-            scrolled ? 'text-[19px]' : 'text-[26px] sm:text-[30px]'
+            scrolled ? 'text-[18px] sm:text-[19px]' : 'text-[20px] sm:text-[26px] md:text-[30px]'
           }`}
         >
           The <span className="text-brand-gold">Champagne</span> Method
         </a>
         <a
           href="/#connect"
-          className="font-sans text-[15px] text-brand-muted hover:text-brand-teal transition-colors"
+          className="font-sans text-[14px] sm:text-[15px] whitespace-nowrap shrink-0 text-brand-muted hover:text-brand-teal transition-colors"
         >
           Start a conversation
         </a>
