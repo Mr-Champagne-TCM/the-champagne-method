@@ -1,5 +1,9 @@
 # Backlog — captured, not started
 
+> **B-1 is DECIDED and queued.** Options 1 and 2 are approved and option 3 is
+> dropped. Scheduled for after the Human Design site's launch deploy, at
+> Jeremy's call, so the two do not compete for attention.
+
 Things noticed and worth doing, written down before they are decided. Nothing in
 here has been implemented. Each item records what was observed, whose idea each
 option was, and what still needs a call — so that picking one up later does not
@@ -37,10 +41,16 @@ Hero, and the section after it is what nobody knows is there.
 
 2. **Change the full stop to an ellipsis** at the end of "My work is asking the
    questions that open it." — so the line trails rather than closes.
-   *(Jeremy's reason for this one was cut off mid-sentence — "This would" — so
-   it is not recorded here rather than guessed at. Worth asking before building
-   it, because the reason probably decides whether the ellipsis is the right
-   instrument.)*
+
+   **His reasoning, given 2026-08-28 and worth keeping verbatim because it is
+   the thing that justifies the instrument:** "the ellipsis will give the feel
+   that there is more to see elsewhere. Like a process didn't complete and does
+   elsewhere. They may intuitively feel inclined to scroll."
+
+   That is a precise argument and it is why an ellipsis rather than an arrow or
+   a nudge word: it does not instruct anybody to scroll, it leaves a sentence
+   unfinished and lets the reader want the rest. Which is also the only version
+   of this that stays in his voice — the site asks, it does not tell.
 
 3. **Reduce the empty space** between the booking call-to-action and the top of
    the following section, so the next section peeks into view.
@@ -48,13 +58,29 @@ Hero, and the section after it is what nobody knows is there.
    objection, and it is the right one: it would show there is more to scroll to,
    but it would wreck the clean opening view that already works.
 
-**What is not yet decided.** Whether this is one change or a choice between
-three. Options 1 and 2 add a signal without touching the composition; option 3
-changes the composition to become the signal. They are not the same kind of fix
-and probably should not all ship together.
+### Decided — 2026-08-28, Jeremy
 
-**Worth measuring before choosing.** Whether the next section's top edge falls
-below the fold is a function of viewport height, and the two reports came from
-two unknown screens. A quick pass across common phone and laptop heights would
-say whether option 3 is even needed, or whether it already peeks on some
-devices and the problem is narrower than it looks.
+**Do 1 and 2. Drop 3.**
+
+| Option | Call |
+|---|---|
+| 1 · scroll indicator, bottom right | **Do it** |
+| 2 · ellipsis on the Hero line | **Do it** |
+| 3 · close the gap so the next section peeks | **Dropped** |
+
+Option 3 was the one he raised the objection to himself, and dropping it holds
+the line the other two are built to respect: **the opening view does not
+change.** Both approved options add a signal on top of a composition that is
+working. That is a different kind of change from rebuilding the composition to
+be the signal, and it is the reason they can ship together while 3 could not
+have shipped with either.
+
+**When.** After the Human Design site's launch deploy. Not because it is hard,
+but because it is a different site and splitting attention across two live
+deploys is how one of them gets a careless push.
+
+**Still worth doing when it is picked up:** measure whether the next section's
+top edge falls below the fold across common phone and laptop heights. Not to
+reopen option 3 — that is closed — but because it says how strong the indicator
+in option 1 has to be. If the next section already peeks on a laptop and only
+hides on a phone, the indicator's job is narrower than the two reports suggest.
