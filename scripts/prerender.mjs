@@ -36,6 +36,7 @@ const ROUTES = [
   { path: '/library/', sentinel: 'Take the tools' },
   { path: '/library/human-design/', sentinel: 'Human Design is a map of how' },
   { path: '/library/bodygraph/', sentinel: 'wiring diagram, not a verdict' },
+  { path: '/readings/', sentinel: 'Three ways in, and what arrives with each' },
 ];
 
 const CHROME_CANDIDATES = [

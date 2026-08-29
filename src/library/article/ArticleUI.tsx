@@ -90,10 +90,24 @@ function Footer({ note }: { note?: ReactNode }) {
 /** Page shell: the site background, nav, a reading-width column, and the footer. */
 export function ArticlePage({
   crumb,
+  parent = { label: 'Library', href: '/library/' },
+  wide = false,
   footerNote,
   children,
 }: {
   crumb: string;
+  /**
+   * What the breadcrumb hangs off. Defaults to the Library because that is
+   * where every page using this shell lived until the readings page, which is
+   * not library matter -- it describes something for sale.
+   */
+  parent?: { label: string; href: string };
+  /**
+   * Article measure is 64ch, which is right for prose and too narrow for a
+   * page whose evidence is a chart and a document. Opt-in, so nothing that
+   * reads as an article gets wider by accident.
+   */
+  wide?: boolean;
   footerNote?: ReactNode;
   children: ReactNode;
 }) {
@@ -106,13 +120,13 @@ export function ArticlePage({
         <main className="pt-28 sm:pt-32 pb-4">
           <div className="max-w-5xl mx-auto px-6 sm:px-8">
             <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.16em] text-brand-muted/70">
-              <a href="/library/" className="hover:text-brand-teal transition-colors">
-                Library
+              <a href={parent.href} className="hover:text-brand-teal transition-colors">
+                {parent.label}
               </a>
               <span className="mx-2">/</span>
               {crumb}
             </p>
-            <article className="max-w-[64ch]">{children}</article>
+            <article className={wide ? '' : 'max-w-[64ch]'}>{children}</article>
           </div>
         </main>
         <Footer note={footerNote} />
@@ -125,15 +139,19 @@ export function ArticleHeader({
   title,
   standfirst,
   readTime,
+  /** The line above the title. Defaults to the Library, which is where every
+   *  page using this shell lived until one that is not library matter. */
+  eyebrow = 'The Champagne Method · Library',
 }: {
   title: ReactNode;
   standfirst: ReactNode;
   readTime?: string;
+  eyebrow?: string;
 }) {
   return (
     <header className="border-b border-brand-gold/15 pb-9 mb-10">
       <span className="block mb-4 font-sans text-[14px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
-        The Champagne Method &middot; Library
+        {eyebrow}
       </span>
       <h1 className="font-display font-medium tracking-tight leading-[1.08] text-[clamp(2.25rem,6vw,3.4rem)]">
         {title}

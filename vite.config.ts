@@ -60,6 +60,9 @@ export default defineConfig({
         library: resolve(__dirname, 'library/index.html'),
         humanDesign: resolve(__dirname, 'library/human-design/index.html'),
         bodygraph: resolve(__dirname, 'library/bodygraph/index.html'),
+        // What each reading is. Not library matter -- it describes what is for
+        // sale -- but it lives here because this repo publishes for free.
+        readings: resolve(__dirname, 'readings/index.html'),
       },
     },
   },
