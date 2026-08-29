@@ -15,29 +15,81 @@ import { ArticlePage, ArticleHeader, H2, P, TextLink } from './ArticleUI';
  * behaviour belongs on the side that is free to edit.
  *
  * EVERY SAMPLE IS REAL OUTPUT. Not a mock-up, not a screenshot of a design: the
- * bodygraph below is what the engine draws, and the PDF is what the download
- * hands over. Both come from the SAME example already published on the shop --
- * 25 June 1985, Chicago, birth time unknown -- so nobody's chart is on show and
- * the two pages cannot disagree about what an example looks like.
+ * bodygraph is what the engine draws, the PDF is what the download hands over,
+ * and the reading is what the model actually wrote -- all four samples from ONE
+ * chart, so the page cannot contradict itself.
+ *
+ * IT IS NO LONGER THE SHOP'S EXAMPLE, and that is the point. The reading tier
+ * was the only one with no evidence, and a written interpretation cannot be
+ * invented for a page like this -- it names the chart it came from in almost
+ * every paragraph. So the whole page moved to a chart that HAS one.
+ *
+ * WHOSE BIRTH MOMENT IT WAS CANNOT BE STATED, because it was never kept. That
+ * is not a gap in this page, it is the privacy promise demonstrating itself:
+ * the details computed a chart and were discarded, exactly as a buyer's are.
  */
 
 const SHOP = 'https://humandesign.thechampagnemethod.co';
 
 /** The example's own values. Copied from a real engine run, not invented. */
 const EXAMPLE: Array<[string, string]> = [
-  ['Type', 'Manifesting Generator'],
-  ['Strategy', 'Wait to respond, then inform'],
-  ['Authority', 'Sacral'],
+  ['Type', 'Projector'],
+  ['Strategy', 'Wait for the invitation'],
+  ['Authority', 'Self-Projected'],
   ['Profile', '1/3 — Investigator / Martyr'],
-  ['Definition', 'Split'],
-  ['Not-Self Theme', 'Frustration'],
-  ['Signature', 'Satisfaction'],
-  ['Incarnation Cross', 'Right Angle Cross of Service (52/58 | 17/18)'],
-  ['Defined centres', 'Ajna · Throat · G · Sacral · Spleen · Root'],
-  ['Open centres', 'Head · Heart · Solar Plexus'],
+  ['Definition', 'Single'],
+  ['Not-Self Theme', 'Bitterness'],
+  ['Signature', 'Success'],
+  ['Incarnation Cross', 'Right Angle Cross of The Sphinx (13/7 | 1/2)'],
+  ['Defined centres', 'Ajna · Throat · G'],
+  ['Open centres', 'Head · Heart · Sacral · Spleen · Solar Plexus · Root'],
 ];
 
-const CHANNELS = '17-62 (Acceptance) · 10-20 (Awakening) · 2-14 (The Beat) · 18-58 (Judgment)';
+const CHANNELS = '11-56 (Curiosity) · 1-8 (Inspiration)';
+
+/**
+ * Two of the eleven sections, verbatim.
+ *
+ * AN EXCERPT, NOT THE READING. Publishing 1,300 words here would be giving the
+ * product away on the page that sells it. Two sections are enough to show what
+ * the writing is like and that it is genuinely about THIS chart -- "because
+ * your Ajna, Throat, and G centers drive this mechanism" could not have been
+ * written about anybody else.
+ *
+ * Not edited, not tidied, not shortened. If it needed cleaning up before it
+ * could be shown, that would be worth knowing rather than hiding.
+ */
+const READING_SAMPLE: Array<{ heading: string; lede?: string; paragraphs: string[] }> = [
+  {
+    heading: 'Your incarnation cross',
+    paragraphs: [
+      'Carrying the Right Angle Cross of The Sphinx (13/7 | 1/2) places you at the energetic center of direction, listening, and leadership. This cross weaves together the themes of gathering experiences, looking ahead, and establishing new creative foundations. You hold a natural geometry for where humanity is headed, offering a guiding presence that helps others find their footing on the map.',
+    ],
+  },
+  {
+    heading: 'How you decide',
+    lede: 'Speaking your thoughts out loud allows your true direction to emerge naturally through the sound of your voice.',
+    paragraphs: [
+      'Your Self-Projected authority requires you to talk things through with a trusted listener who simply holds space while you process. Because your Ajna, Throat, and G centers drive this mechanism, your inner guidance bypasses mental strategizing and comes straight from your core sense of self. Trusting this sonic feedback loop keeps you aligned with your authentic path.',
+      'When decisions rely on mental pressure from your open head center or emotional waves from your open solar plexus, you might feel rushed to choose prematurely. Your authority relies exclusively on the spontaneous truth that echoes from your voice when you are relaxed and unpressured. Pausing before speaking ensures that your words carry the authentic resonance of your inner guidance.',
+    ],
+  },
+];
+
+/** All eleven, so the two above are visibly a sample and not the whole thing. */
+const ALL_SECTIONS = [
+  'Your incarnation cross',
+  'Your definition',
+  'Your channels',
+  'Your profile lines',
+  'Your energy, and how it starts',
+  'How you decide',
+  'How you meet the world',
+  'What is consistently yours',
+  'What you take in from others',
+  'When it is working, and when it is not',
+  'Things to experiment with',
+];
 
 /**
  * The drawing, fetched and put in the page rather than loaded as an <img>.
@@ -143,7 +195,7 @@ export default function WhatAReadingIs() {
       <ArticleHeader
         eyebrow="The Champagne Method · Human Design readings"
         title="What each reading actually is"
-        standfirst="Three ways in, and what arrives with each. Every sample on this page is real output from the same example chart, not a picture of one."
+        standfirst="Three ways in, and what arrives with each. Every sample on this page is real output from one real chart — the drawing, the document and the writing all came out of the machine exactly as you see them."
       />
 
       <P>
@@ -178,9 +230,9 @@ export default function WhatAReadingIs() {
             </dl>
           </div>
           <NotYours>
-            25 June 1985, Chicago, birth time unknown. A chart cast without a
-            time says so, and the parts that depend on one are marked provisional
-            rather than quietly guessed.
+            a real chart, and we cannot tell you whose birth moment made it —
+            those details computed it and were thrown away in the same breath,
+            which is exactly what will happen to yours.
           </NotYours>
         </Tier>
 
@@ -199,7 +251,7 @@ export default function WhatAReadingIs() {
             <SampleBodygraph />
           </div>
           <NotYours>
-            the same example, drawn. Its channels are {CHANNELS}.
+            the same chart, drawn. Its channels are {CHANNELS}.
           </NotYours>
           <p className="mt-5 text-[16px] leading-relaxed text-brand-paper/85">
             And the document that comes with it —{' '}
@@ -223,10 +275,52 @@ export default function WhatAReadingIs() {
           ]}
         >
           <p className="mt-6 max-w-[62ch] text-[16px] leading-relaxed text-brand-muted">
-            Every paragraph names the feature of your chart it rests on — “because
-            your Sacral centre is defined…”, “because your channel 10-20 joins…” —
-            so nothing in it could have been written about somebody else.
+            Every paragraph names the feature of your chart it rests on, so
+            nothing in it could have been written about somebody else. Two of the
+            eleven sections from the same chart as everything else on this page,
+            word for word:
           </p>
+
+          <div className="mt-6 space-y-7 rounded-2xl border border-brand-gold/25 bg-white/[0.04] p-5 sm:p-7">
+            {READING_SAMPLE.map((s) => (
+              <section key={s.heading}>
+                <h3 className="font-sans text-[13px] uppercase tracking-[0.14em] text-brand-gold/90">
+                  {s.heading}
+                </h3>
+                {s.lede && (
+                  <p className="mt-2 max-w-[62ch] font-display text-[18px] italic leading-relaxed text-brand-paper">
+                    {s.lede}
+                  </p>
+                )}
+                {s.paragraphs.map((para) => (
+                  <p
+                    key={para.slice(0, 40)}
+                    className="mt-3 max-w-[62ch] text-[16px] leading-relaxed text-brand-paper/85"
+                  >
+                    {para}
+                  </p>
+                ))}
+              </section>
+            ))}
+          </div>
+          <NotYours>
+            an excerpt. The full reading has all eleven sections, around 1,200
+            words, and is written to one chart only.
+          </NotYours>
+
+          <p className="mt-7 max-w-[62ch] text-[16px] leading-relaxed text-brand-paper/85">
+            The other nine, so you can see the shape of the whole thing:
+          </p>
+          <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
+            {ALL_SECTIONS.map((h) => (
+              <li
+                key={h}
+                className="rounded-full border border-brand-gold/20 px-3 py-1 text-[14px] text-brand-muted"
+              >
+                {h}
+              </li>
+            ))}
+          </ul>
         </Tier>
       </div>
 
