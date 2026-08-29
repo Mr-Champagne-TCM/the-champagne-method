@@ -27,8 +27,25 @@ export default function Hero() {
           and suddenly the thing that felt immovable has a door in it.
         </p>
 
+        {/*
+          THE LINE TRAILS RATHER THAN CLOSES (B-1, option 2).
+
+          Two people told Jeremy on the same day that the opening screen reads
+          as the whole site. Nothing is confusing about it -- it is clean and it
+          works -- they simply thought it was finished.
+
+          His reasoning for an ellipsis over an arrow or a nudge word, kept
+          because it is the argument that justifies the instrument: "the
+          ellipsis will give the feel that there is more to see elsewhere. Like
+          a process didn't complete and does elsewhere. They may intuitively
+          feel inclined to scroll."
+
+          Which is also the only version of this that stays in his voice. It
+          does not instruct anybody to scroll; it leaves a sentence unfinished
+          and lets the reader want the rest. The site asks, it does not tell.
+        */}
         <p className="mt-4 font-display italic text-xl sm:text-[1.375rem] text-brand-gold">
-          My work is asking the questions that open it.
+          My work is asking the questions that open it&hellip;
         </p>
 
         <div className="mt-9 flex flex-wrap gap-3.5">

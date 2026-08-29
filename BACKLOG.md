@@ -1,8 +1,9 @@
 # Backlog — captured, not started
 
-> **B-1 is DECIDED and queued.** Options 1 and 2 are approved and option 3 is
-> dropped. Scheduled for after the Human Design site's launch deploy, at
-> Jeremy's call, so the two do not compete for attention.
+> **B-1 is DONE, 2026-08-29.** Options 1 and 2 shipped; option 3 stays dropped.
+> Kept below rather than deleted, because the reasoning for the ellipsis is the
+> part worth not re-deriving. See `src/components/ScrollCue.tsx` and the note in
+> `src/components/Hero.tsx`.
 
 Things noticed and worth doing, written down before they are decided. Nothing in
 here has been implemented. Each item records what was observed, whose idea each

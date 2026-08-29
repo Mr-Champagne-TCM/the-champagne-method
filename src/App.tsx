@@ -1,6 +1,7 @@
 import Background from './components/Background';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ScrollCue from './components/ScrollCue';
 import Premise from './components/Premise';
 import WhoIWorkWith from './components/WhoIWorkWith';
 import Themes from './components/Themes';
@@ -34,6 +35,7 @@ export default function App() {
           <LetsConnect />
         </main>
         <Footer />
+        <ScrollCue />
       </div>
     </div>
   );

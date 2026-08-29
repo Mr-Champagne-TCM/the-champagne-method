@@ -3,6 +3,21 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      /*
+        The scroll cue's drift (B-1). Small on purpose: it has to read as
+        "there is more this way" from the corner of an eye, without competing
+        with anything the reader is actually looking at. Applied through
+        `motion-safe:` so it is simply still for anyone who asked for that.
+      */
+      keyframes: {
+        scrollcue: {
+          '0%, 100%': { transform: 'translateY(0)', opacity: '0.75' },
+          '50%': { transform: 'translateY(5px)', opacity: '1' },
+        },
+      },
+      animation: {
+        scrollcue: 'scrollcue 2.4s ease-in-out infinite',
+      },
       fontFamily: {
         // v2.0: Fraunces carries the display voice, Outfit the body.
         sans: ['Outfit', 'system-ui', 'sans-serif'],
