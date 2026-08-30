@@ -63,7 +63,12 @@ export default defineConfig({
         // What each reading is. Not library matter -- it describes what is for
         // sale -- but it lives here because this repo publishes for free.
         readings: resolve(__dirname, 'readings/index.html'),
-        privacy: resolve(__dirname, 'privacy/index.html'),
+        // The privacy policy describes the READINGS -- what a purchase collects
+        // and what becomes of it. Nothing on it is about the coaching, so it
+        // lives under /readings/ rather than at the root, where it read as a
+        // policy for the whole practice. /privacy/ is a static redirect now
+        // (public/privacy/), so the URL already given to Stripe still works.
+        readingsPrivacy: resolve(__dirname, 'readings/privacy/index.html'),
       },
     },
   },

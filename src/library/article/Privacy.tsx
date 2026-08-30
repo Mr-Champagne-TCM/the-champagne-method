@@ -15,6 +15,13 @@ import { ArticlePage, ArticleHeader, H2, H3, P, Callout, Bullets, TextLink } fro
  * will be edited for its wording rather than its behaviour belongs on the side
  * that is free to edit. It is also the site Stripe has on file.
  *
+ * IT SITS UNDER /readings/, NOT AT THE ROOT. Every fact on this page is about
+ * buying a Human Design reading -- the birth details, the chart, the year the
+ * reading is kept. None of it describes the coaching, which collects nothing
+ * and sells nothing through this site. At /privacy/ it read as a policy for the
+ * whole practice and promised things about coaching that were never checked.
+ * /privacy/ is kept alive as a redirect (public/privacy/index.html).
+ *
  * REVIEWED BY JEREMY, 2026-08-29, with five corrections that are all in here:
  * why six days is six days, that an expired link self-serves, an honest
  * security section rather than an encryption claim we cannot make, a real rule
@@ -60,11 +67,11 @@ function Table({ head, rows }: { head: string[]; rows: string[][] }) {
 
 export default function Privacy() {
   return (
-    <ArticlePage crumb="Privacy" parent={{ label: 'The Champagne Method', href: '/' }}>
+    <ArticlePage crumb="Privacy" parent={{ label: 'Readings', href: '/readings/' }}>
       <ArticleHeader
-        eyebrow="The Champagne Method"
+        eyebrow="Human Design readings"
         title="Privacy"
-        standfirst="What is collected when you buy a reading, what is kept, for how long, and who else ever sees it."
+        standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
       <p className="text-[15px] text-brand-muted">Last updated 29 August 2026.</p>
 

@@ -10,22 +10,71 @@ import EmotionWheel from './tools/EmotionWheel';
 import { SITE_VERSION } from '../site/version';
 import { useHashScroll } from '../site/useHashScroll';
 
-/** Interactive tools, slotted after the concept card that teaches their idea.
- *  The wheel entry carries two: the wheel to look at, then the quiz that reads it. */
-const TOOLS_AFTER: Record<string, { title: string; node: ReactNode }[]> = {
-  'The wheel of emotions': [
-    { title: 'The wheel itself', node: <EmotionWheel /> },
-    { title: 'Which ring are you on?', node: <QuizRing /> },
-  ],
-  'The three points of ease': [{ title: 'Where&rsquo;s your ease?', node: <QuizEase /> }],
-  'Your nervous system, briefly': [{ title: 'The 4-7-8 breather', node: <Breather /> }],
-  'Serves me / doesn&rsquo;t serve me': [
-    { title: 'Serves-Me Belief Check', node: <ServesMeCheck /> },
-  ],
-  'The confidence continuum': [
-    { title: 'Where&rsquo;s your confidence pointed?', node: <QuizConfidence /> },
-  ],
-};
+/**
+ * The interactive pieces, in one list, in the order they appear down the page.
+ *
+ * WHY ONE LIST AND NOT TWO. These are named in two places now -- the grid at the
+ * top that gets somebody to them, and the block further down where they actually
+ * live. Two hand-kept lists is how a link at the top eventually points at a
+ * heading that has been renamed, and a reader lands somewhere that does not say
+ * what they clicked. `after` is the concept card each one is slotted behind, so
+ * the reading order we chose is still decided here and only here.
+ *
+ * `blurb` exists only for the grid. Down the page the tool is already in front
+ * of you and does not need describing.
+ */
+type Tool = { id: string; title: string; after: string; blurb: string; node: ReactNode };
+
+const TOOLS: Tool[] = [
+  {
+    id: 'wheel',
+    title: 'The wheel itself',
+    after: 'The wheel of emotions',
+    blurb: 'Open it full-screen, zoom in, and take it with you.',
+    node: <EmotionWheel />,
+  },
+  {
+    id: 'ring',
+    title: 'Which ring are you on?',
+    after: 'The wheel of emotions',
+    blurb: 'Six picks. Reads how finely you name what you feel.',
+    node: <QuizRing />,
+  },
+  {
+    id: 'ease',
+    title: 'Where&rsquo;s your ease?',
+    after: 'The three points of ease',
+    blurb: 'Two areas of your life, placed. A location, not a grade.',
+    node: <QuizEase />,
+  },
+  {
+    id: 'breather',
+    title: 'The 4-7-8 breather',
+    after: 'Your nervous system, briefly',
+    blurb: 'In for 4, hold for 7, out for 8. One round is already a win.',
+    node: <Breather />,
+  },
+  {
+    id: 'serves-me',
+    title: 'Serves-Me Belief Check',
+    after: 'Serves me / doesn&rsquo;t serve me',
+    blurb: 'Bring a belief. Four questions take it apart.',
+    node: <ServesMeCheck />,
+  },
+  {
+    id: 'confidence',
+    title: 'Where&rsquo;s your confidence pointed?',
+    after: 'The confidence continuum',
+    blurb: 'Every statement is confident. Only the direction is in question.',
+    node: <QuizConfidence />,
+  },
+];
+
+/** Grouped by the card they sit behind, derived rather than written out again. */
+const TOOLS_AFTER: Record<string, Tool[]> = TOOLS.reduce((acc, t) => {
+  (acc[t.after] ??= []).push(t);
+  return acc;
+}, {} as Record<string, Tool[]>);
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -119,6 +168,61 @@ export default function LibraryApp() {
             </div>
           </section>
 
+
+          {/*
+            THE INTERACTIVE PIECES, BROUGHT FORWARD.
+            
+            They were only reachable by reading the whole page, which meant most
+            of them were never reached at all. Nothing has moved: each one still
+            sits behind the concept card that teaches it, because that is the
+            order that makes them make sense. This is a way in, not a reordering.
+          */}
+          <section id="try" className="scroll-mt-24 pb-4">
+            <div className="max-w-5xl mx-auto px-6 sm:px-8">
+              <div className="rounded-3xl border border-brand-gold/25 bg-white/[0.035] p-6 sm:p-8">
+                <span className="block mb-3 font-sans text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-teal">
+                  Try one
+                </span>
+                <p className="text-brand-paper/85 max-w-[58ch] mb-6">
+                  Six things on this page you can actually do rather than read. They take a
+                  minute or two each, nothing is saved anywhere, and you can start with
+                  whichever one you like the sound of.
+                </p>
+                <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
+                  {TOOLS.map((t) => (
+                    <li key={t.id}>
+                      <a
+                        href={`#tool-${t.id}`}
+                        /* INSTANT, NOT SMOOTH. <html> carries scroll-behavior:
+                           smooth, and these jumps are long -- the last tool sits
+                           around thirteen thousand pixels down. Animated, that is
+                           a several-second ride past everything on the way, which
+                           is the opposite of what a "try one" button promises.
+                           Same call, and same reason, as useHashScroll. */
+                        onClick={(e) => {
+                          const el = document.getElementById(`tool-${t.id}`);
+                          if (!el) return;
+                          e.preventDefault();
+                          el.scrollIntoView({ block: 'start', behavior: 'instant' });
+                          history.replaceState(null, '', `#tool-${t.id}`);
+                        }}
+                        className="group flex h-full flex-col rounded-2xl border border-brand-gold/20 bg-black/20 px-4 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-teal/60 hover:bg-black/30"
+                      >
+                        <span
+                          className="font-display font-medium text-[17px] text-brand-paper group-hover:text-brand-teal transition-colors"
+                          dangerouslySetInnerHTML={{ __html: t.title }}
+                        />
+                        <span className="mt-1.5 text-[14px] leading-relaxed text-brand-muted">
+                          {t.blurb}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+
           {shelves.map((shelf) => (
             <section key={shelf.id} id={shelf.id} className="py-8">
               <div className="max-w-5xl mx-auto px-6 sm:px-8">
@@ -140,8 +244,11 @@ export default function LibraryApp() {
                       </div>
                       {(TOOLS_AFTER[card.title] ?? []).map((tool) => (
                         <div
-                          key={tool.title}
-                          className="border-l-2 border-brand-gold/45 pl-5 mb-7 max-w-[64ch] rounded-r-2xl bg-white/[0.03] py-4 pr-5"
+                          key={tool.id}
+                          id={`tool-${tool.id}`}
+                          /* scroll-mt clears the fixed nav; without it an anchor
+                             lands with the heading tucked underneath the bar. */
+                          className="scroll-mt-24 border-l-2 border-brand-gold/45 pl-5 mb-7 max-w-[64ch] rounded-r-2xl bg-white/[0.03] py-4 pr-5"
                         >
                           <Tag gold>Try it</Tag>
                           <h3
