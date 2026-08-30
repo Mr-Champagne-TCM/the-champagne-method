@@ -55,7 +55,7 @@ export const TOOLS: Tool[] = [
     id: 'ring',
     title: 'Which ring are you on?',
     kind: 'Quiz',
-    blurb: 'Six picks. Shows how finely you name what you feel.',
+    blurb: 'Five picks. Shows how finely you name what you feel.',
     after: 'The wheel of emotions',
     cta: 'Take the ring quiz',
     node: <QuizRing />,
