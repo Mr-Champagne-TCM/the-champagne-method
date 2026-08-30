@@ -69,6 +69,10 @@ export default defineConfig({
         // policy for the whole practice. /privacy/ is a static redirect now
         // (public/privacy/), so the URL already given to Stripe still works.
         readingsPrivacy: resolve(__dirname, 'readings/privacy/index.html'),
+        // The six interactive pieces, moved out of the library. Six working
+        // tools stacked between the shelves made the library a page to scroll
+        // past rather than read; here they have room and it gets its shape back.
+        tools: resolve(__dirname, 'tools/index.html'),
       },
     },
   },

@@ -64,9 +64,23 @@ export default function FreeResources() {
         </Pull>
       </div>
 
-      <Cta href="/library/" ghost>
-        Open the full library &rarr;
-      </Cta>
+      {/*
+        TWO DOORS, AND THE DOING IS THE EASIER ONE.
+
+        "Try one now" was the first wording and it was ambiguous -- try what?
+        This says the count and the kinds instead, because three of the six are
+        quizzes and the other three are a wheel, a pacer and a worksheet. One
+        word for all six would be shorter and wrong about half of them.
+
+        Solid rather than ghost: reading the library is the larger ask, and the
+        button that costs a minute should not look like the heavier one.
+      */}
+      <div className="flex flex-wrap gap-3">
+        <Cta href="/library/" ghost>
+          Open the full library &rarr;
+        </Cta>
+        <Cta href="/tools/">See the quizzes and tools &rarr;</Cta>
+      </div>
     </Section>
   );
 }

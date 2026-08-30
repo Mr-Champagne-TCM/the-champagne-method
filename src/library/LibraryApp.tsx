@@ -1,80 +1,9 @@
 import { useState, useEffect, type ReactNode } from 'react';
 import Background from '../components/Background';
 import { shelves } from './content';
-import QuizEase from './tools/QuizEase';
-import QuizRing from './tools/QuizRing';
-import QuizConfidence from './tools/QuizConfidence';
-import Breather from './tools/Breather';
-import ServesMeCheck from './tools/ServesMeCheck';
-import EmotionWheel from './tools/EmotionWheel';
+import { TOOLS, TOOLS_BY_CARD, toolHref } from '../tools/toolList';
 import { SITE_VERSION } from '../site/version';
 import { useHashScroll } from '../site/useHashScroll';
-
-/**
- * The interactive pieces, in one list, in the order they appear down the page.
- *
- * WHY ONE LIST AND NOT TWO. These are named in two places now -- the grid at the
- * top that gets somebody to them, and the block further down where they actually
- * live. Two hand-kept lists is how a link at the top eventually points at a
- * heading that has been renamed, and a reader lands somewhere that does not say
- * what they clicked. `after` is the concept card each one is slotted behind, so
- * the reading order we chose is still decided here and only here.
- *
- * `blurb` exists only for the grid. Down the page the tool is already in front
- * of you and does not need describing.
- */
-type Tool = { id: string; title: string; after: string; blurb: string; node: ReactNode };
-
-const TOOLS: Tool[] = [
-  {
-    id: 'wheel',
-    title: 'The wheel itself',
-    after: 'The wheel of emotions',
-    blurb: 'Open it full-screen, zoom in, and take it with you.',
-    node: <EmotionWheel />,
-  },
-  {
-    id: 'ring',
-    title: 'Which ring are you on?',
-    after: 'The wheel of emotions',
-    blurb: 'Six picks. Reads how finely you name what you feel.',
-    node: <QuizRing />,
-  },
-  {
-    id: 'ease',
-    title: 'Where&rsquo;s your ease?',
-    after: 'The three points of ease',
-    blurb: 'Two areas of your life, placed. A location, not a grade.',
-    node: <QuizEase />,
-  },
-  {
-    id: 'breather',
-    title: 'The 4-7-8 breather',
-    after: 'Your nervous system, briefly',
-    blurb: 'In for 4, hold for 7, out for 8. One round is already a win.',
-    node: <Breather />,
-  },
-  {
-    id: 'serves-me',
-    title: 'Serves-Me Belief Check',
-    after: 'Serves me / doesn&rsquo;t serve me',
-    blurb: 'Bring a belief. Four questions take it apart.',
-    node: <ServesMeCheck />,
-  },
-  {
-    id: 'confidence',
-    title: 'Where&rsquo;s your confidence pointed?',
-    after: 'The confidence continuum',
-    blurb: 'Every statement is confident. Only the direction is in question.',
-    node: <QuizConfidence />,
-  },
-];
-
-/** Grouped by the card they sit behind, derived rather than written out again. */
-const TOOLS_AFTER: Record<string, Tool[]> = TOOLS.reduce((acc, t) => {
-  (acc[t.after] ??= []).push(t);
-  return acc;
-}, {} as Record<string, Tool[]>);
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -137,23 +66,30 @@ export default function LibraryApp() {
       <div className="relative z-10">
         <Nav />
         <main>
-          <section className="pt-32 pb-8">
+          {/*
+            A SHORTER HERO, so the way in is visible without scrolling.
+
+            The headline was set at a size that pushed everything under it off
+            a laptop screen, and what got pushed off was the only part of this
+            page somebody can act on immediately.
+
+            THE "keeps everything on your screen, always" LINE IS GONE, and not
+            only for room: the interactive pieces live on /tools/ now, so
+            opening one leaves this page. The sentence had become untrue.
+          */}
+          <section className="pt-28 pb-2">
             <div className="max-w-5xl mx-auto px-6 sm:px-8">
-              <span className="block mb-4 font-sans text-[15px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
+              <span className="block mb-3 font-sans text-[15px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
                 The Library
               </span>
-              <h1 className="font-display font-medium tracking-tight leading-[1.1] text-[clamp(2.375rem,6.4vw,3.75rem)]">
+              <h1 className="font-display font-medium tracking-tight leading-[1.1] text-[clamp(2rem,4.6vw,2.875rem)]">
                 Take the tools. They&rsquo;re yours.
               </h1>
-              <p className="mt-4 max-w-[60ch] text-[clamp(1.125rem,2vw,1.3125rem)] leading-relaxed text-brand-paper/90">
+              <p className="mt-3 max-w-[62ch] text-[clamp(1.0625rem,1.8vw,1.1875rem)] leading-relaxed text-brand-paper/90">
                 Everything here is free. Plenty of people get real distance with these alone,
                 and I&rsquo;d rather you have them than not.
               </p>
-              <p className="mt-2 text-brand-muted text-[15px]">
-                This grows. New pieces arrive as they&rsquo;re written &mdash; and the
-                interactive ones keep everything on your screen, always.
-              </p>
-              <ul className="flex flex-wrap gap-2.5 mt-6 list-none p-0">
+              <ul className="flex flex-wrap gap-2.5 mt-5 list-none p-0">
                 {shelves.map((s) => (
                   <li key={s.id}>
                     <a
@@ -170,12 +106,17 @@ export default function LibraryApp() {
 
 
           {/*
-            THE INTERACTIVE PIECES, BROUGHT FORWARD.
-            
-            They were only reachable by reading the whole page, which meant most
-            of them were never reached at all. Nothing has moved: each one still
-            sits behind the concept card that teaches it, because that is the
-            order that makes them make sense. This is a way in, not a reordering.
+            THE TOOLS LIVE ON THEIR OWN PAGE NOW.
+
+            Six working tools stacked between the shelves made this a page to
+            scroll past rather than read, and most of them were never reached
+            anyway. This panel is the pointer, and each section below still
+            carries a button to the exact one that used to sit there.
+
+            NAMES ONLY, NO BLURBS. Each tool is described twice on the way to
+            being used -- once on /tools/ and once by the button in its own
+            section -- so a third description here would be the same six
+            sentences a reader has to get past to reach the writing.
           */}
           <section id="try" className="scroll-mt-24 pb-4">
             <div className="max-w-5xl mx-auto px-6 sm:px-8">
@@ -183,42 +124,29 @@ export default function LibraryApp() {
                 <span className="block mb-3 font-sans text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-teal">
                   Try one
                 </span>
-                <p className="text-brand-paper/85 max-w-[58ch] mb-6">
-                  Six things on this page you can actually do rather than read. They take a
-                  minute or two each, nothing is saved anywhere, and you can start with
-                  whichever one you like the sound of.
+                <p className="text-brand-paper/85 max-w-[60ch] mb-5">
+                  Three short quizzes, a breathing pacer, the emotion wheel, and a belief
+                  worksheet &mdash; a minute or two each, and none of them asks for your email.
+                  They have their own page now, and each one is linked again below beside the
+                  piece that explains it.
                 </p>
-                <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
+                <ul className="flex flex-wrap gap-2.5 list-none p-0 m-0 mb-6">
                   {TOOLS.map((t) => (
                     <li key={t.id}>
                       <a
-                        href={`#tool-${t.id}`}
-                        /* INSTANT, NOT SMOOTH. <html> carries scroll-behavior:
-                           smooth, and these jumps are long -- the last tool sits
-                           around thirteen thousand pixels down. Animated, that is
-                           a several-second ride past everything on the way, which
-                           is the opposite of what a "try one" button promises.
-                           Same call, and same reason, as useHashScroll. */
-                        onClick={(e) => {
-                          const el = document.getElementById(`tool-${t.id}`);
-                          if (!el) return;
-                          e.preventDefault();
-                          el.scrollIntoView({ block: 'start', behavior: 'instant' });
-                          history.replaceState(null, '', `#tool-${t.id}`);
-                        }}
-                        className="group flex h-full flex-col rounded-2xl border border-brand-gold/20 bg-black/20 px-4 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-teal/60 hover:bg-black/30"
-                      >
-                        <span
-                          className="font-display font-medium text-[17px] text-brand-paper group-hover:text-brand-teal transition-colors"
-                          dangerouslySetInnerHTML={{ __html: t.title }}
-                        />
-                        <span className="mt-1.5 text-[14px] leading-relaxed text-brand-muted">
-                          {t.blurb}
-                        </span>
-                      </a>
+                        href={toolHref(t.id)}
+                        className="inline-block rounded-full px-4 py-2 text-[14px] border border-brand-gold/30 text-brand-paper hover:border-brand-teal hover:text-brand-teal transition-colors"
+                        dangerouslySetInnerHTML={{ __html: t.title }}
+                      />
                     </li>
                   ))}
                 </ul>
+                <a
+                  href="/tools/"
+                  className="inline-block rounded-full px-6 py-3 font-sans text-[15px] font-semibold bg-brand-teal text-[#0d1b1a] shadow-lg shadow-brand-teal/25 transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  Open all six &rarr;
+                </a>
               </div>
             </div>
           </section>
@@ -242,22 +170,29 @@ export default function LibraryApp() {
                         />
                         <div className="libcard" dangerouslySetInnerHTML={{ __html: card.html }} />
                       </div>
-                      {(TOOLS_AFTER[card.title] ?? []).map((tool) => (
-                        <div
-                          key={tool.id}
-                          id={`tool-${tool.id}`}
-                          /* scroll-mt clears the fixed nav; without it an anchor
-                             lands with the heading tucked underneath the bar. */
-                          className="scroll-mt-24 border-l-2 border-brand-gold/45 pl-5 mb-7 max-w-[64ch] rounded-r-2xl bg-white/[0.03] py-4 pr-5"
-                        >
-                          <Tag gold>Try it</Tag>
-                          <h3
-                            className="font-display font-medium text-xl mb-2"
-                            dangerouslySetInnerHTML={{ __html: tool.title }}
-                          />
-                          {tool.node}
+                      {/*
+                        THE BUTTON SAYS WHAT WILL HAPPEN, not "Try it".
+
+                        A reader hits this mid-paragraph about something else,
+                        so a generic label asks them to guess what is on the
+                        other side. Each one is worded for the single tool that
+                        used to sit in this exact spot -- the idea and the doing
+                        are still one click apart, they are just not stacked on
+                        top of each other any more.
+                      */}
+                      {(TOOLS_BY_CARD[card.title] ?? []).length > 0 && (
+                        <div className="flex flex-wrap gap-2.5 mb-8 -mt-1 pl-5">
+                          {(TOOLS_BY_CARD[card.title] ?? []).map((tool) => (
+                            <a
+                              key={tool.id}
+                              href={toolHref(tool.id)}
+                              className="inline-block rounded-full px-4 py-2.5 font-sans text-[15px] font-semibold border border-brand-teal/50 text-brand-teal transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-teal hover:text-[#0d1b1a]"
+                            >
+                              {tool.cta} &rarr;
+                            </a>
+                          ))}
                         </div>
-                      ))}
+                      )}
                     </div>
                   ))}
                   {shelf.id === 'agency' && (
