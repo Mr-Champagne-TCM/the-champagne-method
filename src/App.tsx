@@ -8,6 +8,7 @@ import Themes from './components/Themes';
 import Method from './components/Method';
 import HowItAdapts from './components/HowItAdapts';
 import FreeResources from './components/FreeResources';
+import Readings from './components/Readings';
 import MyStory from './components/MyStory';
 import Testimonials from './components/Testimonials';
 import LetsConnect from './components/LetsConnect';
@@ -30,6 +31,7 @@ export default function App() {
           <Method />
           <HowItAdapts />
           <FreeResources />
+          <Readings />
           <MyStory />
           <Testimonials />
           <LetsConnect />

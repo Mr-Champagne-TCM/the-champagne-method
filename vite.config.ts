@@ -63,6 +63,7 @@ export default defineConfig({
         // What each reading is. Not library matter -- it describes what is for
         // sale -- but it lives here because this repo publishes for free.
         readings: resolve(__dirname, 'readings/index.html'),
+        privacy: resolve(__dirname, 'privacy/index.html'),
       },
     },
   },

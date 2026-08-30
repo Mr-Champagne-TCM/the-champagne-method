@@ -37,6 +37,7 @@ const ROUTES = [
   { path: '/library/human-design/', sentinel: 'Human Design is a map of how' },
   { path: '/library/bodygraph/', sentinel: 'wiring diagram, not a verdict' },
   { path: '/readings/', sentinel: 'Three ways in, and what arrives with each' },
+  { path: '/privacy/', sentinel: 'used to work out your chart and are then discarded' },
 ];
 
 const CHROME_CANDIDATES = [
