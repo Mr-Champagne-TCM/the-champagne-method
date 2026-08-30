@@ -73,7 +73,7 @@ export default function Privacy() {
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated 29 August 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated 30 August 2026.</p>
 
       <Callout>
         The birth details you type are used to work out your chart and are then discarded.
@@ -117,9 +117,11 @@ export default function Privacy() {
       />
 
       <Callout>
-        There are no cookies, no trackers and no analytics on this site. Nothing follows you
-        here from anywhere else, and nothing follows you away. The only thing kept in your
-        browser is a short-lived token proving you paid, and it disappears when you close the tab.
+        The shop has no cookies, no trackers and no analytics at all. These library pages count
+        visits with Umami, which sets no cookie, records no personal data, and cannot follow you
+        to another site &mdash; it counts that a page was read, not who read it. Nothing follows
+        you here from anywhere else. The only thing kept in your browser is a short-lived token
+        proving you paid, and it disappears when you close the tab.
       </Callout>
 
       <H2>What is kept, and for how long</H2>

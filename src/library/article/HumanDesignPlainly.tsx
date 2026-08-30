@@ -263,7 +263,12 @@ export default function HumanDesignPlainly() {
 
       <ClosingBox
         title="See your own"
-        buttonHref="/#connect"
+        /* THIS USED TO POINT AT /#connect, THE FREE COACHING FORM.
+           The label promises an interpretation and "a PDF you keep" -- which is
+           the chart tier. So the one page where somebody has just learned what
+           Human Design is, and might want theirs, sent them to a contact form
+           for something else entirely. */
+        buttonHref="https://humandesign.thechampagnemethod.co"
         buttonLabel="Get your Human Design interpretation"
         event="hd-interpretation-click"
         aside={
