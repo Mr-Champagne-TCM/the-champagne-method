@@ -51,27 +51,41 @@ export default function HumanDesignPlainly() {
       <H2>The part most people get backwards</H2>
       <P>
         Every chart has parts that are <strong className="text-brand-paper">defined</strong> and
-        parts that are <strong className="text-brand-paper">open</strong>. The instinct is to
-        read defined as good and open as missing. That is the wrong way round, and it is the
-        single most useful thing on this page.
+        parts that are not. The instinct is to read defined as good and the rest as missing.
+        That is the wrong way round, and it is the single most useful thing on this page.
+      </P>
+      <P>
+        The parts that are not defined come in{' '}
+        <strong className="text-brand-paper">two kinds</strong>, and they do not behave the
+        same way. Most explanations of Human Design collapse them into one word. The
+        difference is worth the extra minute.
       </P>
 
-      <Cards>
+      <CardStack>
         <Card title="Defined">
           Consistent. It runs the same way on a good day and a bad one. Reliable, and it is what
           you can be counted on for &mdash; including by yourself.
         </Card>
-        <Card title="Open">
-          Variable. You take in and amplify whatever is around you here. Not absent &mdash;{' '}
+        <Card title="Undefined">
+          Variable, but with a fixed way in. Something of yours reaches this part without
+          completing it, so you do not run it under your own power &mdash; yet it always
+          arrives through the same door, which is why particular people and particular rooms
+          switch it on and others never do. Not absent &mdash;{' '}
           <em className="text-brand-paper">borrowed</em>, and often more strongly felt than the
           person it came from.
         </Card>
-      </Cards>
+        <Card title="Open">
+          Variable, with no fixed way in. Nothing of yours reaches here at all, so nothing of
+          your own is mixed into what you take on. It is the most changeable part of a chart,
+          the hardest to call yours &mdash; and the most accurate instrument you have for
+          reading a room, because there is nothing of you in the way.
+        </Card>
+      </CardStack>
 
       <P>
         <span className="block mt-6" />
-        You can express through every part of your chart. An open centre is not a thing you
-        cannot do &mdash; it is a thing you do{' '}
+        You can express through every part of your chart. A centre that is not defined is not a
+        thing you cannot do &mdash; it is a thing you do{' '}
         <em className="text-brand-paper">through other people</em>, by picking up what they are
         carrying and running it. That is why some rooms make you brilliant and others flatten
         you, and why certain people make you feel switched on in a way you cannot manufacture
@@ -81,14 +95,14 @@ export default function HumanDesignPlainly() {
         The difference is not <em className="text-brand-paper">can</em> or{' '}
         <em className="text-brand-paper">cannot</em>. It is{' '}
         <strong className="text-brand-paper">ease</strong>. Defined parts move under their own
-        power. Open parts move when there is something to move with &mdash; and they are also
+        power. The other two move when there is something to move with &mdash; and they are also
         where you read a room accurately, because you are feeling it rather than broadcasting
         over it.
       </P>
 
       <Callout>
         Most people arrive expecting their defined centres to be the good news. It is usually
-        the open ones that explain the last ten years.
+        the other two that explain the last ten years.
       </Callout>
 
       <H2>What it is actually for</H2>
@@ -136,7 +150,7 @@ export default function HumanDesignPlainly() {
           surprised by what you have already begun.
         </Card>
         <Card gold title="Reflector" meta="· about one in a hundred">
-          Almost entirely open, and therefore an unusually accurate instrument for the health of
+          Almost nothing defined, and therefore an unusually accurate instrument for the health of
           a place and the people in it. Going well: surprise and delight. Going badly:
           disappointment, and the sense of having become whatever the room was.
         </Card>

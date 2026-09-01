@@ -8,6 +8,7 @@ import {
   Callout,
   Cards,
   Card,
+  CardStack,
   TextLink,
 } from './ArticleUI';
 
@@ -168,7 +169,8 @@ export default function ReadingYourBodygraph() {
           }
         >
           Not activated. Not missing, not broken &mdash; this is where you take the world in
-          rather than broadcast it.
+          rather than broadcast it. That is what open means of a <em>line</em>; of a{' '}
+          <em>centre</em> it means something narrower, further down.
         </LegendRow>
       </ul>
 
@@ -197,26 +199,37 @@ export default function ReadingYourBodygraph() {
         when the more considered parts of you have gone quiet.
       </P>
 
-      <H2>Your centres: filled and open</H2>
+      <H2>Your centres: defined, undefined and open</H2>
       <P>
-        Each of the nine centres is either filled in or it is not, and that single fact is the
-        most load-bearing thing on the page.
+        Each of the nine centres is either filled in on the drawing or it is not, and that
+        single fact is the most load-bearing thing on the page. The ones that are not filled
+        come in two kinds, and what separates them is whether any gate numbers are sitting
+        inside them.
       </P>
 
-      <Cards>
-        <Card title="Filled">
+      <CardStack>
+        <Card title="Defined" meta="&middot; filled in">
           Consistent. This runs the same way on a good day and a bad one. It is what other
           people can rely on you for, and what you can rely on yourself for.
         </Card>
-        <Card title="Open">
-          Variable. It amplifies whatever is around it. This is where you read a room accurately
-          &mdash; and where you can mistake someone else&rsquo;s weather for your own.
+        <Card title="Undefined" meta="&middot; not filled, but carrying gate numbers">
+          Variable, with a fixed way in. A gate of yours reaches this centre without completing
+          a channel across it &mdash; so the energy is not yours to summon, but the doorway it
+          arrives through is always the same one. It switches on around particular people and
+          in particular rooms, which is why it can feel dependable right up until the room
+          changes.
         </Card>
-      </Cards>
+        <Card title="Open" meta="&middot; not filled, and no gate numbers">
+          Variable, with no fixed way in at all. Nothing of yours reaches here, so nothing of
+          your own is mixed into what you pick up. This is where you read a room most
+          accurately &mdash; and where you are likeliest to mistake someone else&rsquo;s
+          weather for your own.
+        </Card>
+      </CardStack>
 
       <P>
         <span className="block mt-6" />
-        Most people expect the filled centres to be the good news. Usually it is the open ones
+        Most people expect the filled centres to be the good news. Usually it is the other two
         that explain the last ten years.
       </P>
 
