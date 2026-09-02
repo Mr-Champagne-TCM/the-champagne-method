@@ -150,7 +150,7 @@ export const shelves: Shelf[] = [
       {
         "tag": "Guide",
         "title": "Human Design, plainly",
-        "html": "<p>A map of how your energy works, drawn from the moment you were born. Not a personality test, and it predicts nothing &mdash; what it describes is mechanics: where your energy is consistent, where it is variable, and how you are built to arrive at a yes or a no.</p>\n    <p>Nothing on a chart is a limit. The parts that look empty are the parts you run <em>through other people</em>, and they are usually the ones that explain the last ten years.</p>\n    <p>About six minutes, and no jargon you have to look up. <a href=\"/library/human-design/\">Human Design, plainly &rarr;</a></p>"
+        "html": "<p>A map of how your energy works, drawn from the moment you were born. Not a personality test, and it predicts nothing &mdash; what it describes is mechanics: where your energy is consistent, where it is variable, and how you are built to arrive at a yes or a no.</p>\n    <p>Nothing on a chart is a limit. The parts that are not filled in are the parts you run <em>through other people</em>, and they are usually the ones that explain the last ten years.</p>\n    <p>About six minutes, and no jargon you have to look up. <a href=\"/library/human-design/\">Human Design, plainly &rarr;</a></p>"
       },
       {
         "tag": "Guide",

@@ -213,7 +213,7 @@ export default function WhatAReadingIs() {
           contains={[
             'Type, Strategy and Authority — how your energy works, what it responds to, and how a decision settles.',
             'Profile, Definition, Signature and Not-Self Theme.',
-            'Your incarnation cross, and which centres are defined and which are open.',
+            'Your incarnation cross, and which centres are defined, which are undefined, and which are open.',
             'A page you can come back to for a year.',
           ]}
         >
