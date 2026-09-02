@@ -33,45 +33,49 @@ const SHOP = 'https://humandesign.thechampagnemethod.co';
 
 /** The example's own values. Copied from a real engine run, not invented. */
 const EXAMPLE: Array<[string, string]> = [
-  ['Type', 'Projector'],
-  ['Strategy', 'Wait for the invitation'],
-  ['Authority', 'Self-Projected'],
-  ['Profile', '1/3 — Investigator / Martyr'],
+  ['Type', 'Manifesting Generator'],
+  ['Strategy', 'Wait to respond, then inform'],
+  ['Authority', 'Emotional'],
+  ['Profile', '3/5 — Martyr / Heretic'],
   ['Definition', 'Single'],
-  ['Not-Self Theme', 'Bitterness'],
-  ['Signature', 'Success'],
-  ['Incarnation Cross', 'Right Angle Cross of The Sphinx (13/7 | 1/2)'],
-  ['Defined centres', 'Ajna · Throat · G'],
-  ['Open centres', 'Head · Heart · Sacral · Spleen · Solar Plexus · Root'],
+  ['Not-Self Theme', 'Frustration'],
+  ['Signature', 'Satisfaction'],
+  ['Incarnation Cross', 'Right Angle Cross of Eden (36/6 | 11/12)'],
+  ['Defined centres', 'Ajna · Throat · G · Sacral · Spleen · Solar Plexus'],
+  ['Undefined centres', 'Heart'],
+  ['Open centres', 'Head · Root'],
 ];
 
-const CHANNELS = '11-56 (Curiosity) · 1-8 (Inspiration)';
+const CHANNELS = '17-62 (Acceptance) · 35-36 (Transitoriness) · 5-15 (Rhythm) · 10-57 (Perfected Form) · 6-59 (Intimacy)';
 
 /**
  * Two of the eleven sections, verbatim.
  *
  * AN EXCERPT, NOT THE READING. Publishing 1,300 words here would be giving the
  * product away on the page that sells it. Two sections are enough to show what
- * the writing is like and that it is genuinely about THIS chart -- "because
- * your Ajna, Throat, and G centers drive this mechanism" could not have been
- * written about anybody else.
+ * the writing is like and that it is genuinely about THIS chart -- "Because this
+ * centre is undefined rather than open, it acts as a filter where specific
+ * gates catch particular energies" could not have been written about anybody
+ * else -- and it is the three-state model, on the page that sells it.
  *
  * Not edited, not tidied, not shortened. If it needed cleaning up before it
  * could be shown, that would be worth knowing rather than hiding.
  */
 const READING_SAMPLE: Array<{ heading: string; lede?: string; paragraphs: string[] }> = [
   {
-    heading: 'Your incarnation cross',
+    heading: 'How you decide',
+    lede: "Clarity arrives only after time washes away the urgency of the moment, never through instant decisions.",
     paragraphs: [
-      'Carrying the Right Angle Cross of The Sphinx (13/7 | 1/2) places you at the energetic center of direction, listening, and leadership. This cross weaves together the themes of gathering experiences, looking ahead, and establishing new creative foundations. You hold a natural geometry for where humanity is headed, offering a guiding presence that helps others find their footing on the map.',
+      "Anchored by your Emotional authority, your decision-making process moves on a relentless wave that shifts from hope to pain and back again. Because you have no truth in the now, trying to rush a choice cuts you off from the wisdom that only time and patience can reveal. Waiting through the full cycle allows your body to reach a quiet place where a quiet yes or no finally emerges.",
+      "Navigating this wave means accepting that you will never have complete certainty at the very beginning of a choice. Your defined Solar Plexus requires you to sleep on major commitments, letting the emotional weather settle until a steady truth remains. When you allow this natural rhythm to run its course, your actions align with a deep sense of peace rather than hurried reaction.",
     ],
   },
   {
-    heading: 'How you decide',
-    lede: 'Speaking your thoughts out loud allows your true direction to emerge naturally through the sound of your voice.',
+    heading: 'What you take in from others',
+    lede: "Your undefined Heart centre picks up the willpower of the room, while your open Head and Root centres amplify external pressure and urgency.",
     paragraphs: [
-      'Your Self-Projected authority requires you to talk things through with a trusted listener who simply holds space while you process. Because your Ajna, Throat, and G centers drive this mechanism, your inner guidance bypasses mental strategizing and comes straight from your core sense of self. Trusting this sonic feedback loop keeps you aligned with your authentic path.',
-      'When decisions rely on mental pressure from your open head center or emotional waves from your open solar plexus, you might feel rushed to choose prematurely. Your authority relies exclusively on the spontaneous truth that echoes from your voice when you are relaxed and unpressured. Pausing before speaking ensures that your words carry the authentic resonance of your inner guidance.',
+      "Through your undefined Heart centre, you absorb the themes of promise, willpower, and self-worth from the people around you, feeling waves of determination that do not originate inside your own body. This area lets you sample different levels of drive, making it easy to notice when others push themselves or make commitments. Because this centre is undefined rather than open, it acts as a filter where specific gates catch particular energies from your environment.",
+      "Through your open Head centre, you take in mental questions and inspirations from the room in whole, amplifying whatever intellectual atmosphere surrounds you without any filter of your own. Similarly, your open Root centre takes in the physical stress and rush of your surroundings, turning outside speed into an amplified sense of urgency in your own limbs. These open areas act as mirrors for the collective pace and wonder, showing you how much pressure floats freely through any room you enter.",
     ],
   },
 ];
