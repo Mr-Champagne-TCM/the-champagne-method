@@ -21,6 +21,7 @@ education, or business-services class, by anyone.** The federal slot is open.
 | 2026-06-11 | First commit here: "chore: bump to V1.2" | git log |
 | 2026-07-21 | v1.3 — photos, testimonials, story | git log |
 | 2026-08-23 | **v2.0 live** at thechampagnemethod.co — coaching offer, booking, library | deploy run 32617209507 |
+| 2026-08-26 | **Aha! records request answered — no creation date.** Aha! Customer Success confirms "the user profile created originally for jeremy.champagne.martin@gmail.com … would have been the email you used to create the trial", but trial account data is deleted by retention policy. Registrant corroborated; creation date unobtainable. Priority date stays **2022-11-27** | Gmail thread `1a03ab69a761d585` |
 
 Gaps to close (see EVIDENCE.md): exact V1.0 launch date; domain registration date
 (registrar is Porkbun — account security emails confirm it; receipt should be in the
