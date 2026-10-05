@@ -11,7 +11,7 @@ import { useHashScroll } from '../../site/useHashScroll';
  *  overlapping pills. Scoping by structure rather than by descent means that
  *  fault cannot come back. */
 
-function Nav() {
+export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 70);
@@ -51,7 +51,7 @@ function Nav() {
   );
 }
 
-function Footer({ note }: { note?: ReactNode }) {
+export function Footer({ note }: { note?: ReactNode }) {
   return (
     <footer className="border-t border-brand-gold/15 pt-12 pb-11 mt-8">
       <div className="max-w-5xl mx-auto px-6 sm:px-8">

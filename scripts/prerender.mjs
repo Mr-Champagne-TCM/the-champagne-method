@@ -36,6 +36,7 @@ const ROUTES = [
   { path: '/library/', sentinel: 'Take the tools' },
   { path: '/library/human-design/', sentinel: 'Human Design is a map of how' },
   { path: '/library/bodygraph/', sentinel: 'wiring diagram, not a verdict' },
+  { path: '/library/human-design-library/', sentinel: 'one layer</em> at a time' },
   { path: '/readings/', sentinel: 'Three ways in, and what arrives with each' },
   { path: '/tools/', sentinel: 'Three short quizzes' },
   { path: '/readings/privacy/', sentinel: 'used to work out your chart and are then discarded' },
