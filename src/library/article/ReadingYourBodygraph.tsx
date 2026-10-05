@@ -291,7 +291,7 @@ export default function ReadingYourBodygraph() {
         <strong className="font-semibold">Then go further.</strong> One week tells you whether
         this is real for you. If it is, the rest of the work &mdash; the experiments, the
         library, and the readings that go deeper than one page &mdash; starts with{' '}
-        <TextLink href="/library/human-design/">Human Design, plainly</TextLink> and{' '}
+        <TextLink href="/library/human-design/">The Human Design library</TextLink> and{' '}
         <TextLink href="/library/">the library</TextLink>. Bring your notes.
       </Callout>
 

@@ -40,7 +40,7 @@ export default function HdLibrary() {
                 </h1>
                 <p className="sub">A line to start. A tap if it pulls at you. As deep as you like after that.</p>
                 <div className="find">
-                  <input id="q" type="search" placeholder="2/4, 10-34, gate 34, Vessel of Love…" aria-label="Find an entry" />
+                  <input id="q" type="search" placeholder="Search the library here" aria-label="Find an entry" />
                   <button className="btn" id="qgo" type="button">
                     Find
                   </button>

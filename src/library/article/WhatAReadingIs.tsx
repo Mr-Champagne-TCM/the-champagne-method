@@ -357,7 +357,7 @@ export default function WhatAReadingIs() {
         <P>
           Two pieces in the library explain the words on this page, and both are
           free and always will be:{' '}
-          <TextLink href="/library/human-design/">Human Design, plainly</TextLink>{' '}
+          <TextLink href="/library/human-design/">The Human Design library</TextLink>{' '}
           for what the system is and is not, and{' '}
           <TextLink href="/library/bodygraph/">Reading your bodygraph</TextLink>{' '}
           for the picture itself.

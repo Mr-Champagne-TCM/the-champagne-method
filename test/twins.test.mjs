@@ -51,28 +51,6 @@ function prose(file) {
  */
 const PAIRS = [
   {
-    name: "Human Design, plainly",
-    tsx: "src/library/article/HumanDesignPlainly.tsx",
-    twin: "docs/hd101-library-draft.html",
-    required: [
-      "parts that are not",
-      "two kinds",
-      "Variable, but with a fixed way in",
-      "Variable, with no fixed way in",
-      "Almost nothing defined",
-      "the other two that explain the last ten years",
-      "Nothing on your chart is a limit",
-    ],
-    banned: [
-      "parts that are open",
-      "Almost entirely open",
-      "An open centre is not a thing you cannot do",
-      "An open center is not a thing you cannot do",
-      "Open parts move when there is something",
-      "the open ones that explain the last ten years",
-    ],
-  },
-  {
     name: "Reading your bodygraph",
     tsx: "src/library/article/ReadingYourBodygraph.tsx",
     twin: "hosting/public/guide/index.html",
@@ -107,14 +85,3 @@ for (const pair of PAIRS) {
     }
   });
 }
-
-/**
- * "Nothing on your chart is a limit" appears three times ON PURPOSE, and the
- * source comment says so. A tidy-up that deduplicates it would pass every other
- * check here, so it is counted rather than merely found.
- */
-test("the deliberate repetition survives a tidy-up", () => {
-  const a = prose("src/library/article/HumanDesignPlainly.tsx");
-  const n = a.split("Nothing on your chart is a limit").length - 1;
-  assert.equal(n, 1, `expected the phrase once in this article's own prose, found ${n}`);
-});
