@@ -1044,11 +1044,25 @@ export function initHdLibrary(root: HTMLElement): () => void {
      anchor (#centers) still happens as normal; this only handles entries, which do not exist until built. */
   const first = setTimeout(() => {
     ARRIVE = true;
-    if (!openHash(location.hash)) {
+    const entry = openHash(location.hash);
+    if (!entry) {
       const el = location.hash && root.querySelector<HTMLElement>('#' + CSS.escape(decodeURIComponent(location.hash.slice(1))));
       if (el) el.scrollIntoView({ block: 'start', behavior: 'instant' });
     }
     setTimeout(() => (ARRIVE = false), 120);
+    /* THE PAGE KEEPS GROWING AFTER THE JUMP (found live 10/5): fonts and the drawings above settle after the first
+       scroll, and #cross-l-control ended with its title hidden above the screen. So the entry is centred again once
+       things settle -- unless the reader has already started moving, which always wins. */
+    if (!entry) return;
+    const target = root.querySelector<HTMLElement>('#' + CSS.escape(decodeURIComponent(location.hash.slice(1))));
+    if (!target) return;
+    let moved = false;
+    const stop = () => (moved = true);
+    for (const ev of ['wheel', 'touchstart', 'keydown', 'pointerdown'] as const) addEventListener(ev, stop, { once: true, passive: true, signal: sig.signal });
+    const settle = () => { if (!moved && target.isConnected) target.scrollIntoView({ block: 'center', behavior: 'instant' }); };
+    document.fonts?.ready.then(settle).catch(() => {});
+    if (document.readyState === 'complete') settle(); else addEventListener('load', settle, { once: true, signal: sig.signal });
+    for (const ms of [400, 1200]) setTimeout(settle, ms);
   }, 0);
   addEventListener('hashchange', () => openHash(location.hash), sig);
 
