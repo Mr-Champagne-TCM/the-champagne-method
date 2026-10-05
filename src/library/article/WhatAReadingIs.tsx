@@ -41,9 +41,9 @@ const EXAMPLE: Array<[string, string]> = [
   ['Not-Self Theme', 'Frustration'],
   ['Signature', 'Satisfaction'],
   ['Incarnation Cross', 'Right Angle Cross of Eden (36/6 | 11/12)'],
-  ['Defined centres', 'Ajna · Throat · G · Sacral · Spleen · Solar Plexus'],
-  ['Undefined centres', 'Heart'],
-  ['Open centres', 'Head · Root'],
+  ['Defined centers', 'Ajna · Throat · G · Sacral · Spleen · Solar Plexus'],
+  ['Undefined centers', 'Heart'],
+  ['Open centers', 'Head · Root'],
 ];
 
 const CHANNELS = '17-62 (Acceptance) · 35-36 (Transitoriness) · 5-15 (Rhythm) · 10-57 (Perfected Form) · 6-59 (Intimacy)';
@@ -72,10 +72,10 @@ const READING_SAMPLE: Array<{ heading: string; lede?: string; paragraphs: string
   },
   {
     heading: 'What you take in from others',
-    lede: "Your undefined Heart centre picks up the willpower of the room, while your open Head and Root centres amplify external pressure and urgency.",
+    lede: "Your undefined Heart center picks up the willpower of the room, while your open Head and Root centers amplify external pressure and urgency.",
     paragraphs: [
-      "Through your undefined Heart centre, you absorb the themes of promise, willpower, and self-worth from the people around you, feeling waves of determination that do not originate inside your own body. This area lets you sample different levels of drive, making it easy to notice when others push themselves or make commitments. Because this centre is undefined rather than open, it acts as a filter where specific gates catch particular energies from your environment.",
-      "Through your open Head centre, you take in mental questions and inspirations from the room in whole, amplifying whatever intellectual atmosphere surrounds you without any filter of your own. Similarly, your open Root centre takes in the physical stress and rush of your surroundings, turning outside speed into an amplified sense of urgency in your own limbs. These open areas act as mirrors for the collective pace and wonder, showing you how much pressure floats freely through any room you enter.",
+      "Through your undefined Heart center, you absorb the themes of promise, willpower, and self-worth from the people around you, feeling waves of determination that do not originate inside your own body. This area lets you sample different levels of drive, making it easy to notice when others push themselves or make commitments. Because this center is undefined rather than open, it acts as a filter where specific gates catch particular energies from your environment.",
+      "Through your open Head center, you take in mental questions and inspirations from the room in whole, amplifying whatever intellectual atmosphere surrounds you without any filter of your own. Similarly, your open Root center takes in the physical stress and rush of your surroundings, turning outside speed into an amplified sense of urgency in your own limbs. These open areas act as mirrors for the collective pace and wonder, showing you how much pressure floats freely through any room you enter.",
     ],
   },
 ];
@@ -217,7 +217,7 @@ export default function WhatAReadingIs() {
           contains={[
             'Type, Strategy and Authority — how your energy works, what it responds to, and how a decision settles.',
             'Profile, Definition, Signature and Not-Self Theme.',
-            'Your incarnation cross, and which centres are defined, which are undefined, and which are open.',
+            'Your incarnation cross, and which centers are defined, which are undefined, and which are open.',
             'A page you can come back to for a year.',
           ]}
         >
@@ -245,7 +245,7 @@ export default function WhatAReadingIs() {
           price="$11.11"
           standfirst="Everything in the summary, and the bodygraph itself — the picture people mean when they say they have seen their chart."
           contains={[
-            'Your bodygraph, drawn: the nine centres, which are filled, and every channel running between them.',
+            'Your bodygraph, drawn: the nine centers, which are filled, and every channel running between them.',
             'Your channels named, and your activated gates numbered.',
             'A page you can share, and a PDF you keep.',
             'The same drawing at print size, so it is readable on paper.',

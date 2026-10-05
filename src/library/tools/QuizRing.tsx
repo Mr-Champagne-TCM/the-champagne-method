@@ -56,7 +56,7 @@ export default function QuizRing() {
       <p className="text-[15px] text-brand-paper/80 mb-3">
         Five moments. For each, the word you would most <em>genuinely feel</em> &mdash; not the
         one that reads best. In every set, all three words come from the same family on the
-        wheel above: the centre word, then one ring out, then one ring further. All three are
+        wheel above: the center word, then one ring out, then one ring further. All three are
         honest answers &mdash; they differ only in resolution.
       </p>
       {MOMENTS.map((m, i) => (

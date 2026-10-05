@@ -155,7 +155,7 @@ export const shelves: Shelf[] = [
       {
         "tag": "Guide",
         "title": "Reading your bodygraph",
-        "html": "<p>For anyone already holding a chart and wondering what they are looking at. What the colours mean, what the shapes mean, and what it means when a line is only half filled in.</p>\n    <p>More is not better here &mdash; every mark adds detail, not value, and nobody is scoring yours. <a href=\"/library/bodygraph/\">Reading your bodygraph &rarr;</a></p>"
+        "html": "<p>For anyone already holding a chart and wondering what they are looking at. What the colors mean, what the shapes mean, and what it means when a line is only half filled in.</p>\n    <p>More is not better here &mdash; every mark adds detail, not value, and nobody is scoring yours. <a href=\"/library/bodygraph/\">Reading your bodygraph &rarr;</a></p>"
       }
     ]
   }

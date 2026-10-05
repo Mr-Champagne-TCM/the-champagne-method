@@ -55,7 +55,7 @@ export default function ReadingYourBodygraph() {
         standfirst={
           <>
             The chart in your reading is a wiring diagram, not a verdict. Here is how to read
-            the picture &mdash; what the colours mean, what the shapes mean, and what it means
+            the picture &mdash; what the colors mean, what the shapes mean, and what it means
             when a line &mdash; a <em className="text-brand-paper">channel</em> &mdash; is only
             half filled in.
           </>
@@ -66,10 +66,10 @@ export default function ReadingYourBodygraph() {
       <P>
         <strong className="text-brand-paper">More is not better.</strong> Every activation on
         this chart adds <em className="text-brand-paper">detail</em>, not value. A page with
-        more colour on it is not a better page, and nobody is scoring yours.
+        more color on it is not a better page, and nobody is scoring yours.
       </P>
       <P>
-        A centre or a channel that is not activated is{' '}
+        A center or a channel that is not activated is{' '}
         <strong className="text-brand-paper">not a deficit</strong>. You can still express
         through it &mdash; everybody does, constantly. It simply does not carry the same
         energetic ease as the parts of you that are defined. Knowing which is which is the
@@ -88,20 +88,20 @@ export default function ReadingYourBodygraph() {
         house. This just shows you why the living room is where everyone ends up.
       </P>
 
-      <H2>Centres, channels and gates</H2>
+      <H2>Centers, channels and gates</H2>
       <P>
         Three words, and then you have the whole vocabulary. This is deliberately shallow &mdash;
         you do not need the theory to read your own chart.
       </P>
 
       <Cards>
-        <Card title="Centres">
+        <Card title="Centers">
           The nine shapes &mdash; squares, triangles, diamonds. Each one governs a different kind
           of energy. You will also hear them called <em className="text-brand-paper">engines</em>{' '}
           &mdash; the two words mean the same thing and we use them interchangeably.
         </Card>
         <Card title="Channels">
-          The lines running between centres. A channel wires two centres together. There are
+          The lines running between centers. A channel wires two centers together. There are
           thirty-six of them.
         </Card>
       </Cards>
@@ -119,7 +119,7 @@ export default function ReadingYourBodygraph() {
         a finger on the place it means.
       </P>
 
-      <H2>The colours</H2>
+      <H2>The colors</H2>
       <P>
         Every channel and every gate is in one of four states. This is the whole vocabulary
         &mdash; once you have these four, the rest of the chart is just where they sit.
@@ -170,14 +170,14 @@ export default function ReadingYourBodygraph() {
         >
           Not activated. Not missing, not broken &mdash; this is where you take the world in
           rather than broadcast it. That is what open means of a <em>line</em>; of a{' '}
-          <em>centre</em> it means something narrower, further down.
+          <em>center</em> it means something narrower, further down.
         </LegendRow>
       </ul>
 
-      <H2>What the split colour actually means</H2>
+      <H2>What the split color actually means</H2>
       <P>
         A gate can be switched on from two directions at once: once by your Personality and once
-        by your Design. When both land on the same gate, it draws in both colours, split down
+        by your Design. When both land on the same gate, it draws in both colors, split down
         the length.
       </P>
       <P>
@@ -199,9 +199,9 @@ export default function ReadingYourBodygraph() {
         when the more considered parts of you have gone quiet.
       </P>
 
-      <H2>Your centres: defined, undefined and open</H2>
+      <H2>Your centers: defined, undefined and open</H2>
       <P>
-        Each of the nine centres is either filled in on the drawing or it is not, and that
+        Each of the nine centers is either filled in on the drawing or it is not, and that
         single fact is the most load-bearing thing on the page. The ones that are not filled
         come in two kinds, and what separates them is whether any gate numbers are sitting
         inside them.
@@ -213,7 +213,7 @@ export default function ReadingYourBodygraph() {
           people can rely on you for, and what you can rely on yourself for.
         </Card>
         <Card title="Undefined" meta="&middot; not filled, but carrying gate numbers">
-          Variable, with a fixed way in. A gate of yours reaches this centre without completing
+          Variable, with a fixed way in. A gate of yours reaches this center without completing
           a channel across it &mdash; so the energy is not yours to summon, but the doorway it
           arrives through is always the same one. It switches on around particular people and
           in particular rooms, which is why it can feel dependable right up until the room
@@ -229,14 +229,14 @@ export default function ReadingYourBodygraph() {
 
       <P>
         <span className="block mt-6" />
-        Most people expect the filled centres to be the good news. Usually it is the other two
+        Most people expect the filled centers to be the good news. Usually it is the other two
         that explain the last ten years.
       </P>
 
       <H2>The half-filled channels</H2>
       <P>
         When both of a channel&rsquo;s gates are switched on, it fills all the way across and
-        the two centres it joins are wired together permanently. That is the easy case.
+        the two centers it joins are wired together permanently. That is the easy case.
       </P>
 
       <H3>When only half of it fills</H3>

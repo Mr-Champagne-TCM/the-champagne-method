@@ -67,6 +67,7 @@ const PAIRS = [
       "parts that are open",
       "Almost entirely open",
       "An open centre is not a thing you cannot do",
+      "An open center is not a thing you cannot do",
       "Open parts move when there is something",
       "the open ones that explain the last ten years",
     ],
@@ -82,7 +83,7 @@ const PAIRS = [
       "Variable, with no fixed way in at all",
       "the other two that explain the last ten years",
     ],
-    banned: ["Your centres: filled and open", "It amplifies whatever is around it"],
+    banned: ["Your centres: filled and open", "Your centers: filled and open", "It amplifies whatever is around it"],
   },
 ];
 

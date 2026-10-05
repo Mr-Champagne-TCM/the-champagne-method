@@ -84,7 +84,7 @@ export default function HumanDesignPlainly() {
 
       <P>
         <span className="block mt-6" />
-        You can express through every part of your chart. A centre that is not defined is not a
+        You can express through every part of your chart. A center that is not defined is not a
         thing you cannot do &mdash; it is a thing you do{' '}
         <em className="text-brand-paper">through other people</em>, by picking up what they are
         carrying and running it. That is why some rooms make you brilliant and others flatten
@@ -101,7 +101,7 @@ export default function HumanDesignPlainly() {
       </P>
 
       <Callout>
-        Most people arrive expecting their defined centres to be the good news. It is usually
+        Most people arrive expecting their defined centers to be the good news. It is usually
         the other two that explain the last ten years.
       </Callout>
 
@@ -199,7 +199,7 @@ export default function HumanDesignPlainly() {
 
       <H2>Channels, and what a name like Charisma means</H2>
       <P>
-        A channel is a line joining two centres, and it only completes when both of its numbered
+        A channel is a line joining two centers, and it only completes when both of its numbered
         ends are switched on. There are thirty-six of them and each has a name for what it does
         when it runs.
       </P>
@@ -238,7 +238,7 @@ export default function HumanDesignPlainly() {
       <P>
         The chart is cast from a moment, not a day. The Sun and the outer planets barely move in
         twenty-four hours, so most of your chart holds without a time &mdash; your gates, most
-        of your channels and centres, usually your Type and Authority.
+        of your channels and centers, usually your Type and Authority.
       </P>
       <P>
         The Moon is the fast one. It shifts through the day, and it carries your Profile with

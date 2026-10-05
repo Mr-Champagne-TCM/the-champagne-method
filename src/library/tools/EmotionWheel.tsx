@@ -115,7 +115,7 @@ export default function EmotionWheel() {
   return (
     <div id="wheel">
       <p className="text-[15px] text-brand-paper/80 mb-3">
-        Here is the wheel itself &mdash; eight families at the centre, finer words toward the
+        Here is the wheel itself &mdash; eight families at the center, finer words toward the
         edge. Yours to open, keep, or pass on.
       </p>
 
@@ -129,7 +129,7 @@ export default function EmotionWheel() {
       >
         <img
           src={SRC}
-          alt="The emotion wheel: eight families of feeling arranged in three rings, from broad families at the centre to finer distinctions at the edge."
+          alt="The emotion wheel: eight families of feeling arranged in three rings, from broad families at the center to finer distinctions at the edge."
           className="w-full max-w-[520px] mx-auto block"
           loading="lazy"
           width={1040}
