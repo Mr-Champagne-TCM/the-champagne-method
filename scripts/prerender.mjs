@@ -38,7 +38,7 @@ const ROUTES = [
   { path: '/library/human-design/', sentinel: 'one layer</em> at a time' },
   { path: '/readings/', sentinel: 'Three ways in, and what arrives with each' },
   { path: '/tools/', sentinel: 'Three short quizzes' },
-  { path: '/readings/privacy/', sentinel: 'used to work out your chart and are then discarded' },
+  { path: '/readings/privacy/', sentinel: 'kept with your reading so your PDF can show' },
   // The page GitHub Pages serves for any wrong address. A file, not a folder, so it names its own target.
   { path: '/404.html', file: '404.html', sentinel: 'pick up from' },
 ];
