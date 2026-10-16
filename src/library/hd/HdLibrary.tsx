@@ -429,7 +429,7 @@ export default function HdLibrary() {
                     </li>
                     <li>
                       <b>Where to find them:</b> on your chart, in brackets after the cross name, like{' '}
-                      <b>(36/6 | 11/12)</b>. The first pair is your Sun and Earth at birth, the second about three
+                      <b>(6/36 | 12/11)</b>. The first pair is your Sun and Earth at birth, the second about three
                       months before. A cross isn&rsquo;t a place on the body drawing.{' '}
                       <a
                         className="exchart"

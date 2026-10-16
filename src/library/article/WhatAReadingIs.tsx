@@ -24,64 +24,80 @@ import { ArticlePage, ArticleHeader, BrandEyebrow, H2, P, TextLink } from './Art
  * invented for a page like this -- it names the chart it came from in almost
  * every paragraph. So the whole page moved to a chart that HAS one.
  *
- * WHOSE BIRTH MOMENT IT WAS CANNOT BE STATED, because it was never kept: the
- * details computed a chart and were discarded, as every buyer's were until
- * 16 October 2026 (since then a paid chart keeps them for its PDF's birth
- * line -- see readings/privacy).
+ * IT IS JEREMY CHAMPAGNE'S OWN CHART (Jeremy 10/16: "one example everywhere
+ * ... OK to use mine", "9-17-83 3:17am Wichita Falls, Texas -- my name is
+ * OK"). The same chart is the shop's example summary, this page's table,
+ * drawing, PDF and excerpt, and the library's marked example charts. All of it
+ * comes from ONE real shop record (a reading-tier purchase he made on 16 Oct
+ * 2026), through hd-site tools/sample-from-record.mjs: the PDF is the chart
+ * tier exactly as the shop builds it, with his name and the birth line the
+ * record keeps. Two centers defined and one channel: a simple drawing, so a
+ * buyer's own will look richer next to it.
+ *
+ * Before 10/16 the samples were an unnamed chart whose birth details were
+ * never kept; nothing of it remains on this page.
  */
 
 const SHOP = 'https://humandesign.thechampagnemethod.co';
 
-/** The example's own values. Copied from a real engine run, not invented. */
+/**
+ * The example's own values: Jeremy Champagne's chart, copied from his shop
+ * record (engine 0.5.0), not invented.
+ */
 const EXAMPLE: Array<[string, string]> = [
   ['Type', 'Manifesting Generator'],
   ['Strategy', 'Wait to respond, then inform'],
-  ['Authority', 'Emotional'],
-  ['Profile', '3/5 — Martyr / Heretic'],
+  ['Authority', 'Sacral'],
+  ['Profile', '2/4 — Hermit / Opportunist'],
   ['Definition', 'Single'],
   ['Not-Self Theme', 'Frustration'],
   ['Signature', 'Satisfaction'],
-  ['Incarnation Cross', 'Right Angle Cross of Eden (36/6 | 11/12)'],
-  ['Defined centers', 'Ajna · Throat · G · Sacral · Spleen · Solar Plexus'],
-  ['Undefined centers', 'Heart'],
-  ['Open centers', 'Head · Root'],
+  ['Incarnation Cross', 'Right Angle Cross of Eden (6/36 | 12/11)'],
+  ['Defined centers', 'Throat · Sacral'],
+  ['Undefined centers', 'Ajna · Heart · Spleen · Solar Plexus · Root'],
+  ['Open centers', 'Head · G'],
 ];
 
-const CHANNELS = '17-62 (Acceptance) · 35-36 (Transitoriness) · 5-15 (Rhythm) · 10-57 (Perfected Form) · 6-59 (Intimacy)';
+const CHANNELS = '20-34 (Charisma)';
+
+/** Whose chart every sample on this page is (his leave, 10/16). */
+const WHOSE = 'Jeremy Champagne’s own chart — September 17, 1983, 3:17 AM, Wichita Falls, Texas';
 
 /**
  * Two of the eleven sections, verbatim.
  *
  * AN EXCERPT, NOT THE READING. Publishing 1,300 words here would be giving the
  * product away on the page that sells it. Two sections are enough to show what
- * the writing is like and that it is genuinely about THIS chart -- "Because this
- * centre is undefined rather than open, it acts as a filter where specific
- * gates catch particular energies" could not have been written about anybody
- * else -- and it is the three-state model, on the page that sells it.
+ * the writing is like and that it is genuinely about THIS chart -- "Because
+ * these open centers have no gates at all, nothing of your own mixes into what
+ * you take in" could not have been written about anybody else -- and it is the
+ * three-state model, on the page that sells it.
  *
+ * Jeremy's own reading (his shop record, written 16 Oct 2026), the same two
+ * sections as before, copied out of the record character for character.
  * Not edited, not tidied, not shortened. If it needed cleaning up before it
  * could be shown, that would be worth knowing rather than hiding.
  */
 const READING_SAMPLE: Array<{ heading: string; lede?: string; paragraphs: string[] }> = [
   {
     heading: 'How you decide',
-    lede: "Clarity arrives only after time washes away the urgency of the moment, never through instant decisions.",
+    lede: "Your decisions emerge from physical sounds and sensations rather than mental logic.",
     paragraphs: [
-      "Anchored by your Emotional authority, your decision-making process moves on a relentless wave that shifts from hope to pain and back again. Because you have no truth in the now, trying to rush a choice cuts you off from the wisdom that only time and patience can reveal. Waiting through the full cycle allows your body to reach a quiet place where a quiet yes or no finally emerges.",
-      "Navigating this wave means accepting that you will never have complete certainty at the very beginning of a choice. Your defined Solar Plexus requires you to sleep on major commitments, letting the emotional weather settle until a steady truth remains. When you allow this natural rhythm to run its course, your actions align with a deep sense of peace rather than hurried reaction.",
+      "Your Sacral center acts as your inner authority, giving you guttural sounds and bodily pulls that know what is correct for you. This physical intelligence does not need reasons or arguments; it simply registers whether you have the fuel for something or not. You learn to trust these immediate bodily yes and no responses over any story your mind tries to construct.",
+      "Your single definition works alongside your Sacral authority by letting your entire physical design process decisions without internal hesitation. Because your defined centers are already linked, your gut response has full access to your expression in the Throat without second-guessing. You discover that waiting for this clear physical signal keeps you aligned with your true path.",
     ],
   },
   {
     heading: 'What you take in from others',
-    lede: "Your undefined Heart center picks up the willpower of the room, while your open Head and Root centers amplify external pressure and urgency.",
+    lede: "Your uncolored centers act as sensitive receptors for the shifting energies of other people and environments.",
     paragraphs: [
-      "Through your undefined Heart center, you absorb the themes of promise, willpower, and self-worth from the people around you, feeling waves of determination that do not originate inside your own body. This area lets you sample different levels of drive, making it easy to notice when others push themselves or make commitments. Because this center is undefined rather than open, it acts as a filter where specific gates catch particular energies from your environment.",
-      "Through your open Head center, you take in mental questions and inspirations from the room in whole, amplifying whatever intellectual atmosphere surrounds you without any filter of your own. Similarly, your open Root center takes in the physical stress and rush of your surroundings, turning outside speed into an amplified sense of urgency in your own limbs. These open areas act as mirrors for the collective pace and wonder, showing you how much pressure floats freely through any room you enter.",
+      "Your undefined Ajna, Heart, Spleen, Solar Plexus, and Root centers are areas where particular gates catch and amplify the energies carried by people around you. In these undefined spaces, you experience inconsistent pressures, survival fears, emotional waves, and mental certainties that belong entirely to others. You notice how easily these specific spots get switched on when certain rooms or individuals surround you.",
+      "Your open Head and G centers take in the wider environment in whole, absorbing mental confusion and questions of identity without any filters of your own. Because these open centers have no gates at all, nothing of your own mixes into what you take in from the collective atmosphere. You observe how visiting different places alters your mental focus and your sense of direction entirely.",
     ],
   },
 ];
 
-/** All eleven, so the two above are visibly a sample and not the whole thing. */
+/** All eleven, as headed in his reading, so the two above are visibly a sample and not the whole thing. */
 const ALL_SECTIONS = [
   'Your incarnation cross',
   'Your definition',
@@ -92,7 +108,7 @@ const ALL_SECTIONS = [
   'How you meet the world',
   'What is consistently yours',
   'What you take in from others',
-  'When it is working, and when it is not',
+  "When it's on track, and when it's off track",
   'Things to experiment with',
 ];
 
@@ -235,9 +251,7 @@ export default function WhatAReadingIs() {
             </dl>
           </div>
           <NotYours>
-            a real chart, and we cannot tell you whose birth moment made it —
-            those details computed it and were thrown away in the same breath,
-            which is exactly what will happen to yours.
+            {WHOSE}. Every sample on this page comes from it.
           </NotYours>
         </Tier>
 
@@ -256,7 +270,7 @@ export default function WhatAReadingIs() {
             <SampleBodygraph />
           </div>
           <NotYours>
-            the same chart, drawn. Its channels are {CHANNELS}.
+            the same chart, drawn. Its one channel is {CHANNELS}.
           </NotYours>
           <p className="mt-5 text-[16px] leading-relaxed text-brand-paper/85">
             And the document that comes with it —{' '}
