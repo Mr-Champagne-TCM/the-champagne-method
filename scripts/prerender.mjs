@@ -39,6 +39,8 @@ const ROUTES = [
   { path: '/readings/', sentinel: 'Three ways in, and what arrives with each' },
   { path: '/tools/', sentinel: 'Three short quizzes' },
   { path: '/readings/privacy/', sentinel: 'used to work out your chart and are then discarded' },
+  // The page GitHub Pages serves for any wrong address. A file, not a folder, so it names its own target.
+  { path: '/404.html', file: '404.html', sentinel: 'pick up from' },
 ];
 
 const CHROME_CANDIDATES = [
@@ -93,8 +95,8 @@ const server = await serve();
 let written = 0;
 let skipped = 0;
 
-for (const { path, sentinel } of ROUTES) {
-  const target = join(DOCS, path.slice(1), 'index.html');
+for (const { path, sentinel, file } of ROUTES) {
+  const target = file ? join(DOCS, file) : join(DOCS, path.slice(1), 'index.html');
   const before = await readFile(target, 'utf8');
   const beforeLen = textLength(before);
   const title = before.match(/<title>([^<]*)<\/title>/)?.[1] ?? '';

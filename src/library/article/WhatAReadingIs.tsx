@@ -259,7 +259,7 @@ export default function WhatAReadingIs() {
           </NotYours>
           <p className="mt-5 text-[16px] leading-relaxed text-brand-paper/85">
             And the document that comes with it —{' '}
-            <TextLink href="/samples/the-chart.pdf">
+            <TextLink href="/samples/the-chart.pdf" download="TCM-Example-Chart.pdf">
               the example chart as a PDF
             </TextLink>
             , exactly as it downloads.

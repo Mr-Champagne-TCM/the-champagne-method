@@ -191,3 +191,25 @@ nav.topics::after{content:"";position:absolute;left:24px;right:24px;bottom:-1px;
 .bgcap .gclear:hover{background:rgba(63,224,197,.18)}
 #gateSel .pill{border-color:var(--teal);color:var(--teal);background:rgba(63,224,197,.08)}
 .yours a{white-space:nowrap}.xfind{margin:14px 0 14px}
+/* Parked items v2 (Jeremy 10/15). 6c-2: the "Topics" label stays put outside the scrolling row (call 44); a teal
+   arrow shows at an edge only while topics are hidden past it. The engine sets [hidden] on each arrow. */
+nav.topics{display:flex;align-items:center}
+nav.topics .lab{margin-right:10px}
+.topics .rail{position:relative;flex:1;min-width:0}
+.topics .edge{position:absolute;top:0;bottom:0;z-index:1;display:flex;align-items:center;width:34px;padding:0 4px;border:0;cursor:pointer;color:var(--teal);font:600 26px/1 Outfit,system-ui,sans-serif}
+.topics .edge.l{left:0;justify-content:flex-start;background:linear-gradient(90deg,rgba(13,20,40,1) 35%,rgba(13,20,40,0))}
+.topics .edge.r{right:0;justify-content:flex-end;background:linear-gradient(270deg,rgba(13,20,40,1) 35%,rgba(13,20,40,0))}
+.topics .edge[hidden]{display:none}
+@media (max-width:760px){nav.topics .lab{align-self:stretch;display:flex;align-items:center;margin:-8px 0 -8px -10px;padding:0 12px 0 14px;border-right:1px solid rgba(63,224,197,.14)}}
+/* 6b: each Channels card carries the 20-34 worked example (call 63). */
+.states .ex{display:block;margin-top:12px;padding-left:10px;border-left:3px solid var(--teal);color:var(--text);font-size:14px;line-height:1.45}
+.states .ex b{font-weight:500;color:var(--text)}
+/* 6c-3: on phones "Enlarge" and "Full list" are outlined 44px buttons, not small plain text. */
+@media (max-width:760px),(hover:none) and (pointer:coarse){
+  .bgtools{gap:11px;margin:4px 0 12px}
+  .bgtools button{display:inline-flex;align-items:center;gap:6px;box-sizing:border-box;min-height:44px;padding:0 18px;border:1px solid rgba(63,224,197,.65);border-radius:999px;background:rgba(63,224,197,.06);color:var(--teal);font-size:15px}
+}
+/* 6c-1: on touch screens the enlarged view draws numbers about 33px across (a fingertip is about 44px). */
+@media (hover:none) and (pointer:coarse){.zoom .pan svg{min-width:900px}}
+/* Call 38: Full list hides while All channels is selected. `all:unset` above outranks the browser's own [hidden]. */
+.bgtools button[hidden]{display:none}

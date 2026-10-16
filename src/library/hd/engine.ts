@@ -104,6 +104,8 @@ const WHERE: Record<string, [string, string]> = {
   gates: [`The numbered circles on the drawing of ${YC}. Yours are lit.`, CHT + ' The reading ($44.44) adds the planet behind each.'],
   crosses: [`The Incarnation Cross line on ${YC}.`, SUM],
 };
+/** The name each marked example chart saves under (parked items v2, 4b, Jeremy 10/15): the business name, not the file's. */
+const DLNAME = (k: string) => `TCM-Example-Chart-${k[0].toUpperCase()}${k.slice(1)}.pdf`;
 const XNAME: Record<string, string> = { types: 'your type', authority: 'your authority', centers: 'the centers', definition: 'your definition', profiles: 'your profile', channels: 'the channels', gates: 'the gates', crosses: 'the cross' };
 
 /* Hovers (calls 39, 40) */
@@ -150,9 +152,10 @@ export function initHdLibrary(root: HTMLElement): () => void {
   /* Start clean: React's development double-run calls this twice on the same nodes. */
   ['#typeList', '#authTabs', '#authOut', '#ctrStates', '#ctrTabs', '#ctrOut', '#defTabs', '#defOut', '#l1', '#l2', '#profOut', '#lineCards', '#chanStates', '#themeChips', '#chanOut', '#chanAll', '#gateStates', '#gateSel', '#gateOut', '#askedList', '#gateGrid', '#gateOut2', '#angleTabs', '#angleLine', '#crossList'].forEach((s) => ($(s).innerHTML = ''));
 
-  function stateCards(host: HTMLElement, rows: [string, string, string, string][]) {
+  /** A fifth item, when given, is the card's worked example (call 63: the 20-34 line in each Channels card). */
+  function stateCards(host: HTMLElement, rows: ([string, string, string, string] | [string, string, string, string, string])[]) {
     host.innerHTML = rows
-      .map(([svg, term, plain, mean]) => `<div>${svg.replace('class="ico" ', '')}<span><span class="term">${term}</span><span class="plain">${plain}</span><span class="mean">${mean}</span></span></div>`)
+      .map(([svg, term, plain, mean, ex]) => `<div>${svg.replace('class="ico" ', '')}<span><span class="term">${term}</span><span class="plain">${plain}</span><span class="mean">${mean}</span>${ex ? `<span class="ex">${ex}</span>` : ''}</span></div>`)
       .join('');
   }
 
@@ -250,7 +253,7 @@ export function initHdLibrary(root: HTMLElement): () => void {
   $$('.where').forEach((w) => {
     const k = w.dataset.w!;
     const [a0, b] = WHERE[k];
-    const a = a0.replace(`<a href="${SAMPLE}">`, `<a class="exchart" href="${CHARTS}/example-chart-${k}.pdf" data-tip="Download example chart, marked to show ${XNAME[k]}">`);
+    const a = a0.replace(`<a href="${SAMPLE}">`, `<a class="exchart" href="${CHARTS}/example-chart-${k}.pdf" download="${DLNAME(k)}" data-tip="Download example chart, marked to show ${XNAME[k]}">`);
     w.innerHTML = `<div><b>Where it is on your chart</b>${a}</div><div><b>Which reading shows it</b>${b}</div>`;
   });
 
@@ -443,11 +446,12 @@ export function initHdLibrary(root: HTMLElement): () => void {
       fold({ id: 'line-' + i, title: `<span class="tag gold">Line</span>${i} &middot; ${NAMES[i]}`, line: md1(PROF.lines[i].glance), group: 'lines', summary: md1(PROF.lines[i].summary), subs: [['As your first number', md(PROF.lines[i].first)], ['As your second number', md(PROF.lines[i].second)]] }),
     );
 
-  /* ---------- CHANNELS: drawing visible by default (call 16); themes light it (call 19); full/half/empty (call 29) ---------- */
+  /* ---------- CHANNELS: drawing visible by default (call 16); themes light it (call 19); full/half/empty (call 29),
+     each with the 20-34 worked example the Gates section uses (call 63, Jeremy 10/15) ---------- */
   stateCards($('#chanStates'), [
-    [CHI.full, 'Defined channel', 'Colored in all the way', 'Both gates are lit on your chart. Always on in you.'],
-    [CHI.half, 'Hanging gate', 'Half colored in', 'One gate is lit. Someone with the other gate can complete it while you&rsquo;re together.'],
-    [CHI.none, 'Open channel', 'Not colored in', 'Neither gate is lit. You can still feel it around people who have it.'],
+    [CHI.full, 'Defined channel', 'Colored in all the way', 'Both gates are lit on your chart. Always on in you.', '<b>With 20-34:</b> 34 and 20 both lit. The power goes straight into action, every day.'],
+    [CHI.half, 'Hanging gate', 'Half colored in', 'One gate is lit. Someone with the other gate can complete it while you&rsquo;re together.', '<b>With 20-34:</b> only 34 lit. The flow switches on while you&rsquo;re with someone who has 20.'],
+    [CHI.none, 'Open channel', 'Not colored in', 'Neither gate is lit. You can still feel it around people who have it.', '<b>With 20-34:</b> neither lit. You can feel that flow around someone who has both.'],
   ]);
   const ctrName = (n: string) => (n === 'Heart' ? 'Heart (Ego)' : n);
   const ctrWhat = (n: string) => {
@@ -723,13 +727,29 @@ export function initHdLibrary(root: HTMLElement): () => void {
     };
     addEventListener('scroll', spy, { passive: true, ...sig });
     spy();
+    /* Edge arrows (parked items v2, 6c-2, 10/15): each shows only while topics are hidden past its edge; a tap
+       moves the row along by most of its width. */
+    {
+      const box = bar.querySelector<HTMLElement>('.pills')!;
+      const [el, er] = [bar.querySelector<HTMLButtonElement>('.edge.l')!, bar.querySelector<HTMLButtonElement>('.edge.r')!];
+      const edges = () => {
+        el.hidden = box.scrollLeft <= 2;
+        er.hidden = box.scrollLeft + box.clientWidth >= box.scrollWidth - 2;
+      };
+      el.onclick = () => box.scrollBy({ left: -box.clientWidth * 0.7, behavior: 'smooth' });
+      er.onclick = () => box.scrollBy({ left: box.clientWidth * 0.7, behavior: 'smooth' });
+      box.addEventListener('scroll', edges, { passive: true, ...sig });
+      addEventListener('resize', edges, sig);
+      document.fonts?.ready.then(edges).catch(() => {});
+      edges();
+    }
     /* the words under the pills fold away once the bar pins */
     const io = new IntersectionObserver(([e]) => bar.classList.toggle('stuck', !e.isIntersecting), { rootMargin: `-${NAVH + 8}px 0px 0px 0px` });
     io.observe($('#topicsMark'));
     observers.push(io);
   }
 
-  /* ---------- GATES: chart first, then most asked, then all 64 (call 24) ---------- */
+  /* ---------- GATES: chart first, then a few to start with (was "most asked", renamed 10/15), then all 64 (call 24) ---------- */
   stateCards($('#gateStates'), [
     [GTI.lit, 'Defined gate', 'Lit', 'A steady thing you bring, every day.'],
     [GTI.off, 'Undefined gate', 'Not lit', 'Not yours, but you can meet it in other people.'],
@@ -964,7 +984,8 @@ export function initHdLibrary(root: HTMLElement): () => void {
 
   /* ---------- ENLARGE (call 20): selection carries over; on phones a tap opens it first ---------- */
   const zoom = $('#zoom');
-  function openZoom(kind: string) {
+  /** `at` is where on the drawing the tap landed (0-1 across and down); the enlarged view opens centred there. */
+  function openZoom(kind: string, at?: [number, number]) {
     const src = kind === 'gates' ? bgG : bgCh;
     const bgZ = drawBG(
       $<SVGSVGElement>('#bgZoom'),
@@ -982,7 +1003,13 @@ export function initHdLibrary(root: HTMLElement): () => void {
     $('#zoomHint').textContent = kind === 'gates' ? HINT.gate() + '.' : HINT.channel() + '.';
     zoom.classList.add('on');
     const p = $('#zoomPan');
-    p.scrollLeft = (p.scrollWidth - p.clientWidth) / 2;
+    if (at) {
+      p.scrollLeft = at[0] * p.scrollWidth - p.clientWidth / 2;
+      p.scrollTop = at[1] * p.scrollHeight - p.clientHeight / 2;
+    } else {
+      p.scrollLeft = (p.scrollWidth - p.clientWidth) / 2;
+      p.scrollTop = 0;
+    }
   }
   function closeZoom() {
     zoom.classList.remove('on');
@@ -992,12 +1019,17 @@ export function initHdLibrary(root: HTMLElement): () => void {
     if (t === zoom || t.classList.contains('x')) closeZoom();
   }, sig);
   $$<HTMLButtonElement>('[data-z]').forEach((b) => (b.onclick = () => openZoom(b.dataset.z!)));
+  /* On a touch screen (or a drawing narrower than 480px) a tap on the Channels or Gates drawing opens the enlarged
+     view first, centred where the finger landed, and numbers are picked there at about 33px. A mouse on a wider
+     drawing keeps direct clicks (call 16). Parked items v2, 6c-1, Jeremy 10/15. */
+  const TOUCH = matchMedia('(hover: none) and (pointer: coarse)');
   ['bgChannels', 'bgGates'].forEach((id) =>
     $('#' + id).addEventListener('click', (e) => {
-      if ($('#' + id).getBoundingClientRect().width < 480) {
+      const r = $('#' + id).getBoundingClientRect();
+      if (TOUCH.matches || r.width < 480) {
         e.stopPropagation();
         e.preventDefault();
-        openZoom(id === 'bgGates' ? 'gates' : 'channels');
+        openZoom(id === 'bgGates' ? 'gates' : 'channels', [(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]);
       }
     }, { capture: true, ...sig }),
   );

@@ -282,11 +282,13 @@ export function ClosingBox({
   );
 }
 
-/** A quiet inline link — the text link inside the closing box uses this. */
-export function TextLink({ href, children }: { href: string; children: ReactNode }) {
+/** A quiet inline link — the text link inside the closing box uses this.
+ *  `download` names the saved file when the link is a file to keep. */
+export function TextLink({ href, download, children }: { href: string; download?: string; children: ReactNode }) {
   return (
     <a
       href={href}
+      download={download}
       className="text-brand-teal underline underline-offset-4 decoration-brand-teal/40 hover:decoration-brand-teal transition-colors"
     >
       {children}

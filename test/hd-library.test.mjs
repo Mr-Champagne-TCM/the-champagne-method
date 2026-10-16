@@ -47,11 +47,18 @@ const REQUIRED = [
   ["'Right Angle · 16'", 25],
   ["'Left Angle · 33'", 25],
   ["'Juxtaposition · 64'", 25],
+  ["A few to start with", 24],
+  ["A few gates to start with.", 24],
+  ["<b>With 20-34:</b> 34 and 20 both lit. The power goes straight into action, every day.", 63],
+  ["<b>With 20-34:</b> only 34 lit. The flow switches on while you&rsquo;re with someone who has 20.", 63],
+  ["<b>With 20-34:</b> neither lit. You can feel that flow around someone who has both.", 63],
 ];
 const BANNED = [
   ["When it isn", 45],
   ["lit on its own", 46],
   ["Half a channel", 47],
+  ["Most asked", 24],
+  ["The gates people ask about most.", 24],
 ];
 
 test("every locked wording is still in the library", () => {
@@ -96,4 +103,17 @@ test("data.ts is still exactly the content JSON it was generated from", (t) => {
   assert.deepEqual(take("GATETXT"), J("gates").gates, "gates.json changed");
   assert.deepEqual(take("CRTXT"), { right: cr.right, left: cr.left }, "crosses.json changed");
   assert.deepEqual(take("CRIX"), J("crosses-index"), "crosses-index.json changed");
+});
+
+test("sample charts save under the business name (parked items v2, 4b)", () => {
+  assert.ok(SRC.includes("download=\"${DLNAME(k)}\""), "the eight Where-it-is links name their download");
+  assert.ok(SRC.includes('download="TCM-Example-Chart-Crosses.pdf"'), "the Crosses intro link names its download");
+  const readings = fs.readFileSync("src/library/article/WhatAReadingIs.tsx", "utf8");
+  assert.ok(readings.includes('download="TCM-Example-Chart.pdf"'), "the Readings page sample names its download");
+});
+
+test("a wrong address gets the branded page (parked items v2, 4a)", () => {
+  assert.match(fs.readFileSync("vite.config.ts", "utf8"), /resolve\(__dirname, '404\.html'\)/, "404.html must be a build entry");
+  const page = fs.readFileSync("src/site/NotFound.tsx", "utf8");
+  for (const s of ["This page isn&rsquo;t here", "The Human Design library", "/library/human-design/", "/readings/"]) assert.ok(page.includes(s), `404 page lost "${s}"`);
 });

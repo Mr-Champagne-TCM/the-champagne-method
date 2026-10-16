@@ -107,15 +107,25 @@ export default function HdLibrary() {
 
               {/* Marks where the Topics bar sits in the flow, so it can tell when it has pinned. */}
               <div id="topicsMark" style={{ height: 1 }} />
+              {/* The "Topics" label sits outside the scrolling row so it never scrolls away (call 44), and a
+                  teal arrow shows at an edge only while topics are hidden past it (parked items v2, 6c-2, 10/15). */}
               <nav className="topics" aria-label="Topics">
-                <div className="pills">
-                  <span className="lab">Topics</span>
-                  {TOPICS.map(([id, label, sub]) => (
-                    <a key={id} className="pill" href={`#${id}`}>
-                      {label}
-                      <small>{sub}</small>
-                    </a>
-                  ))}
+                <span className="lab">Topics</span>
+                <div className="rail">
+                  <div className="pills">
+                    {TOPICS.map(([id, label, sub]) => (
+                      <a key={id} className="pill" href={`#${id}`}>
+                        {label}
+                        <small>{sub}</small>
+                      </a>
+                    ))}
+                  </div>
+                  <button type="button" className="edge l" aria-label="Earlier topics" hidden>
+                    &lsaquo;
+                  </button>
+                  <button type="button" className="edge r" aria-label="More topics" hidden>
+                    &rsaquo;
+                  </button>
                 </div>
               </nav>
 
@@ -349,8 +359,9 @@ export default function HdLibrary() {
                   <button type="button" data-v="chart" aria-pressed="true">
                     On the chart
                   </button>
+                  {/* Renamed 10/15 from the old "most asked" (call 24): no data says people ask about these 8 (parked items v2, 6a). */}
                   <button type="button" data-v="asked" aria-pressed="false">
-                    Most asked
+                    A few to start with
                   </button>
                   <button type="button" data-v="all" aria-pressed="false">
                     All 64
@@ -370,7 +381,7 @@ export default function HdLibrary() {
                   <div id="gateOut" />
                 </div>
                 <div id="gateAsked" hidden>
-                  <p className="lead">The gates people ask about most.</p>
+                  <p className="lead">A few gates to start with.</p>
                   <div id="askedList" />
                 </div>
                 <p className="alt" id="gateLines">
@@ -423,6 +434,7 @@ export default function HdLibrary() {
                       <a
                         className="exchart"
                         href="/samples/charts/example-chart-crosses.pdf"
+                        download="TCM-Example-Chart-Crosses.pdf"
                         data-tip="Download example chart, marked to show where the cross and its four gates are"
                       >
                         It&rsquo;s marked on an example chart

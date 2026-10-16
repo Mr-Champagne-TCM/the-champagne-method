@@ -75,6 +75,9 @@ export default defineConfig({
         // tools stacked between the shelves made the library a page to scroll
         // past rather than read; here they have room and it gets its shape back.
         tools: resolve(__dirname, 'tools/index.html'),
+        // GitHub Pages serves docs/404.html for every address that does not exist,
+        // at any depth. Branded, with three ways back in (parked items v2, 4a, 10/15).
+        notFound: resolve(__dirname, '404.html'),
       },
     },
   },
