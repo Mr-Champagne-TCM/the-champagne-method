@@ -11,6 +11,30 @@ import { useHashScroll } from '../../site/useHashScroll';
  *  overlapping pills. Scoping by structure rather than by descent means that
  *  fault cannot come back. */
 
+/** The small lines above and below the name in the top bar (mock: Outfit 12px, 500, 0.2em, uppercase, muted). */
+const BRAND_SMALL =
+  'block font-sans font-medium leading-[1.5] uppercase text-brand-muted transition-all duration-300';
+const BRAND_SMALL_TOP = 'text-[9px] tracking-[0.16em] sm:text-[12px] sm:tracking-[0.2em]';
+const BRAND_SMALL_SCROLLED = 'text-[8px] tracking-[0.16em] sm:text-[9px] sm:tracking-[0.18em]';
+
+/**
+ * The Human Design line above a title: "<lead> by The Champagne Method Coaching
+ * and Consulting" (Jeremy 10/16, mock changes 2 and 3, option A). It breaks only
+ * between whole phrases, so a wrapped line never splits "Coaching and / Consulting";
+ * "by" stays lowercase inside the capitalized line.
+ */
+export function BrandEyebrow({ lead }: { lead: string }) {
+  return (
+    <>
+      <span className="whitespace-nowrap">
+        {lead} <span className="normal-case">by</span>
+      </span>{' '}
+      <span className="whitespace-nowrap">The Champagne Method</span>{' '}
+      <span className="whitespace-nowrap">Coaching and Consulting</span>
+    </>
+  );
+}
+
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -31,14 +55,26 @@ export function Nav() {
         }`}
       >
         {/* The brand starts smaller than on the wider pages: at 390px a 26px brand
-            plus the right-hand link overruns the bar and the two collide. */}
+            plus the right-hand link overruns the bar and the two collide.
+            The Human Design brand (Jeremy 10/16, mock change 1, option B): "Human
+            Design by" above the name, "Coaching and Consulting" under it; "by"
+            always lowercase. The two small lines shrink on a phone so they never
+            run wider than the name, and follow it down when the bar compacts. */}
         <a
           href="/"
           className={`font-display font-medium tracking-tight whitespace-nowrap text-brand-paper transition-all duration-300 ${
             scrolled ? 'text-[18px] sm:text-[19px]' : 'text-[20px] sm:text-[26px] md:text-[30px]'
           }`}
         >
-          The <span className="text-brand-gold">Champagne</span> Method
+          <span className={`${BRAND_SMALL} ${scrolled ? BRAND_SMALL_SCROLLED : BRAND_SMALL_TOP}`}>
+            Human Design <span className="normal-case">by</span>
+          </span>
+          <span className="block">
+            The <span className="text-brand-gold">Champagne</span> Method
+          </span>
+          <span className={`${BRAND_SMALL} ${scrolled ? BRAND_SMALL_SCROLLED : BRAND_SMALL_TOP}`}>
+            Coaching and Consulting
+          </span>
         </a>
         <a
           href="/#connect"
@@ -139,18 +175,20 @@ export function ArticleHeader({
   title,
   standfirst,
   readTime,
-  /** The line above the title. Defaults to the Library, which is where every
-   *  page using this shell lived until one that is not library matter. */
-  eyebrow = 'The Champagne Method · Library',
+  /** The line above the title. Defaults to the Human Design library (Jeremy
+   *  10/16, mock change 2, option A); only "Reading your bodygraph" still uses
+   *  the default -- the other pages set their own. It runs to two lines on a
+   *  laptop, by his choice, so it breaks between whole phrases. */
+  eyebrow = <BrandEyebrow lead="Human Design library" />,
 }: {
   title: ReactNode;
   standfirst: ReactNode;
   readTime?: string;
-  eyebrow?: string;
+  eyebrow?: ReactNode;
 }) {
   return (
     <header className="border-b border-brand-gold/15 pb-9 mb-10">
-      <span className="block mb-4 font-sans text-[14px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
+      <span className="block mb-4 font-sans text-[14px] leading-[1.6] font-semibold uppercase tracking-[0.22em] text-brand-teal">
         {eyebrow}
       </span>
       <h1 className="font-display font-medium tracking-tight leading-[1.08] text-[clamp(2.25rem,6vw,3.4rem)]">

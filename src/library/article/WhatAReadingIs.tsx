@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArticlePage, ArticleHeader, H2, P, TextLink } from './ArticleUI';
+import { ArticlePage, ArticleHeader, BrandEyebrow, H2, P, TextLink } from './ArticleUI';
 
 /**
  * What the three readings actually are.
@@ -198,7 +198,7 @@ export default function WhatAReadingIs() {
       wide
     >
       <ArticleHeader
-        eyebrow="The Champagne Method · Human Design readings"
+        eyebrow={<BrandEyebrow lead="Human Design readings" />}
         title="What each reading actually is"
         standfirst="Three ways in, and what arrives with each. Every sample on this page is real output from one real chart — the drawing, the document and the writing all came out of the machine exactly as you see them."
       />

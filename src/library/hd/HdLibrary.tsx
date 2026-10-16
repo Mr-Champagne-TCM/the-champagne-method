@@ -507,7 +507,8 @@ export default function HdLibrary() {
               >
                 Jovian Archive
               </a>
-              . Every word here is The Champagne Method&rsquo;s own, written plainly and offered for self-reflection.
+              . Every word here is Jeremy Champagne&rsquo;s own (The Champagne Method Coaching and Consulting),
+              written plainly and offered for self-reflection.
             </>
           }
         />
