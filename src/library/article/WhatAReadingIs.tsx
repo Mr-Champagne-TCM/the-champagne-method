@@ -24,9 +24,10 @@ import { ArticlePage, ArticleHeader, H2, P, TextLink } from './ArticleUI';
  * invented for a page like this -- it names the chart it came from in almost
  * every paragraph. So the whole page moved to a chart that HAS one.
  *
- * WHOSE BIRTH MOMENT IT WAS CANNOT BE STATED, because it was never kept. That
- * is not a gap in this page, it is the privacy promise demonstrating itself:
- * the details computed a chart and were discarded, exactly as a buyer's are.
+ * WHOSE BIRTH MOMENT IT WAS CANNOT BE STATED, because it was never kept: the
+ * details computed a chart and were discarded, as every buyer's were until
+ * 16 October 2026 (since then a paid chart keeps them for its PDF's birth
+ * line -- see readings/privacy).
  */
 
 const SHOP = 'https://humandesign.thechampagnemethod.co';
@@ -339,8 +340,9 @@ export default function WhatAReadingIs() {
         </P>
         <P>
           Your reading is kept for a year. Nothing is stored that you did not
-          buy: the birth details are used to work out the chart and then
-          discarded — not kept, not logged, not written to disk.
+          buy: the birth details are kept with your chart and your reading, so
+          your PDF can show when and where you were born — and the summary
+          keeps none of them.
         </P>
         <p className="mt-8">
           <a

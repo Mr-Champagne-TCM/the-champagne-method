@@ -73,14 +73,24 @@ export default function Privacy() {
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated 30 August 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated 16 October 2026.</p>
 
+      {/*
+        CHANGED 16 OCTOBER 2026 (Jeremy: "a veer from our initial approach.
+        Update Ts and Cs/privacy as needed"). A paid chart now keeps its birth
+        details so the PDF can print the birth line under the name. Read out of
+        hd-site netlify/lib/reading.mjs (birthRecord, fillReading): date, time
+        or "unknown", the place as picked, the time zone -- no coordinates --
+        on the chart and reading tiers only, in the reading's own record.
+      */}
       <Callout>
-        The birth details you type are used to work out your chart and are then discarded.
-        They are not stored, not logged, and not written to disk — not even for you.
+        The birth details you type — date, time, place and time zone — are used to work out your
+        chart, and they are kept with your reading so your PDF can show when and where you were
+        born. They are kept for the same year as your reading, and they are never sent to Google,
+        who writes the interpretation. The summary has no PDF, so it keeps none of them.
       </Callout>
 
-      <P>That is the unusual one, so it comes first. Everything below is the ordinary detail.</P>
+      <P>That changed on 16 October 2026, so it comes first. Everything below is the ordinary detail.</P>
 
       <H2>Who is asking</H2>
       <P>
@@ -96,7 +106,7 @@ export default function Privacy() {
           [
             '<strong>Your birth date, time and place</strong>',
             'The form, after you buy',
-            'To calculate your chart. <strong>Discarded the moment the chart is made.</strong>',
+            'To calculate your chart, and to print when and where you were born on your PDF. <strong>Kept with your reading</strong> — the summary keeps none of them',
           ],
           [
             '<strong>Your name, email address and phone number</strong>',
@@ -129,7 +139,7 @@ export default function Privacy() {
         head={['What', 'How long']}
         rows={[
           [
-            'Your chart, your reading, and the name, email and phone from your purchase',
+            'Your chart, your reading, the birth details they were made from, and the name, email and phone from your purchase',
             'One year from the day you bought it',
           ],
           [
@@ -138,7 +148,7 @@ export default function Privacy() {
           ],
           ['The scrambled IP hash', 'One week'],
           ['A record of a technical failure, so it can be fixed', 'Fourteen days'],
-          ['Your birth date, time and place', '<strong>Not kept at all</strong>'],
+          ['Your birth details, if you bought the summary', '<strong>Not kept at all</strong>'],
         ]}
       />
       <P>
@@ -184,8 +194,9 @@ export default function Privacy() {
             receives it and could not store it if it wanted to.
           </>,
           <>
-            <strong>Your birth details are never written down at all</strong> — the strongest
-            protection available, which is that there is nothing to protect.
+            <strong>Your birth details are kept only beside your reading</strong> — the date, the
+            time, the place you picked and its time zone, exactly what your PDF prints. No map
+            coordinates are kept, and they are never filed anywhere on their own.
           </>,
         ]}
       />
@@ -212,8 +223,9 @@ export default function Privacy() {
             <strong>Netlify</strong> hosts the site and stores your reading.
           </>,
           <>
-            <strong>Fly.io</strong> runs the chart calculator. Your birth details pass through it
-            to be computed and are not stored there either.
+            <strong>Fly.io</strong> runs the chart calculator. Your birth date, time and time zone
+            pass through it to be computed — never your name or the place — and are not stored
+            there.
           </>,
         ]}
       />
@@ -240,7 +252,7 @@ export default function Privacy() {
             year is up, and it will be done rather than debated. Ask, and it happens.
           </>,
           <>
-            <strong>A correction</strong> to your name or email.
+            <strong>A correction</strong> to your name, email or birth details.
           </>,
           <>
             <strong>Your reading again</strong> — the link can be re-sent to the address you
