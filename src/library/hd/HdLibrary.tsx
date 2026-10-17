@@ -497,6 +497,7 @@ export default function HdLibrary() {
           </div>
         </main>
         <Footer
+          hd
           note={
             <>
               Source material: Ra Uru Hu and the{' '}

@@ -209,6 +209,7 @@ function NotYours({ children }: { children: React.ReactNode }) {
 export default function WhatAReadingIs() {
   return (
     <ArticlePage
+      hd
       crumb="What a reading is"
       parent={{ label: 'Human Design readings', href: SHOP }}
       wide

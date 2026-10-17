@@ -87,11 +87,61 @@ export function Nav() {
   );
 }
 
-export function Footer({ note }: { note?: ReactNode }) {
+/**
+ * THE FOOTER THEME, on the Human Design pages only (Jeremy 10/17, footer-
+ * everywhere mock): the same two names the readings' emails, shop and readings
+ * site end with, side by side, stacked on a phone. Words as in hd-site
+ * shared/footerTheme.mjs (test/footer-theme.test.mjs holds them).
+ *
+ * ONLY WHERE HUMAN DESIGN ALREADY LIVES. The coaching pages stay clean of HD
+ * (Jeremy 10/16: "keep clean of HD stuff on coaching site, except if there is
+ * already a link to my HD stuff"), so this is opt-in: `hd` on the footer.
+ *
+ * The HD name is this site's gold (brand-gold); the business name the
+ * lavender the emails use (#a78bfa, the site's own lavender-400).
+ */
+export const FOOTER_THEME = [
+  {
+    href: 'https://humandesign.thechampagnemethod.co/',
+    name: 'Human Design by The Champagne Method',
+    line: 'Charts and readings, for you or someone close to you.',
+    color: '#E8CBA0',
+    bar: 'rgba(232,203,160,0.55)',
+  },
+  {
+    href: 'https://thechampagnemethod.co',
+    name: 'The Champagne Method Coaching and Consulting',
+    line: 'Coaching, if you’d like to go further.',
+    color: '#a78bfa',
+    bar: 'rgba(167,139,250,0.55)',
+  },
+];
+
+function FooterTheme() {
+  return (
+    <div data-footer-theme="" className="grid gap-x-8 gap-y-5 sm:grid-cols-2 max-w-3xl mb-8">
+      {FOOTER_THEME.map((c) => (
+        <div key={c.href} className="pl-3" style={{ borderLeft: `2px solid ${c.bar}` }}>
+          <a
+            href={c.href}
+            className="font-sans text-[16px] font-semibold leading-snug hover:underline"
+            style={{ color: c.color }}
+          >
+            {c.name}
+          </a>
+          <p className="mt-1 text-[15px] leading-relaxed text-brand-muted">{c.line}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function Footer({ note, hd = false }: { note?: ReactNode; hd?: boolean }) {
   return (
     <footer className="border-t border-brand-gold/15 pt-12 pb-11 mt-8">
       <div className="max-w-5xl mx-auto px-6 sm:px-8">
         {note && <p className="max-w-[62ch] text-[15px] text-brand-muted mb-8">{note}</p>}
+        {hd && <FooterTheme />}
         <div className="flex flex-wrap gap-4 mb-8">
           <a
             href="/library/"
@@ -105,12 +155,15 @@ export function Footer({ note }: { note?: ReactNode }) {
           >
             Start a conversation
           </a>
-          <a
-            href="https://thechampagnemethod.co"
-            className="text-[15px] text-brand-muted hover:text-brand-teal transition-colors"
-          >
-            thechampagnemethod.co
-          </a>
+          {/* On an HD page the coaching name above already opens the home page. */}
+          {!hd && (
+            <a
+              href="https://thechampagnemethod.co"
+              className="text-[15px] text-brand-muted hover:text-brand-teal transition-colors"
+            >
+              thechampagnemethod.co
+            </a>
+          )}
         </div>
         <div className="flex flex-wrap gap-2 justify-between items-center pt-6 border-t border-brand-gold/10">
           <span className="text-[15px] text-brand-muted/70">
@@ -129,6 +182,7 @@ export function ArticlePage({
   parent = { label: 'Library', href: '/library/' },
   wide = false,
   footerNote,
+  hd = false,
   children,
 }: {
   crumb: string;
@@ -145,6 +199,8 @@ export function ArticlePage({
    */
   wide?: boolean;
   footerNote?: ReactNode;
+  /** A Human Design page: its footer carries the footer theme (10/17). */
+  hd?: boolean;
   children: ReactNode;
 }) {
   useHashScroll();
@@ -165,7 +221,7 @@ export function ArticlePage({
             <article className={wide ? '' : 'max-w-[64ch]'}>{children}</article>
           </div>
         </main>
-        <Footer note={footerNote} />
+        <Footer note={footerNote} hd={hd} />
       </div>
     </div>
   );

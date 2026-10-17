@@ -47,6 +47,7 @@ function LegendRow({ swatch, title, children }: { swatch: ReactNode; title: stri
 export default function ReadingYourBodygraph() {
   return (
     <ArticlePage
+      hd
       crumb="Reading your bodygraph"
       footerNote="Your chart was cast for your exact birth moment. If the birth time on your reading is wrong, the Type, Authority and Profile can change — tell us and we will recast it."
     >
