@@ -67,13 +67,13 @@ function Table({ head, rows }: { head: string[]; rows: string[][] }) {
 
 export default function Privacy() {
   return (
-    <ArticlePage crumb="Privacy" parent={{ label: 'Readings', href: '/readings/' }}>
+    <ArticlePage crumb="Privacy" parent={{ label: 'Readings', href: '/readings/' }} hd>
       <ArticleHeader
         eyebrow="Human Design readings"
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated 16 October 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated 17 October 2026.</p>
 
       {/*
         CHANGED 16 OCTOBER 2026 (Jeremy: "a veer from our initial approach.
@@ -268,6 +268,48 @@ export default function Privacy() {
         Depending on where you live you may have these rights in law as well — under the GDPR in
         the UK and Europe, or state privacy laws in the US. They are offered here to everybody
         regardless.
+      </P>
+
+      {/*
+        READINGS MADE IN PERSON (10/17, footer-everywhere mock, open item: the
+        readings site's footer had no privacy line because this page described
+        the shop only). Every fact read out of hd-reading-app: ClientStore.kt
+        keeps the client in the app until "Forget"; Delivery.upload days = 7;
+        Reading.kt sends chart values only; OPT_IN is the email box. The
+        laptop copy is the backup taken before each app update.
+        NOT SAID, ON PURPOSE: that the PDF is deleted when the link closes. The
+        readings site only deletes it when somebody opens an expired link
+        (hosting/netlify/lib/delivery.mjs) -- an open item until a sweep exists.
+      */}
+      <div id="in-person" className="scroll-mt-28">
+        <H2>Readings made with Jeremy in person</H2>
+      </div>
+      <P>
+        Some readings are made face to face, on Jeremy&rsquo;s phone, rather than bought here.
+        Their links open on readings.thechampagnemethod.co. For those:
+      </P>
+      <Table
+        head={['What', 'Where, and for how long']}
+        rows={[
+          [
+            '<strong>Your name, your birth date, time and place, and the phone number or email you give</strong>',
+            'In the readings app on Jeremy&rsquo;s phone, so your reading can be sent again, until you ask for them to be removed. A backup copy is kept on his computer when the app is updated',
+          ],
+          [
+            '<strong>Your reading&rsquo;s PDF</strong>, behind a private link and a short code',
+            'The link stops working after seven days',
+          ],
+          [
+            '<strong>Occasional emails</strong>',
+            'Only if you ticked the box for them',
+          ],
+        ]}
+      />
+      <P>
+        Google writes the interpretation for these too, from the values of your chart only &mdash;
+        no name, no birth date, no birth time, no place. A copy, a correction or deletion works
+        the same way as above: one email to{' '}
+        <TextLink href={`mailto:${CONTACT}`}>{CONTACT}</TextLink>.
       </P>
 
       <H2>If something goes wrong</H2>
