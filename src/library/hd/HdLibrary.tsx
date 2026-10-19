@@ -39,6 +39,16 @@ export default function HdLibrary() {
                   Every part of a chart, <em>one layer</em> at a time.
                 </h1>
                 <p className="sub">A line to start. A tap if it pulls at you. As deep as you like after that.</p>
+                {/* The three questions a newcomer asks first, a line each (newcomer fix 11, option B, Jeremy 10/19).
+                    Same card as "One part per section" below, with the question in gold. */}
+                <div className="how what">
+                  {WHAT.map(([q, a]) => (
+                    <div key={q}>
+                      <b>{q}</b>
+                      {a}
+                    </div>
+                  ))}
+                </div>
                 <div className="find">
                   <input id="q" type="search" placeholder="Search the library here" aria-label="Find an entry" />
                   <button className="btn" id="qgo" type="button">
@@ -517,6 +527,13 @@ export default function HdLibrary() {
     </div>
   );
 }
+
+/** What it is, where it is from, and whether it is science: newcomer fix 11B, words as accepted. */
+const WHAT: [string, string][] = [
+  ['What is it?', 'A chart worked out from when and where you were born, about how your energy tends to work.'],
+  ['Where is it from?', 'It began in 1987 and blends astrology, the I Ching, the Kabbalah and the chakra system.'],
+  ['Is it science?', 'No, and it is not a prediction either. It is a lens to test against your own life.'],
+];
 
 /** The Topics bar: id, label, and the word or two under each pill (v21, call 44). */
 const TOPICS: [string, string, string][] = [
