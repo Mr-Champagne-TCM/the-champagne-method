@@ -261,7 +261,7 @@ export default function WhatAReadingIs() {
           price="$11.11"
           standfirst="Everything in the summary, and the bodygraph itself — the picture people mean when they say they have seen their chart."
           contains={[
-            'Your bodygraph, drawn: the nine centers, which are filled, and every channel running between them.',
+            'Your bodygraph, drawn: the nine centers, which ones are colored in, and every channel running between them.',
             'Your channels named, and your activated gates numbered.',
             'A page you can share, and a PDF you keep.',
             'The same drawing at print size, so it is readable on paper.',

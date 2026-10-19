@@ -104,7 +104,7 @@ export default function ReadingYourBodygraph() {
             The chart in your reading is a wiring diagram, not a verdict. Here is how to read
             the picture &mdash; what the colors mean, what the shapes mean, and what it means
             when a line &mdash; a <em className="text-brand-paper">channel</em> &mdash; is only
-            half filled in.
+            half colored in.
           </>
         }
       />
@@ -263,25 +263,25 @@ export default function ReadingYourBodygraph() {
 
       <H2>Your centers: defined, undefined and open</H2>
       <P>
-        Each of the nine centers is either filled in on the drawing or it is not, and that
-        single fact is the most load-bearing thing on the page. The ones that are not filled
+        Each of the nine centers is either colored in on the drawing or it is not, and that
+        single fact is the most load-bearing thing on the page. The ones that are not colored in
         come in two kinds, and what separates them is whether any gate numbers are sitting
         inside them.
       </P>
 
       <CardStack>
-        <Card title="Defined" meta="&middot; filled in">
+        <Card title="Defined" meta="&middot; colored in">
           Consistent. This runs the same way on a good day and a bad one. It is what other
           people can rely on you for, and what you can rely on yourself for.
         </Card>
-        <Card title="Undefined" meta="&middot; not filled, but carrying gate numbers">
+        <Card title="Undefined" meta="&middot; not colored in, but carrying gate numbers">
           Variable, with a fixed way in. A gate of yours reaches this center without completing
           a channel across it &mdash; so the energy is not yours to summon, but the doorway it
           arrives through is always the same one. It switches on around particular people and
           in particular rooms, which is why it can feel dependable right up until the room
           changes.
         </Card>
-        <Card title="Open" meta="&middot; not filled, and no gate numbers">
+        <Card title="Open" meta="&middot; not colored in, and no gate numbers">
           Variable, with no fixed way in at all. Nothing of yours reaches here, so nothing of
           your own is mixed into what you pick up. This is where you read a room most
           accurately &mdash; and where you are likeliest to mistake someone else&rsquo;s
@@ -291,17 +291,17 @@ export default function ReadingYourBodygraph() {
 
       <P>
         <span className="block mt-6" />
-        Most people expect the filled centers to be the good news. Usually it is the other two
+        Most people expect the colored-in centers to be the good news. Usually it is the other two
         that explain the last ten years.
       </P>
 
-      <H2>The half-filled channels</H2>
+      <H2>The half-colored channels</H2>
       <P>
-        When both of a channel&rsquo;s gates are switched on, it fills all the way across and
+        When both of a channel&rsquo;s gates are switched on, it is colored in all the way across and
         the two centers it joins are wired together permanently. That is the easy case.
       </P>
 
-      <H3>When only half of it fills</H3>
+      <H3>When only half of it is colored in</H3>
       <P>
         That is a channel you carry one end of. It is not a partial version of the whole thing
         and it is not a deficiency. It means the other half arrives{' '}
