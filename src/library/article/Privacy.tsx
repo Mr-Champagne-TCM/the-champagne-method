@@ -73,7 +73,7 @@ export default function Privacy() {
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated 17 October 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated 19 October 2026.</p>
 
       {/*
         CHANGED 16 OCTOBER 2026 (Jeremy: "a veer from our initial approach.
@@ -82,15 +82,33 @@ export default function Privacy() {
         hd-site netlify/lib/reading.mjs (birthRecord, fillReading): date, time
         or "unknown", the place as picked, the time zone -- no coordinates --
         on the chart and reading tiers only, in the reading's own record.
+
+        CHANGED 19 OCTOBER 2026 (newcomer fixes 17A and 20A, Jeremy 10/19). The
+        shop's birth form asks, optionally, for a "Name for this chart"; it is
+        the title of the page and the PDF ("Alex's Human Design") and is kept in
+        the same record as the birth details, for the same year, and deleted
+        with them. The writer is sent chart values only, so never this name.
+        The PDF's birth line no longer prints the time zone; the zone is still
+        kept, because the chart is worked out from it. SHIP WITH THE SHOP: this
+        describes the hd-site release that adds the field.
       */}
       <Callout>
         The birth details you type — date, time, place and time zone — are used to work out your
         chart, and they are kept with your reading so your PDF can show when and where you were
         born. They are kept for the same year as your reading, and they are never sent to Google,
         who writes the interpretation. The summary has no PDF, so it keeps none of them.
+        <span className="mt-3 block">
+          The form also asks for a name for the chart, if you&rsquo;d like to give one. It becomes the
+          title of your page and your PDF (&ldquo;Alex&rsquo;s Human Design&rdquo;), and it is kept with
+          your reading in the same way as your birth details: in the same place, for the same year, and
+          deleted with them. Google never sees it.
+        </span>
       </Callout>
 
-      <P>That changed on 16 October 2026, so it comes first. Everything below is the ordinary detail.</P>
+      <P>
+        The birth details changed on 16 October 2026 and the name for the chart on 19 October 2026,
+        so they come first. Everything below is the ordinary detail.
+      </P>
 
       <H2>Who is asking</H2>
       <P>
@@ -107,6 +125,11 @@ export default function Privacy() {
             '<strong>Your birth date, time and place</strong>',
             'The form, after you buy',
             'To calculate your chart, and to print when and where you were born on your PDF. <strong>Kept with your reading</strong> — the summary keeps none of them',
+          ],
+          [
+            '<strong>A name for the chart, if you give one</strong>',
+            'The form, after you buy',
+            'To put a title on your page and your PDF, like “Alex’s Human Design”. <strong>Kept with your reading</strong>, the same way as your birth details',
           ],
           [
             '<strong>Your name, email address and phone number</strong>',
@@ -139,7 +162,7 @@ export default function Privacy() {
         head={['What', 'How long']}
         rows={[
           [
-            'Your chart, your reading, the birth details they were made from, and the name, email and phone from your purchase',
+            'Your chart, your reading, the birth details they were made from, the name you gave the chart (if you gave one), and the name, email and phone from your purchase',
             'One year from the day you bought it',
           ],
           [
@@ -195,8 +218,10 @@ export default function Privacy() {
           </>,
           <>
             <strong>Your birth details are kept only beside your reading</strong> — the date, the
-            time, the place you picked and its time zone, exactly what your PDF prints. No map
-            coordinates are kept, and they are never filed anywhere on their own.
+            time, the place you picked and its time zone. Your PDF prints the date, the time and the
+            place; the time zone is kept because your chart is worked out from it. No map
+            coordinates are kept, and they are never filed anywhere on their own. The name you give
+            the chart, if you give one, is kept beside your reading in the same way.
           </>,
         ]}
       />
@@ -216,7 +241,8 @@ export default function Privacy() {
           <>
             <strong>Google</strong> writes the interpretation on the reading tier, using their
             Gemini model. <strong>They receive the values of your chart and nothing else</strong> —
-            no name, no email, no birth date, no birth time, no place. What is sent looks like
+            no name (not yours, and not the one you gave the chart), no email, no birth date, no
+            birth time, no place. What is sent looks like
             “Projector, 1/3, Self-Projected, channels 11-56 and 1-8”, attached to nobody.
           </>,
           <>
@@ -252,7 +278,8 @@ export default function Privacy() {
             year is up, and it will be done rather than debated. Ask, and it happens.
           </>,
           <>
-            <strong>A correction</strong> to your name, email or birth details.
+            <strong>A correction</strong> to your name, email or birth details, or to the name on
+            your chart.
           </>,
           <>
             <strong>Your reading again</strong> — the link can be re-sent to the address you
