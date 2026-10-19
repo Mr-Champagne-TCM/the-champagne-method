@@ -11,6 +11,52 @@ import {
   CardStack,
   TextLink,
 } from './ArticleUI';
+import { MarkedChart, type Mark } from './MarkedChart';
+
+/* Where the numbered rings sit, in the drawing's own units (viewBox -120 -12 1090 1330),
+   checked against public/samples/bodygraph.svg in the 10/17 mock. */
+/** The four line states (marks 1-4). */
+const COLOR_MARKS: Mark[] = [
+  { n: 1, x: 730, y: 790 }, // a Personality line (white): gate 36's half
+  { n: 2, x: 280, y: 608, dx: -62, dy: 8 }, // a Design line (violet): gate 20 toward 57
+  { n: 3, x: 190, y: 988 }, // both, split: gate 50's half
+  { n: 4, x: 615, y: 1098 }, // open: an unlit line, Root to Solar Plexus
+];
+
+/** The three center states (marks 5-7). */
+const CENTER_MARKS: Mark[] = [
+  { n: 5, x: 421, y: 1003, r: 62, dx: 92, dy: -70 }, // Sacral: colored in
+  { n: 6, x: 45, y: 973, r: 58, dx: -10, dy: -96 }, // Spleen: not colored in, gates lit
+  { n: 7, x: 421, y: 701, r: 62, dx: 112, dy: 22 }, // G: not colored in, nothing lit
+];
+
+/** The key beside the marked example (newcomer fix 12A, Jeremy 10/19). Number, name, what it looks like. */
+const KEY: Array<[number, string, string]> = [
+  [1, 'Personality line', 'white: the part you know'],
+  [2, 'Design line', 'violet: the part the body knows'],
+  [3, 'Both, split', 'white and violet down its length'],
+  [4, 'Open line', 'dark navy: nothing lit'],
+  [5, 'Colored in', 'a defined center (here, the Sacral)'],
+  [6, 'Not colored in, gates lit', 'an undefined center (the Spleen)'],
+  [7, 'Not colored in, nothing lit', 'an open center (the G)'],
+];
+
+function MarkKey({ rows }: { rows: Array<[number, string, string]> }) {
+  return (
+    <ol className="list-none p-0 m-0 grid gap-3">
+      {rows.map(([n, t, d]) => (
+        <li key={n} className="flex gap-3 items-start">
+          <span className="mt-[2px] inline-grid place-items-center h-6 w-6 shrink-0 rounded-full bg-brand-teal text-[13px] font-bold text-[#0d1b1a]">
+            {n}
+          </span>
+          <span className="text-[15px] leading-snug text-brand-paper/85">
+            <strong className="text-brand-paper">{t}</strong> &middot; {d}
+          </span>
+        </li>
+      ))}
+    </ol>
+  );
+}
 
 /** "Reading your bodygraph" — for someone already holding a paid interpretation,
  *  asking "what am I looking at?"
@@ -121,6 +167,21 @@ export default function ReadingYourBodygraph() {
       </P>
 
       <H2>The colors</H2>
+      {/* Newcomer fix 12A: Jeremy's own chart, marked, with the key beside it (under it on a phone).
+          It opens full screen and zooms like the chart on a reading's page. */}
+      <figure className="my-8 grid gap-6 sm:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] sm:items-center">
+        <div>
+          <MarkedChart
+            marks={[...COLOR_MARKS, ...CENTER_MARKS]}
+            label="Jeremy Champagne’s own chart, marked 1 to 7 to match the key"
+            className="rounded-2xl overflow-hidden border border-brand-gold/25"
+          />
+          <figcaption className="mt-2 text-[13px] text-brand-muted">
+            An example: Jeremy Champagne&rsquo;s own chart, marked. Not your chart.
+          </figcaption>
+        </div>
+        <MarkKey rows={KEY} />
+      </figure>
       <P>
         Every channel and every gate is in one of four states. This is the whole vocabulary
         &mdash; once you have these four, the rest of the chart is just where they sit.
