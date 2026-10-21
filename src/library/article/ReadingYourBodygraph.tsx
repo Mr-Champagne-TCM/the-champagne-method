@@ -196,7 +196,7 @@ export default function ReadingYourBodygraph() {
             </Swatch>
           }
         >
-          Conscious. The part you would describe about yourself if someone asked. You recognise
+          Conscious. The part you would describe about yourself if someone asked. You recognize
           these when you read them, sometimes with a wince.
         </LegendRow>
         <LegendRow
@@ -323,7 +323,7 @@ export default function ReadingYourBodygraph() {
 
       <H3>1. Pick the line that stung</H3>
       <P>
-        Go back through your reading and find the sentence you either recognised instantly or
+        Go back through your reading and find the sentence you either recognized instantly or
         wanted to argue with. Both reactions mean the same thing. Write that one sentence
         somewhere you will see it &mdash; not the whole reading, one line.
       </P>
