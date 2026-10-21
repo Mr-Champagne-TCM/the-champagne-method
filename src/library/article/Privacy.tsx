@@ -73,7 +73,7 @@ export default function Privacy() {
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated 22 October 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated October 22, 2026.</p>
 
       {/*
         CHANGED 16 OCTOBER 2026 (Jeremy: "a veer from our initial approach.
