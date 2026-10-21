@@ -124,8 +124,8 @@ export default function Privacy() {
       </Callout>
 
       <P>
-        The birth details changed on 16 October 2026, the name for the chart on 19 October 2026,
-        and the summary keeping them too on 20 October 2026, so they come first. Everything below
+        The birth details changed on October 16, 2026, the name for the chart on October 19, 2026,
+        and the summary keeping them too on October 20, 2026, so they come first. Everything below
         is the ordinary detail.
       </P>
 
