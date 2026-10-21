@@ -42,7 +42,9 @@ const SHOP = 'https://humandesign.thechampagnemethod.co';
 
 /**
  * The example's own values: Jeremy Champagne's chart, copied from his shop
- * record (engine 0.5.0), not invented.
+ * record (engine 0.5.0), not invented. The on-track and off-track rows use the
+ * shop's own labels and order (its PDF: "When it's on track -- The feeling is
+ * satisfaction"), not the system's names Signature and Not-Self Theme (fix 11).
  */
 const EXAMPLE: Array<[string, string]> = [
   ['Type', 'Manifesting Generator'],
@@ -50,8 +52,8 @@ const EXAMPLE: Array<[string, string]> = [
   ['Authority', 'Sacral'],
   ['Profile', '2/4 — Hermit / Opportunist'],
   ['Definition', 'Single'],
-  ['Not-Self Theme', 'Frustration'],
-  ['Signature', 'Satisfaction'],
+  ['When it’s on track', 'The feeling is satisfaction'],
+  ['When it’s off track', 'The feeling is frustration'],
   ['Incarnation Cross', 'Right Angle Cross of Eden (6/36 | 12/11)'],
   ['Defined centers', 'Throat · Sacral'],
   ['Undefined centers', 'Ajna · Heart · Spleen · Solar Plexus · Root'],
@@ -234,7 +236,7 @@ export default function WhatAReadingIs() {
           standfirst="The named parts of a chart, as words. No picture, and nothing blurred out."
           contains={[
             'Type, Strategy and Authority — how your energy works, what it responds to, and how a decision settles.',
-            'Profile, Definition, Signature and Not-Self Theme.',
+            'Profile and Definition, and how it feels when it is on track and when it is off track.',
             'Your incarnation cross, and which centers are defined, which are undefined, and which are open.',
             'A page you can come back to for a year.',
           ]}
@@ -364,9 +366,9 @@ export default function WhatAReadingIs() {
         </P>
         <P>
           Your reading is kept for a year. Nothing is stored that you did not
-          buy: the birth details are kept with your chart and your reading, so
-          your PDF can show when and where you were born — and the summary
-          keeps none of them.
+          buy: the birth details are kept with your summary, your chart and your
+          reading, so moving up never means typing them again, and your PDF can
+          show when and where you were born.
         </P>
         <p className="mt-8">
           <a

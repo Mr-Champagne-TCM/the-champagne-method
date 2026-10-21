@@ -73,7 +73,7 @@ export default function Privacy() {
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated 20 October 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated 22 October 2026.</p>
 
       {/*
         CHANGED 16 OCTOBER 2026 (Jeremy: "a veer from our initial approach.
@@ -101,6 +101,13 @@ export default function Privacy() {
         address (charts.mjs, store charts-by-email). And Jeremy 10/20: his page
         is "Human Design readings", never "the shop", in anything a reader sees.
         SHIP WITH hd-site release 2 -- not before.
+
+        CHANGED 22 OCTOBER 2026 (fix 12): the payment page stopped asking for a
+        phone number in hd-site release 1, so the payment rows and the Stripe
+        line say name and email only. The in-person section below is a
+        different system (the readings app on Jeremy's phone) and still takes
+        a phone number or an email; it is unchanged. The date above is a stand-in
+        for the day this goes live.
       */}
       <Callout>
         The birth details you type — date, time, place and time zone — are used to work out your
@@ -154,7 +161,7 @@ export default function Privacy() {
             'To send a fresh link to each chart bought with that address — to that address and nowhere else. The page never shows whether it has any. The address itself is not stored; a scrambled version is counted for a day, so the page cannot be used to fill an inbox',
           ],
           [
-            '<strong>Your name, email address and phone number</strong>',
+            '<strong>Your name and email address</strong>',
             'The payment page',
             'To send you what you bought, and to send it again if you ask',
           ],
@@ -184,7 +191,7 @@ export default function Privacy() {
         head={['What', 'How long']}
         rows={[
           [
-            'Your chart, your reading, the birth details they were made from, the name you gave the chart (if you gave one), any earlier details you corrected, and the name, email and phone from your purchase',
+            'Your chart, your reading, the birth details they were made from, the name you gave the chart (if you gave one), any earlier details you corrected, and the name and email from your purchase',
             'One year from the day you bought it',
           ],
           [
@@ -257,7 +264,7 @@ export default function Privacy() {
         items={[
           <>
             <strong>Stripe</strong> takes the payment and holds your card details. They receive
-            your name, email and phone.
+            your name and email.
           </>,
           <>
             <strong>Resend</strong> delivers the emails. They receive your email address and what

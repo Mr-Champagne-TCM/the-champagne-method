@@ -4,7 +4,9 @@
 > making any change. Its top priority is: **do not break the build or the deployment.**
 > Live site: **https://thechampagnemethod.co**
 > Repo: `github.com/Mr-Champagne-TCM/the-champagne-method`
-> Last audited at **v2.2** (Aug 2026) — the React library at `/library/` with its
+> Version marker at **v2.3** (Oct 2026) — copy fixes on `/readings/` and
+> `/readings/privacy/` only; nothing below changed. Last audited at **v2.2**
+> (Aug 2026) — the React library at `/library/` with its
 > interactive tools and the emotion wheel, plus two long-form article pages at
 > `/library/human-design/` and `/library/bodygraph/`. Palette, type, layered
 > waves + bubbles background and the Calendly link-out are unchanged from v2.1.
