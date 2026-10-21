@@ -143,11 +143,16 @@ export function Footer({ note, hd = false }: { note?: ReactNode; hd?: boolean })
         {note && <p className="max-w-[62ch] text-[15px] text-brand-muted mb-8">{note}</p>}
         {hd && <FooterTheme />}
         <div className="flex flex-wrap gap-4 mb-8">
+          {/*
+            THE WIDER LIBRARY, NAMED (Jeremy 10/20): on a Human Design page a
+            link to the whole /library/ says "Open the full Coaching Library";
+            on the coaching site it stays "The Library".
+          */}
           <a
             href="/library/"
             className="text-[15px] text-brand-muted hover:text-brand-teal transition-colors"
           >
-            The Library
+            {hd ? 'Open the full Coaching Library' : 'The Library'}
           </a>
           <a
             href="/#connect"
@@ -179,7 +184,7 @@ export function Footer({ note, hd = false }: { note?: ReactNode; hd?: boolean })
 /** Page shell: the site background, nav, a reading-width column, and the footer. */
 export function ArticlePage({
   crumb,
-  parent = { label: 'Library', href: '/library/' },
+  parent,
   wide = false,
   footerNote,
   hd = false,
@@ -204,6 +209,13 @@ export function ArticlePage({
   children: ReactNode;
 }) {
   useHashScroll();
+  /*
+   * The breadcrumb's default. On a Human Design page it hangs off the Human
+   * Design library (release 2, Jeremy 10/20: a bare "Library" there led to the
+   * wider library under no name -- that link now lives in the footer as "Open
+   * the full Coaching Library"). Elsewhere it is the Library, as before.
+   */
+  const up = parent ?? (hd ? { label: 'Human Design library', href: '/library/human-design/' } : { label: 'Library', href: '/library/' });
   return (
     <div className="font-sans text-brand-paper">
       <Background />
@@ -212,8 +224,8 @@ export function ArticlePage({
         <main className="pt-28 sm:pt-32 pb-4">
           <div className="max-w-5xl mx-auto px-6 sm:px-8">
             <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.16em] text-brand-muted/70">
-              <a href={parent.href} className="hover:text-brand-teal transition-colors">
-                {parent.label}
+              <a href={up.href} className="hover:text-brand-teal transition-colors">
+                {up.label}
               </a>
               <span className="mx-2">/</span>
               {crumb}

@@ -353,8 +353,8 @@ export default function ReadingYourBodygraph() {
         <strong className="font-semibold">Then go further.</strong> One week tells you whether
         this is real for you. If it is, the rest of the work &mdash; the experiments, the
         library, and the readings that go deeper than one page &mdash; starts with{' '}
-        <TextLink href="/library/human-design/">The Human Design library</TextLink> and{' '}
-        <TextLink href="/library/">the library</TextLink>. Bring your notes.
+        {/* Fix 19, option A (Jeremy 10/20 "2A"): one library named, not "the library and the library". */}
+        <TextLink href="/library/human-design/">The Human Design library</TextLink>. Bring your notes.
       </Callout>
 
       <P>If it holds up, it was never information. It was a mirror, and you already knew.</P>

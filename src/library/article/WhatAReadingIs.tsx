@@ -329,17 +329,26 @@ export default function WhatAReadingIs() {
           </NotYours>
 
           <p className="mt-7 max-w-[62ch] text-[16px] leading-relaxed text-brand-paper/85">
-            The other nine, so you can see the shape of the whole thing:
+            {/* FIX 19, OPTION A (Jeremy 10/20 "2A"): it said "the other nine" and then listed
+                eleven. All eleven now, the two shown above marked in gold. */}
+            All eleven, so you can see the shape of the whole thing (the two above in gold):
           </p>
           <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
-            {ALL_SECTIONS.map((h) => (
-              <li
-                key={h}
-                className="rounded-full border border-brand-gold/20 px-3 py-1 text-[14px] text-brand-muted"
-              >
-                {h}
-              </li>
-            ))}
+            {ALL_SECTIONS.map((h) => {
+              const shown = READING_SAMPLE.some((r) => r.heading === h);
+              return (
+                <li
+                  key={h}
+                  className={
+                    shown
+                      ? 'rounded-full border border-brand-gold/70 bg-brand-gold/10 px-3 py-1 text-[14px] text-brand-gold'
+                      : 'rounded-full border border-brand-gold/20 px-3 py-1 text-[14px] text-brand-muted'
+                  }
+                >
+                  {h}
+                </li>
+              );
+            })}
           </ul>
         </Tier>
       </div>

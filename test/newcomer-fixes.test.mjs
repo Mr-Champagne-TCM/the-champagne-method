@@ -71,5 +71,5 @@ test("17A + 20A: the privacy page says what happens to the chart's name, and the
   assert.match(privacy, /Alex&rsquo;s Human Design|Alex’s Human Design/);
   assert.match(privacy, /not yours, and not the one you gave the chart/);
   assert.doesNotMatch(privacy, /exactly what your PDF prints/);
-  assert.match(privacy, /kept with your reading so your PDF can show/, "prerender sentinel");
+  assert.match(privacy, /kept with your chart so your page and PDF can show/, "prerender sentinel");
 });

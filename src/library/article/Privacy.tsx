@@ -73,7 +73,7 @@ export default function Privacy() {
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated 19 October 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated 20 October 2026.</p>
 
       {/*
         CHANGED 16 OCTOBER 2026 (Jeremy: "a veer from our initial approach.
@@ -91,23 +91,35 @@ export default function Privacy() {
         The PDF's birth line no longer prints the time zone; the zone is still
         kept, because the chart is worked out from it. SHIP WITH THE SHOP: this
         describes the hd-site release that adds the field.
+
+        CHANGED 20 OCTOBER 2026 (release 2, Jeremy 10/19: "capture birth details
+        even for summary"). The summary keeps the details too (hd-site
+        reading.mjs: fillReading keeps `birth` on every tier), so an upgrade
+        carries them over. "Change a detail" keeps the details it replaced in
+        the record's `history`, never sent to a page, a PDF or an email. "Email
+        me my charts" keeps a list of record ids under a scrambled key per
+        address (charts.mjs, store charts-by-email). And Jeremy 10/20: his page
+        is "Human Design readings", never "the shop", in anything a reader sees.
+        SHIP WITH hd-site release 2 -- not before.
       */}
       <Callout>
         The birth details you type — date, time, place and time zone — are used to work out your
-        chart, and they are kept with your reading so your PDF can show when and where you were
-        born. They are kept for the same year as your reading, and they are never sent to Google,
-        who writes the interpretation. The summary has no PDF, so it keeps none of them.
+        chart, and they are kept with your chart so your page and PDF can show when and where you
+        were born. They are kept for the same year as your chart, and they are never sent to Google,
+        who writes the interpretation. The summary keeps them too, so going a step further never
+        means typing them again.
         <span className="mt-3 block">
-          The form also asks for a name for the chart, if you&rsquo;d like to give one. It becomes the
+          The form also asks whose chart it will be, if you&rsquo;d like to give a name. It becomes the
           title of your page and your PDF (&ldquo;Alex&rsquo;s Human Design&rdquo;), and it is kept with
-          your reading in the same way as your birth details: in the same place, for the same year, and
+          your chart in the same way as your birth details: in the same place, for the same year, and
           deleted with them. Google never sees it.
         </span>
       </Callout>
 
       <P>
-        The birth details changed on 16 October 2026 and the name for the chart on 19 October 2026,
-        so they come first. Everything below is the ordinary detail.
+        The birth details changed on 16 October 2026, the name for the chart on 19 October 2026,
+        and the summary keeping them too on 20 October 2026, so they come first. Everything below
+        is the ordinary detail.
       </P>
 
       <H2>Who is asking</H2>
@@ -124,12 +136,22 @@ export default function Privacy() {
           [
             '<strong>Your birth date, time and place</strong>',
             'The form, after you buy',
-            'To calculate your chart, and to print when and where you were born on your PDF. <strong>Kept with your reading</strong> — the summary keeps none of them',
+            'To calculate your chart, and to show when and where you were born on your page and PDF. <strong>Kept with your chart, on every tier</strong> — the summary too',
           ],
           [
             '<strong>A name for the chart, if you give one</strong>',
             'The form, after you buy',
-            'To put a title on your page and your PDF, like “Alex’s Human Design”. <strong>Kept with your reading</strong>, the same way as your birth details',
+            'To put a title on your page and your PDF, like “Alex’s Human Design”. <strong>Kept with your chart</strong>, the same way as your birth details',
+          ],
+          [
+            '<strong>Earlier details, if you correct one</strong>',
+            '“Change a detail”, after you buy',
+            'Your corrected details become your chart’s details. The ones they replaced are <strong>kept with the chart for its year, seen only by Jeremy</strong>, in case you ever write in about them. They are never shown on your page, your PDF or in an email',
+          ],
+          [
+            '<strong>The email you type on “Email me my charts”</strong>',
+            'That page, if you use it',
+            'To send a fresh link to each chart bought with that address — to that address and nowhere else. The page never shows whether it has any. The address itself is not stored; a scrambled version is counted for a day, so the page cannot be used to fill an inbox',
           ],
           [
             '<strong>Your name, email address and phone number</strong>',
@@ -150,7 +172,7 @@ export default function Privacy() {
       />
 
       <Callout>
-        The shop has no cookies, no trackers and no analytics at all. These library pages count
+        Human Design readings have no cookies, no trackers and no analytics at all. These library pages count
         visits with Umami, which sets no cookie, records no personal data, and cannot follow you
         to another site &mdash; it counts that a page was read, not who read it. Nothing follows
         you here from anywhere else. The only thing kept in your browser is a short-lived token
@@ -162,8 +184,12 @@ export default function Privacy() {
         head={['What', 'How long']}
         rows={[
           [
-            'Your chart, your reading, the birth details they were made from, the name you gave the chart (if you gave one), and the name, email and phone from your purchase',
+            'Your chart, your reading, the birth details they were made from, the name you gave the chart (if you gave one), any earlier details you corrected, and the name, email and phone from your purchase',
             'One year from the day you bought it',
+          ],
+          [
+            'Which charts were bought with your email, as record numbers under a scrambled key — no birth details, no address',
+            'As long as those charts are kept',
           ],
           [
             'The link in your email',
@@ -171,7 +197,6 @@ export default function Privacy() {
           ],
           ['The scrambled IP hash', 'One week'],
           ['A record of a technical failure, so it can be fixed', 'Fourteen days'],
-          ['Your birth details, if you bought the summary', '<strong>Not kept at all</strong>'],
         ]}
       />
       <P>
@@ -217,7 +242,7 @@ export default function Privacy() {
             receives it and could not store it if it wanted to.
           </>,
           <>
-            <strong>Your birth details are kept only beside your reading</strong> — the date, the
+            <strong>Your birth details are kept only beside your chart</strong> — the date, the
             time, the place you picked and its time zone. Your PDF prints the date, the time and the
             place; the time zone is kept because your chart is worked out from it. No map
             coordinates are kept, and they are never filed anywhere on their own. The name you give
@@ -283,7 +308,9 @@ export default function Privacy() {
           </>,
           <>
             <strong>Your reading again</strong> — the link can be re-sent to the address you
-            bought with, as often as you need, for the whole year.
+            bought with, as often as you need, for the whole year. If you have lost the email,
+            &ldquo;Email me my charts&rdquo; on the Human Design readings page sends a fresh link to
+            each chart bought with your address.
           </>,
         ]}
       />
