@@ -292,7 +292,16 @@ export function initHdLibrary(root: HTMLElement): () => void {
       ctrs[n] = p;
       if (onCenter) p.onclick = () => onCenter(n);
       else p.style.cursor = 'default';
-      if (gates) {
+      if (n === 'Heart') {
+        // MOCK 10/22 (Jeremy: "HEART (EGO)", "make sure it fits"): one line spills past this
+        // triangle and hides behind gates 26 and 40, so two lines -- inside the triangle without
+        // gates, below its base with them (clear of 26-44 and 40-37).
+        const [fs, x, y] = gates ? [18, 615, 1027] : [29, 618, 948];
+        const cls = gates ? 'lblb' : 'lbl';
+        mk('text', { x, y, class: cls, 'font-size': fs, style: `font-size:${fs}px`, 'text-anchor': 'middle', 'dominant-baseline': 'central' }).textContent = 'HEART';
+        const fs2 = Math.round(fs * 0.72);
+        mk('text', { x, y: y + fs * 0.62 + fs2 * 0.62, class: cls, 'font-size': fs2, style: `font-size:${fs2}px`, 'text-anchor': 'middle', 'dominant-baseline': 'central' }).textContent = '(EGO)';
+      } else if (gates) {
         const [fs, x, y] = LBLBIG[n];
         const words = n === 'Solar Plexus' ? ['SOLAR', 'PLEXUS'] : [LBL[n][0]];
         words.forEach((w, k) => {
