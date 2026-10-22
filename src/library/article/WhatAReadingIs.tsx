@@ -58,6 +58,10 @@ const EXAMPLE: Array<[string, string]> = [
   ['Defined centers', 'Throat · Sacral'],
   ['Undefined centers', 'Ajna · Heart · Spleen · Solar Plexus · Root'],
   ['Open centers', 'Head · G'],
+  // Since 10/22 the summary lists these too, as values (Jeremy: "gates/channels go to summary
+  // (with no explanation)"), copied from the same record.
+  ['Channels', '20-34 (Charisma)'],
+  ['Activated gates', '4, 6, 9, 11, 12, 20, 26, 28, 33, 34, 36, 45, 47, 50, 60'],
 ];
 
 const CHANNELS = '20-34 (Charisma)';
@@ -238,6 +242,7 @@ export default function WhatAReadingIs() {
             'Type, Strategy and Authority — how your energy works, what it responds to, and how a decision settles.',
             'Profile and Definition, and how it feels when it is on track and when it is off track.',
             'Your incarnation cross, and which centers are defined, which are undefined, and which are open.',
+            'Your channels and your activated gates, listed as values — the library explains each one.',
             'A page you can come back to for a year.',
           ]}
         >
@@ -264,7 +269,7 @@ export default function WhatAReadingIs() {
           standfirst="Everything in the summary, and the bodygraph itself — the picture people mean when they say they have seen their chart."
           contains={[
             'Your bodygraph, drawn: the nine centers, which ones are colored in, and every channel running between them.',
-            'Your channels named, and your activated gates numbered.',
+            'Every channel and gate from the summary, in its place on the drawing.',
             'A page you can share, and a PDF you keep.',
             'The same drawing at print size, so it is readable on paper.',
           ]}
