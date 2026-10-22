@@ -293,7 +293,7 @@ export function initHdLibrary(root: HTMLElement): () => void {
       if (onCenter) p.onclick = () => onCenter(n);
       else p.style.cursor = 'default';
       if (n === 'Heart') {
-        // MOCK 10/22 (Jeremy: "HEART (EGO)", "make sure it fits"): one line spills past this
+        // HEART over a smaller (EGO) (Jeremy 10/22: "HEART (EGO)", "make sure it fits"): one line spills past this
         // triangle and hides behind gates 26 and 40, so two lines -- inside the triangle without
         // gates, below its base with them (clear of 26-44 and 40-37).
         const [fs, x, y] = gates ? [18, 615, 1027] : [29, 618, 948];
