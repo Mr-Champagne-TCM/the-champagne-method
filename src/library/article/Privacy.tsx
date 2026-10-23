@@ -73,7 +73,7 @@ export default function Privacy() {
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated October 22, 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated October 23, 2026.</p>
 
       {/*
         CHANGED 16 OCTOBER 2026 (Jeremy: "a veer from our initial approach.
@@ -353,6 +353,21 @@ export default function Privacy() {
         NOT SAID, ON PURPOSE: that the PDF is deleted when the link closes. The
         readings site only deletes it when somebody opens an expired link
         (hosting/netlify/lib/delivery.mjs) -- an open item until a sweep exists.
+
+        CHANGED 23 OCTOBER 2026 (Jeremy 10/23, call 1 = OPTION 2: a phone
+        reading made without a birth time gets an "add it here" form on the
+        readings site). Read out of hd-reading-app hosting/netlify/lib/
+        addtime.mjs, upload.mjs and sweep.mjs (release-1022): store "addtime",
+        `t/<token>` = the date-and-place line the form shows + the first six
+        characters of the reading link + when it was registered (no name, no
+        time, no zone, no contact); `used/<token>` = when + the time + a
+        one-off number; both deleted when Jeremy deletes the client in the app
+        (DELETE /upload), never swept. Store "limits", `ip/<HMAC>` = the times
+        of a visitor's tries in the last day under an IP scrambled with the
+        site's secret, expiring a day on, cleared by the monthly sweep. Jeremy's
+        email goes through the alert mail (Resend): the time + six characters
+        of each link, never a name, contact, date or place. SHIP WITH the
+        readings-site deploy of that release -- not before.
       */}
       <div id="in-person" className="scroll-mt-28">
         <H2>Readings made with Jeremy in person</H2>
@@ -371,6 +386,18 @@ export default function Privacy() {
           [
             '<strong>Your reading&rsquo;s PDF</strong>, behind a private link and a short code',
             'The link stops working after seven days',
+          ],
+          [
+            '<strong>If your reading was made without a birth time: the link in your PDF for adding it</strong>',
+            'On readings.thechampagnemethod.co: the link&rsquo;s own code, the birth date and place the form shows you, the first six characters of your reading&rsquo;s link, and when it was made &mdash; never your name, a birth time or a way to reach you. Kept for as long as your reading is kept on Jeremy&rsquo;s phone, and removed with it',
+          ],
+          [
+            '<strong>The birth time you add on that form</strong>',
+            'Kept there once, with when it was sent and a one-off number that tells two quick sends apart, and removed with the link above. It is emailed to Jeremy, through Resend, so he can redo your chart and your reading: the email carries the time and the first six characters of each link &mdash; no name, no contact details, no birth date and no place',
+          ],
+          [
+            '<strong>A scrambled version of your IP address</strong>, when you use that form',
+            'The times of your tries in the last day, under your IP address scrambled with a secret, so the form can&rsquo;t be tried over and over. The address itself is never stored. Each count runs for a day, and a monthly clean-up clears the ones that have run out',
           ],
           [
             '<strong>Occasional emails</strong>',
