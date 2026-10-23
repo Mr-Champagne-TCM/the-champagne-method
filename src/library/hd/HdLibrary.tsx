@@ -93,11 +93,11 @@ export default function HdLibrary() {
                   </a>
                   <a href="#centers">
                     <b>Centers</b>
-                    <span>The nine hubs on the chart</span>
+                    <span>The nine centers on the chart</span>
                   </a>
                   <a href="#definition">
                     <b>Definition</b>
-                    <span>How your hubs connect</span>
+                    <span>How your centers connect</span>
                   </a>
                   <a href="#profiles">
                     <b>Profiles</b>
@@ -195,12 +195,12 @@ export default function HdLibrary() {
 
               {/* CENTERS */}
               <section className="topic" id="centers">
-                <span className="eyebrow">The nine hubs</span>
+                <span className="eyebrow">The nine centers</span>
                 <h2>
                   Centers<span className="count">9</span>
                 </h2>
                 <p className="tldr">
-                  Nine hubs on the chart. Each one is colored in, or not.
+                  Nine centers on the chart. Each one is colored in, or not.
                   <span className="pull">
                     Colored in is steady and yours. Not colored in is where you take in other people.
                   </span>
@@ -543,7 +543,7 @@ const WHAT: [string, string][] = [
 const TOPICS: [string, string, string][] = [
   ['types', 'Types', 'your energy'],
   ['authority', 'Authority', 'how you decide'],
-  ['centers', 'Centers', 'the nine hubs'],
+  ['centers', 'Centers', 'the nine centers'],
   ['definition', 'Definition', 'how they link'],
   ['profiles', 'Profiles', 'how you learn'],
   ['channels', 'Channels', 'always on'],

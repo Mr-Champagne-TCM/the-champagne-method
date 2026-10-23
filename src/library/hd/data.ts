@@ -52,7 +52,7 @@ export const TYPETXT: Record<string, TypeText> = {
   "notworking": "This happens when they act without letting the people affected know, and meet pushback they didn’t expect.\n\nIt shows up as anger. The anger is a signal, pointing back to informing first. Informing isn’t asking permission. It simply clears the way."
  },
  "Reflector": {
-  "glance": "No steady hubs of its own. Reflects the people and places around it.",
+  "glance": "No steady centers of its own. Reflects the people and places around it.",
   "summary": "Reflectors have no colored-in centers. They’re about one in a hundred people. They take in and reflect everyone around them, which makes them a clear mirror for the health of a group or place. For big decisions, their strategy is to wait about a month, a full Moon cycle. When life is going well, the feeling is surprise.",
   "works": "With nothing fixed, a Reflector samples everything around it. That can feel different from one day to the next.\n\nThe Moon’s monthly cycle is the one steady rhythm. More under [Authority](#authority).",
   "working": "This happens when they’re in the right place with the right people, and take their time over big decisions.\n\nIt shows up as surprise: life keeps delighting them.",
