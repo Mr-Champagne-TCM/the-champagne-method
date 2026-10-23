@@ -122,7 +122,8 @@ export default function Breather() {
           {...hint('A favorite of mine to go deeper: breathwork with Sandi', HINT.video)}
           className="text-brand-teal underline underline-offset-4 hover:text-brand-gold"
         >
-          A favorite of mine to go deeper: breathwork with Sandi &rarr;
+          {/* &nbsp; keeps "Sandi →" together: at 390 the arrow wrapped onto a line of its own (10/23 2x renders). */}
+          A favorite of mine to go deeper: breathwork with Sandi&nbsp;&rarr;
         </a>
       </p>
     </div>

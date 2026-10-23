@@ -51,10 +51,14 @@ export function Nav() {
       }`}
     >
       <div
-        className={`max-w-5xl mx-auto px-6 sm:px-8 flex items-center justify-between gap-4 transition-all duration-300 ${
+        className={`max-w-5xl mx-auto px-6 sm:px-8 flex items-center justify-between gap-2 sm:gap-4 transition-all duration-300 ${
           scrolled ? 'py-3' : 'py-5'
         }`}
       >
+        {/* PHONE FIT (10/23 2x renders): at the top of the page the 20px brand is 222px wide, so a
+            one-line "Start a conversation" (125px) ran past the 24px margin at 390 (3px from the
+            edge) and off the screen at 375 and 360. On a phone the link now goes onto two lines,
+            right-aligned ("Start a / conversation", 80px), with an 8px gap: it fits down to 360. */}
         {/* The brand starts smaller than on the wider pages: at 390px a 26px brand
             plus the right-hand link overruns the bar and the two collide.
             The Human Design brand (Jeremy 10/16, mock change 1, option B): "Human
@@ -82,7 +86,7 @@ export function Nav() {
         <a
           href="/#connect"
           {...hint('Start a conversation', HINT.connect)}
-          className="font-sans text-[14px] sm:text-[15px] whitespace-nowrap shrink-0 text-brand-muted hover:text-brand-teal transition-colors"
+          className="font-sans text-[14px] sm:text-[15px] leading-snug text-right sm:whitespace-nowrap sm:shrink-0 text-brand-muted hover:text-brand-teal transition-colors"
         >
           Start a conversation
         </a>

@@ -156,7 +156,10 @@ svg.bgsvg{width:100%;height:auto;display:block}
 
 .zoom .x{position:absolute;top:-4px;right:-4px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(232,203,160,.4);background:rgba(26,16,64,.9);color:var(--paper);font-size:20px;cursor:pointer}
 .zoom p{margin:6px 0 0;color:var(--muted);font-size:14px;text-align:center}
-.cta{margin:34px 0 0;padding:22px;border:1px solid var(--line);border-radius:20px;background:var(--card)}.cta p{margin:0 0 14px;color:var(--text)}
+.cta{margin:34px 0 0;padding:22px;border:1px solid var(--line);border-radius:20px;background:var(--card)}.cta p{margin:0 0 6px;color:var(--text)}
+/* 10/23 2x renders: on a phone the two buttons wrap and touched (0px between them); 8px above each keeps them apart.
+   The line above them keeps its 14px (6 + 8). */
+.cta .btn{margin-top:8px}
 @media (max-width:760px){.how,.states{grid-template-columns:1fr}.map{grid-template-columns:repeat(2,1fr)}.where{grid-template-columns:1fr}.where div+div{border-left:0;border-top:1px solid var(--line)}}
 @media (max-width:760px){.lines{grid-template-columns:repeat(3,1fr)}.yours{display:block}.yours::before{display:inline-block;margin-right:9px;vertical-align:2px}.yours a{margin-left:4px}}
 /* v13 scroll window for channel lists */

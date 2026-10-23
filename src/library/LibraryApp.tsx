@@ -21,12 +21,15 @@ function Nav() {
       }`}
     >
       <div
-        className={`max-w-5xl mx-auto px-6 sm:px-8 flex items-center justify-between gap-4 transition-all duration-300 ${
+        className={`max-w-5xl mx-auto px-6 sm:px-8 flex items-center justify-between gap-2 sm:gap-4 transition-all duration-300 ${
           scrolled ? 'py-3' : 'py-5'
         }`}
       >
         {/* Starts smaller than on desktop: at every common phone width (390/414/430) a
-            26px brand plus the right-hand link overruns the bar and the two collide. */}
+            26px brand plus the right-hand link overruns the bar and the two collide.
+            PHONE FIT (10/23 2x renders): even at 20px a one-line "Start a conversation" ran past
+            the margin at 390 and off the screen at 375 and 360; on a phone it now goes onto two
+            right-aligned lines with an 8px gap, as in ArticleUI's Nav. */}
         <a
           href="/"
           className={`font-display font-medium tracking-tight whitespace-nowrap text-brand-paper transition-all duration-300 ${
@@ -38,7 +41,7 @@ function Nav() {
         <a
           href="/#connect"
           {...hint('Start a conversation', HINT.connect)}
-          className="font-sans text-[14px] sm:text-[15px] whitespace-nowrap shrink-0 text-brand-muted hover:text-brand-teal transition-colors"
+          className="font-sans text-[14px] sm:text-[15px] leading-snug text-right sm:whitespace-nowrap sm:shrink-0 text-brand-muted hover:text-brand-teal transition-colors"
         >
           Start a conversation
         </a>

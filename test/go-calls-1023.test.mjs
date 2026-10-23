@@ -126,3 +126,15 @@ test("4: no straight apostrophes or quotes in what a reader sees (source, librar
   }
   assert.deepEqual(bad, [], "straight quotes a reader sees:\n" + bad.join("\n"));
 });
+
+test("2x renders (10/23): the nav link fits a phone, the closing buttons keep apart, the video link's arrow stays on its line", () => {
+  // A one-line "Start a conversation" beside the 20px brand ran past the margin at 390 and off the screen at 375/360.
+  for (const f of ["src/library/article/ArticleUI.tsx", "src/library/LibraryApp.tsx"]) {
+    const s = read(f);
+    assert.ok(s.includes("justify-between gap-2 sm:gap-4"), `${f}: nav gap`);
+    assert.ok(s.includes("leading-snug text-right sm:whitespace-nowrap sm:shrink-0"), `${f}: nav link wraps on a phone`);
+    assert.ok(!/whitespace-nowrap shrink-0 text-brand-muted/.test(s), `${f}: nav link forced onto one line again`);
+  }
+  assert.ok(read("src/library/hd/hd-library.css").includes(".cta .btn{margin-top:8px}"), "HD library closing buttons");
+  assert.ok(read("src/library/tools/Breather.tsx").includes("breathwork with Sandi&nbsp;&rarr;"), "Sandi + arrow together");
+});
