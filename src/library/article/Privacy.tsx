@@ -389,7 +389,7 @@ export default function Privacy() {
           ],
           [
             '<strong>If your reading was made without a birth time: the link in your PDF for adding it</strong>',
-            'On readings.thechampagnemethod.co: the link&rsquo;s own code, the birth date and place the form shows you, the first six characters of your reading&rsquo;s link, and when it was made &mdash; never your name, a birth time or a way to reach you. Kept for as long as your reading is kept on Jeremy&rsquo;s phone, and removed with it',
+            'On that site: the link&rsquo;s own code, the birth date and place the form shows you, the first six characters of your reading&rsquo;s link, and when it was made &mdash; never your name, a birth time or a way to reach you. Kept for as long as your reading is kept on Jeremy&rsquo;s phone, and removed with it',
           ],
           [
             '<strong>The birth time you add on that form</strong>',
