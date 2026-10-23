@@ -32,7 +32,7 @@ export const TYPETXT: Record<string, TypeText> = {
  },
  "Manifesting Generator": {
   "glance": "The Generator’s motor, with a faster, many-paths streak.",
-  "summary": "Manifesting Generators have a colored-in Sacral linked to the Throat by a motor. They respond like Generators, then move fast, often doing many things at once. Skipping steps is natural for them. Letting people know what’s coming keeps the road clear. The feeling when it’s working is satisfaction, with a sense of peace.",
+  "summary": "Manifesting Generators have a colored-in Sacral and a motor connected to the Throat. They respond like Generators, then move fast, often doing many things at once. Skipping steps is natural for them. Letting people know what’s coming keeps the road clear. The feeling when it’s working is satisfaction, with a sense of peace.",
   "works": "The same steady [Sacral](#centers) energy as a Generator, wired to act quickly. Once the gut says yes, things can happen at speed.\n\nMany interests at once is normal, not a lack of focus.\n\nSkipping steps, then going back to fill them in, is part of how they learn.",
   "working": "This happens when they respond first, then move fast, and let the people affected know before changing course. Dropping what no longer fits, without guilt, is part of it.\n\nIt shows up as satisfaction, with a sense of peace.",
   "notworking": "This happens when they jump in without a gut yes, or move so fast that people around them are caught off guard.\n\nIt shows up as frustration, sometimes anger. The feeling is a signal, pointing back to responding first and letting people know."
@@ -146,7 +146,7 @@ export const CTRTXT: Record<string, CenterText> = {
  "Spleen": {
   "summary": "The Spleen is instinct: quick, quiet knowing about what’s safe and healthy, right now. It speaks once, in the moment, and doesn’t repeat itself. It’s also linked to health and the immune system. It looks after your well-being in the present.",
   "defined": "You have a steady sense of well-being and a reliable instinct. It speaks quietly, in the moment.\n\nIf your [authority](#authority) is Splenic, that quiet first knowing is how you decide.",
-  "undefined": "You’re sensitive to how others feel, physically and emotionally. You can sense when someone is unwell.\n\nThe trap is holding on to things, people or situations that aren’t good for you, out of fear of letting go.",
+  "undefined": "You’re sensitive to how others feel, in body and health. You can sense when someone is unwell.\n\nThe trap is holding on to things, people or situations that aren’t good for you, out of fear of letting go.",
   "open": "You can be very sensitive to other people’s health and fears. Being around someone who feels good can make you feel good too.\n\nIt often helps to notice which feelings of fear or comfort are actually yours."
  },
  "Sacral": {

@@ -367,9 +367,9 @@ export default function WhatAReadingIs() {
         <P>
           Start with the summary and move up later, or go straight to the
           reading: the total is identical either way. What you have already paid
-          comes off what you pay next, and the link in your email is what proves
-          it — so opening the next step from there means the credit is already on
-          the price.
+          comes off what you pay next — nobody pays twice for the same thing. The
+          link in your email is what proves it, so opening the next step from
+          there means the credit is already on the price.
         </P>
         <P>
           Your reading is kept for a year. Nothing is stored that you did not

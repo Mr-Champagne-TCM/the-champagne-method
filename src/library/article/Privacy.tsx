@@ -108,6 +108,13 @@ export default function Privacy() {
         different system (the readings app on Jeremy's phone) and still takes
         a phone number or an email; it is unchanged. The date above is a stand-in
         for the day this goes live.
+
+        CHANGED 23 OCTOBER 2026 (10/23 verbatim read, S3 + S7): the lead names
+        the fourth change, adding a birth time later (hd-site reading.mjs
+        retimeReading keeps the details as they were, the chart made from them
+        and its written reading, in `history`, seen only by Jeremy), and the
+        callout says it plainly with the first three. "After a year" no longer
+        tells every tier to download a PDF: a summary has none.
       */}
       <Callout>
         The birth details you type — date, time, place and time zone — are used to work out your
@@ -121,12 +128,17 @@ export default function Privacy() {
           your chart in the same way as your birth details: in the same place, for the same year, and
           deleted with them. Google never sees it.
         </span>
+        <span className="mt-3 block">
+          If your chart was made without a birth time, you&rsquo;re welcome to add it later, once and
+          free. Your earlier details, and the chart (and reading) made from them, stay with your chart
+          for its year, seen only by Jeremy.
+        </span>
       </Callout>
 
       <P>
         The birth details changed on October 16, 2026, the name for the chart on October 19, 2026,
-        and the summary keeping them too on October 20, 2026, so they come first. Everything below
-        is the ordinary detail.
+        the summary keeping them too on October 20, 2026, and adding a birth time later on October
+        23, 2026, so they come first. Everything below is the ordinary detail.
       </P>
 
       <H2>Who is asking</H2>
@@ -211,8 +223,8 @@ export default function Privacy() {
         ]}
       />
       <P>
-        After a year your reading is gone. If you want to keep it, download the PDF — that copy
-        is yours and lives on your own device.
+        After a year your chart is gone from here. The chart and the reading come with a PDF that
+        is yours to keep — that copy lives on your own device.
       </P>
 
       <H3>Why the link is short and the reading is not</H3>

@@ -12,6 +12,7 @@ import {
   TextLink,
 } from './ArticleUI';
 import { MarkedChart, type Mark } from './MarkedChart';
+import { HINT } from '../../site/linkHints';
 
 /* Where the numbered rings sit, in the drawing's own units (viewBox -120 -12 1090 1330),
    checked against public/samples/bodygraph.svg in the 10/17 mock. */
@@ -358,9 +359,16 @@ export default function ReadingYourBodygraph() {
       <Callout>
         <strong className="font-semibold">Going further.</strong> One week tells you whether
         this is real for you. If it is, the rest of the work &mdash; the experiments, the
-        library, and the readings that go deeper than one page &mdash; starts with{' '}
-        {/* Fix 19, option A (Jeremy 10/20 "2A"): one library named, not "the library and the library". */}
-        <TextLink href="/library/human-design/">The Human Design library</TextLink>. You&rsquo;re welcome to bring your notes.
+        library, and the readings &mdash; starts with{' '}
+        {/* Fix 19, option A (Jeremy 10/20 "2A"): one library named, not "the library and the library".
+            10/23 verbatim read: "the" mid-sentence (N9); the notes have somewhere to go, a free
+            conversation (S6); "deeper than one page" dropped (S6). */}
+        <TextLink href="/library/human-design/">the Human Design library</TextLink>. You&rsquo;re welcome to
+        bring your notes to{' '}
+        <TextLink href="/#connect" where={HINT.connect}>
+          a free conversation
+        </TextLink>
+        .
       </Callout>
 
       <P>If it holds up, it was never information. It was a mirror, and you already knew.</P>

@@ -630,7 +630,7 @@ export function initHdLibrary(root: HTMLElement): () => void {
     if (noHover) a.textContent = 'an example chart';
   });
   /* every shop link says what you get and the price (call 40), and first where it goes (link labels, Jeremy 10/23):
-     "See yours →" and "Get yours!" open the readings' front page, not a chart */
+     "See yours →" and "A reading" (how-this-works step 2) open the readings' front page, not a chart */
   $$<HTMLAnchorElement>(`a[href="${SHOP}"]`).forEach((a) => {
     const t = a.textContent!.trim(), sec = a.closest('section.topic');
     a.dataset.tip = `${LINK_HINT.readings}. ` + (

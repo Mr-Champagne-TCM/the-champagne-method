@@ -62,9 +62,10 @@ test("2A: all eleven sections, the two shown above in gold", () => {
   assert.match(readings, /border-brand-gold\/70 bg-brand-gold\/10 px-3 py-1 text-\[14px\] text-brand-gold/);
 });
 
-test("2A: the bodygraph page ends '...starts with The Human Design library.' -- one library, not two", () => {
-  // 10/23 ("bring into our voice"): the closing "Bring your notes." is a request now.
-  assert.match(bg, /starts with\{' '\}\s*\n?\s*(\{\/\*[\s\S]*?\*\/\}\s*)?<TextLink href="\/library\/human-design\/">The Human Design library<\/TextLink>\. You&rsquo;re welcome to bring your notes\./);
+test("2A: the bodygraph page ends '...starts with the Human Design library.' -- one library, not two", () => {
+  // 10/23 ("bring into our voice"): the closing "Bring your notes." is a request now; the 10/23
+  // verbatim read: "the" mid-sentence (N9), and the notes go to a free conversation (S6).
+  assert.match(bg, /starts with\{' '\}\s*\n?\s*(\{\/\*[\s\S]*?\*\/\}\s*)?<TextLink href="\/library\/human-design\/">the Human Design library<\/TextLink>\. You&rsquo;re welcome to\s+bring your notes to\{' '\}\s+<TextLink href="\/#connect" where=\{HINT\.connect\}>\s+a free conversation\s+<\/TextLink>\s+\./);
   assert.doesNotMatch(bg, /<TextLink href="\/library\/">/);
 });
 

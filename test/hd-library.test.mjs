@@ -39,7 +39,9 @@ const REQUIRED = [
   ["Your profile is in the summary · $1.11", 40],
   ["Summary $1.11 · Chart $11.11 · Reading $44.44", 40],
   ["Opens in Channels.", 53],
-  ["Get yours!", 9],
+  // Call 9 changed by Jeremy 10/23 (GO PDF, "good, bring into our voice"): a request, not "Get yours!".
+  ["<a href={SHOP}>A reading</a> names", 9],
+  ["yours, if you&rsquo;d like it.", 9],
   ["Ra Uru Hu and the", 6],
   ["Start a conversation", 7],
   ["'Heart'", 12],
@@ -59,6 +61,7 @@ const BANNED = [
   ["Half a channel", 47],
   ["Most asked", 24],
   ["The gates people ask about most.", 24],
+  ["Get yours!", 9],
 ];
 
 test("every locked wording is still in the library", () => {
