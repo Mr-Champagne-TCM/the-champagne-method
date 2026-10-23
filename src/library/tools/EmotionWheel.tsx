@@ -155,7 +155,7 @@ export default function EmotionWheel() {
       </div>
       {note && <p className="mt-2 text-[14px] text-brand-muted">{note}</p>}
       <p className="mt-3 text-[13px] text-brand-muted/80">
-        This wheel is ours &mdash; drawn for this library, with its own words. Sharing it,
+        This wheel is mine &mdash; drawn for this library, with its own words. Sharing it,
         printing it, or putting it on a wall is welcome.
       </p>
 
