@@ -70,9 +70,10 @@ export default function HdLibrary() {
                     <b>
                       <span className="num">2</span>Your chart picks from each
                     </b>
-                    {/* Call 9, changed by Jeremy 10/23 (GO PDF, "good, bring into our voice"): a request, not a command (verbatim read S8). */}
-                    You have one type, one profile, a handful of channels. <a href={SHOP}>A reading</a> names
-                    yours, if you&rsquo;d like it.
+                    {/* Locked call 9 (Jeremy's words): step 2 ends "Get yours!". Back from the 10/23 copy fix's
+                        "A reading names yours, if you'd like it." (picks-1023, pending his answer). */}
+                    You have one type, one profile, a handful of channels. A reading names yours.{' '}
+                    <a href={SHOP}>Get yours!</a>
                   </div>
                   <div>
                     <b>
