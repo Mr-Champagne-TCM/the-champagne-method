@@ -147,7 +147,7 @@ export default function ReadingYourBodygraph() {
         <Card title="Centers">
           The nine shapes &mdash; squares, triangles, diamonds. Each one governs a different kind
           of energy. You will also hear them called <em className="text-brand-paper">engines</em>{' '}
-          &mdash; the two words mean the same thing and we use them interchangeably.
+          &mdash; the two words mean the same thing and I use them interchangeably.
         </Card>
         <Card title="Channels">
           The lines running between centers. A channel wires two centers together. There are

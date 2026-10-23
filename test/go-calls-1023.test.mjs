@@ -75,11 +75,12 @@ test("3: the bodygraph page's closing list is requests, in I, not commands", () 
     // 10/23 verbatim read S6: the notes have somewhere to go.
     "You&rsquo;re welcome to bring your notes to{' '} <TextLink href=\"/#connect\" where={HINT.connect}> a free conversation </TextLink> .",
     "you’re welcome to let me know, and I’ll recast it.",
+    "the two words mean the same thing and I use them interchangeably.",
   ]) assert.ok(p.includes(s), s);
   assert.ok(!p.includes("deeper than one page"), "S6: 'the readings that go deeper than one page'");
   for (const s of [
     "Do this with it", "Pick the line that stung", "Write that one sentence", "Give it exactly one real decision",
-    "Bring your notes.", "tell us and we will recast it", "Run your Authority once", "Write down what happened",
+    "Bring your notes.", "tell us and we will recast it", "we use them interchangeably", "Run your Authority once", "Write down what happened",
     "Then go further.", "Do that for a week", "answer something out loud", "and do not revise it",
     "deliberately sleep on it", "act on the first quiet read",
   ]) assert.ok(!p.includes(s), `command back: "${s}"`);
