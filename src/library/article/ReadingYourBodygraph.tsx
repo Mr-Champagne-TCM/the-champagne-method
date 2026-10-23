@@ -345,7 +345,7 @@ export default function ReadingYourBodygraph() {
         <strong className="text-brand-paper">Splenic</strong>, it could mean acting on the first
         quiet read you get, without waiting for it to repeat &mdash; it will not.
       </P>
-      <P>One decision. Not your career. Something with real stakes and a short fuse.</P>
+      <P>One decision. Not your career. Something small with a short fuse.</P>
 
       <H3>3. A note of what happened</H3>
       <P>
