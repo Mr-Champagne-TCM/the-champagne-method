@@ -32,7 +32,8 @@ test("1: planet numbers, in the readings' own words; no 'activations' left where
   const markup = path.resolve(process.cwd(), "..", "HD-Library-Work", "charts", "markup.py");
   if (fs.existsSync(markup)) {
     const m = read(markup);
-    assert.ok(m.includes(">A reading lists all 26 planet numbers, each with the planet that lit it."), "markup.py gates line");
+    // Numbers in words since decisions 19 + 25 (picks-1023, markup.py v12).
+    assert.ok(m.includes(">A reading lists all twenty-six planet numbers, each with the planet that lit it."), "markup.py gates line");
     assert.ok(!m.includes("all 26 activations with"), "markup.py still says activations");
   }
 });
