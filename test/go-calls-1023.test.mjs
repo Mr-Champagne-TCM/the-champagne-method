@@ -46,6 +46,8 @@ test("2: link labels -- every link to the readings, the home page or its contact
   // The library's own hover box (calls 39, 40): the destination first, then what you get and the price.
   assert.match(engine, /a\.dataset\.tip = `\$\{LINK_HINT\.readings\}\. ` \+ \(/);
   assert.ok(engine.includes("'Your profile is in the summary · $1.11'"), "call 40 wording kept");
+  // "The summary" hover names everything the summary lists, channels and gates included (since 10/22).
+  assert.ok(engine.includes("'Type, strategy, authority, profile, definition, centers, cross, channels, gates · $1.11'"), "summary hover");
   assert.match(lib, /href="\/#connect" data-tip=\{HINT\.connect\}/);
   // Site chrome on the Human Design pages and the 404.
   assert.match(ui, /hint\('Human Design by The Champagne Method Coaching and Consulting', HINT\.home\)/);

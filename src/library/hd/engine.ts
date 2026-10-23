@@ -634,7 +634,8 @@ export function initHdLibrary(root: HTMLElement): () => void {
   $$<HTMLAnchorElement>(`a[href="${SHOP}"]`).forEach((a) => {
     const t = a.textContent!.trim(), sec = a.closest('section.topic');
     a.dataset.tip = `${LINK_HINT.readings}. ` + (
-      t === 'The summary' ? 'Type, strategy, authority, profile, definition, centers, cross · $1.11'
+      /* the summary lists channels and activated gates too, since 10/22 (WhatAReadingIs.tsx EXAMPLE) */
+      t === 'The summary' ? 'Type, strategy, authority, profile, definition, centers, cross, channels, gates · $1.11'
       : t === 'The chart' ? 'Your drawing, channels and gates · $11.11'
       : sec && TIP_TOPIC[sec.id] ? TIP_TOPIC[sec.id]
       : TIP_ALL);
