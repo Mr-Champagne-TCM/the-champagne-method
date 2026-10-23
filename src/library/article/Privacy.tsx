@@ -153,7 +153,7 @@ export default function Privacy() {
           [
             '<strong>Earlier details, if you correct one or add your birth time</strong>',
             '“Change a detail” or “Add your birth time”, after you buy',
-            'Your corrected details, or the time you add, become your chart’s details. The ones they replaced are <strong>kept with the chart for its year, seen only by Jeremy</strong>, in case you ever write in about them. When you add a birth time, the chart and the reading it replaces are kept the same way. They are never shown on your page, your PDF or in an email',
+            'Your corrected details, or the time you add, become your chart’s details. The ones they replaced are <strong>kept with the chart for its year, seen only by Jeremy</strong>, in case you ever write in about them. When you change a detail, the chart keeps the details it replaced and which of your Type, Profile and Authority came out differently — not a copy of the chart or reading before it. When you add a birth time, it keeps the details as they were, with the time unknown, and a copy of the chart made from them and of its written reading, if it had one. Apart from the short note at the top of your page that says what changed, they are never shown on your page, your PDF or in an email',
           ],
           [
             '<strong>The email you type on “Email me my charts”</strong>',
