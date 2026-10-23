@@ -151,9 +151,9 @@ export default function Privacy() {
             'To put a title on your page and your PDF, like “Alex’s Human Design”. <strong>Kept with your chart</strong>, the same way as your birth details',
           ],
           [
-            '<strong>Earlier details, if you correct one</strong>',
-            '“Change a detail”, after you buy',
-            'Your corrected details become your chart’s details. The ones they replaced are <strong>kept with the chart for its year, seen only by Jeremy</strong>, in case you ever write in about them. They are never shown on your page, your PDF or in an email',
+            '<strong>Earlier details, if you correct one or add your birth time</strong>',
+            '“Change a detail” or “Add your birth time”, after you buy',
+            'Your corrected details, or the time you add, become your chart’s details. The ones they replaced are <strong>kept with the chart for its year, seen only by Jeremy</strong>, in case you ever write in about them. When you add a birth time, the chart and the reading it replaces are kept the same way. They are never shown on your page, your PDF or in an email',
           ],
           [
             '<strong>The email you type on “Email me my charts”</strong>',
@@ -191,7 +191,7 @@ export default function Privacy() {
         head={['What', 'How long']}
         rows={[
           [
-            'Your chart, your reading, the birth details they were made from, the name you gave the chart (if you gave one), any earlier details you corrected, and the name and email from your purchase',
+            'Your chart, your reading, the birth details they were made from, the name you gave the chart (if you gave one), any earlier details you corrected (and, if you added a birth time, the chart and reading it replaced), and the name and email from your purchase',
             'One year from the day you bought it',
           ],
           [
@@ -201,6 +201,10 @@ export default function Privacy() {
           [
             'The link in your email',
             'Six days — then the page hands you a button that sends a fresh one',
+          ],
+          [
+            'The link in the PDF of a chart made without a birth time, for adding the time later',
+            'As long as the chart is kept. It does one thing only: add a birth time to that chart, once',
           ],
           ['The scrambled IP hash', 'One week'],
           ['A record of a technical failure, so it can be fixed', 'Fourteen days'],
@@ -222,8 +226,16 @@ export default function Privacy() {
         An expired link is not a dead end and you do not have to write in for it. Open it and the
         page offers you a button that sends a fresh one — to the address on your purchase and
         nowhere else, as many times as you need, for the whole year. That is the only address it
-        will ever go to, which is what stops the button being a way for somebody else to have
+        will ever go to, which is what stops the button from being a way for somebody else to have
         your reading mailed to them.
+      </P>
+      <P>
+        One link works differently. When a chart is made without a birth time, its PDF carries a
+        link for adding the time later, and that link does not stop after six days, because a PDF
+        is kept for years. It can do one thing only: add a birth time to that one chart, once. The
+        page it opens shows nothing that is not already on the PDF. Once the time is added, it
+        opens the chart made with it, and after that it only says the time has been added. It works
+        for as long as the chart is kept.
       </P>
 
       <H2>How it is kept safe</H2>
@@ -362,7 +374,7 @@ export default function Privacy() {
           ],
           [
             '<strong>Occasional emails</strong>',
-            'Only if you ticked the box for them',
+            'Only if you checked the box for them',
           ],
         ]}
       />
@@ -383,14 +395,16 @@ export default function Privacy() {
       <H2>Children</H2>
       <P>
         This is not intended for anyone under 16, and readings are not knowingly sold to children.
-        If a purchase was made by one, write in and it will be refunded and erased — the one
-        exception to purchases being final.
+        If a purchase was made by one, write in and it will be refunded and erased. Purchases are
+        otherwise final, with the two exceptions named before you pay: if something did not arrive,
+        or did not work, that is Jeremy’s to put right; and if the birth details went in wrong,
+        write in and he will do what he can.
       </P>
 
       <H2>When this page changes</H2>
       <P>
         The rule, so it is not left to memory: this page is updated in the same piece of work that
-        changes how information is handled — not afterwards, and not when somebody notices. If a
+        changes how information is handled — not afterward, and not when somebody notices. If a
         change adds something collected, adds a company that sees it, changes how long anything is
         kept, or turns on analytics, the page changes with it and the date at the top moves.
       </P>

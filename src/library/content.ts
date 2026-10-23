@@ -104,7 +104,7 @@ export const shelves: Shelf[] = [
       {
         "tag": "Concept",
         "title": "The components of shame",
-        "html": "<p>Too much. Not enough. Wrong. Bad. Broken. Every arrival of shame is wearing one of these five costumes &mdash; and underneath, they&rsquo;re the same tool.</p>\n    <p>And it is a tool &mdash; of oppression: it creates convenience for the person applying it at the cost of the person carrying it. A shamed person is a compliant person, and compliance is cheap to maintain.</p>\n    <p>The use here is recognition. When one of the five shows up &mdash; in someone&rsquo;s words, or in your own inner voice &mdash; naming the costume takes most of its charge: <em>that&rsquo;s not &ldquo;too much.&rdquo; That&rsquo;s shame, wearing costume number five.</em> There&rsquo;s no version of growth that requires it.</p>"
+        "html": "<p>Too much. Not enough. Wrong. Bad. Broken. Every arrival of shame is wearing one of these five costumes &mdash; and underneath, they&rsquo;re the same tool.</p>\n    <p>And it is a tool &mdash; of oppression: it creates convenience for the person applying it at the cost of the person carrying it. A shamed person is a compliant person, and compliance is cheap to maintain.</p>\n    <p>The use here is recognition. When one of the five shows up &mdash; in someone&rsquo;s words, or in your own inner voice &mdash; naming the costume takes most of its charge: <em>that&rsquo;s not &ldquo;too much.&rdquo; That&rsquo;s shame, wearing costume number one.</em> There&rsquo;s no version of growth that requires it.</p>"
       }
     ]
   },

@@ -175,7 +175,7 @@ export default function HdLibrary() {
                 <p className="yours">
                   You have one authority, and it depends on your{' '}
                   <a className="xref" href="#centers">
-                    Centers
+                    centers
                   </a>
                   . <a href={SHOP}>Find yours &rarr;</a>
                 </p>
@@ -224,7 +224,7 @@ export default function HdLibrary() {
                 <p className="tldr">
                   Whether your colored-in{' '}
                   <a className="xref" href="#centers">
-                    Centers
+                    centers
                   </a>{' '}
                   are joined up, or sit in separate groups.
                   <span className="pull">It shapes how you take things in and think them through.</span>
@@ -277,7 +277,7 @@ export default function HdLibrary() {
                 <p className="tldr">
                   A channel is a line joining two{' '}
                   <a className="xref" href="#centers">
-                    Centers
+                    centers
                   </a>
                   . When it&rsquo;s colored in on your chart, that pairing is a steady part of how you work.
                   <span className="pull">Most charts have between two and six.</span>
@@ -324,11 +324,11 @@ export default function HdLibrary() {
                   Gates<span className="count">64</span>
                 </h2>
                 <p className="tldr">
-                  The small numbered circles on the chart. Your chart lights up about 26 of them.
+                  The small numbered circles on the chart. Most charts light up 15 to 21 of them.
                   <span className="pull">
                     A gate is a quality. A{' '}
                     <a className="xref" href="#channels">
-                      Channel
+                      channel
                     </a>{' '}
                     is two gates joined, and something flows between them.
                   </span>
@@ -419,7 +419,7 @@ export default function HdLibrary() {
                 <p className="tldr">
                   Four of your{' '}
                   <a className="xref" href="#gates">
-                    Gates
+                    gates
                   </a>{' '}
                   combine into one life theme.
                   <span className="pull">Less about a Tuesday, more about the shape of a life.</span>
@@ -438,7 +438,7 @@ export default function HdLibrary() {
                       months before.
                     </li>
                     <li>
-                      <b>Where to find them:</b> on your chart, in brackets after the cross name, like{' '}
+                      <b>Where to find them:</b> on your chart, in parentheses after the cross name, like{' '}
                       <b>(6/36 | 12/11)</b>. The first pair is your Sun and Earth at birth, the second about three
                       months before. A cross isn&rsquo;t a place on the body drawing.{' '}
                       <a
@@ -454,7 +454,7 @@ export default function HdLibrary() {
                     <li>
                       <b>The three kinds:</b> your{' '}
                       <a className="xref" href="#profiles">
-                        Profile
+                        profile
                       </a>{' '}
                       decides which. Right Angle, most people: a life mostly about your own path. Left Angle: a life
                       lived with and through others. Juxtaposition, only the 4/1: a fixed path between the two.

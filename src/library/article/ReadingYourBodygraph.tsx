@@ -120,7 +120,7 @@ export default function ReadingYourBodygraph() {
         <strong className="text-brand-paper">not a deficit</strong>. You can still express
         through it &mdash; everybody does, constantly. It simply does not carry the same
         energetic ease as the parts of you that are defined. Knowing which is which is the
-        entire point: it tells you where you are running downhill and where you are pedalling.
+        entire point: it tells you where you are running downhill and where you are pedaling.
       </P>
       <P>
         What the drawing actually shows is{' '}
@@ -161,8 +161,8 @@ export default function ReadingYourBodygraph() {
         complete. That single rule explains most of what you are about to look at.
       </P>
       <P>
-        You do not need to memorise any of it. The numbers are there so that when your reading
-        says <em className="text-brand-paper">this comes from your 34&ndash;57</em>, you can put
+        You do not need to memorize any of it. The numbers are there so that when your reading
+        says <em className="text-brand-paper">this comes from your 34-57</em>, you can put
         a finger on the place it means.
       </P>
 

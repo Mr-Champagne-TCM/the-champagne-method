@@ -84,7 +84,7 @@ export const AUTHTXT: Record<string, AuthText> = {
  },
  "Ego": {
   "glance": "What you really want, heard in what you say or do.",
-  "summary": "Ego authority comes from a colored-in Heart that connects to the Throat or the G. It's about what you want, and what's in it for you. That isn't selfish. It's how your willpower knows what it can commit to. The answer often shows up in what you hear yourself say, or what you feel driven to do.",
+  "summary": "Ego authority comes from a colored-in Heart joined to the Throat (Ego Manifested) or the G (Ego Projected). It's about what you want, and what's in it for you. That isn't selfish. It's how your willpower knows what it can commit to. The answer often shows up in what you hear yourself say, or what you feel driven to do.",
   "feels": "A clear \"I want this\" or \"I don't\". It's about your own heart, not what others need from you.\n\nPromises made from it tend to be ones you can keep.",
   "timing": "Often in the moment, as you speak or act. Listening to your own words is part of it.\n\nIf your will isn't in it, the commitment tends to fall apart later.",
   "mixups": "Saying yes to please people, then running out of will to follow through.\n\nThinking wanting something for yourself is wrong. Here it's the guide."
@@ -120,7 +120,7 @@ export const CTRTXT: Record<string, CenterText> = {
   "open": "Nothing here is fixed, so you take in whatever people around you are thinking about. That can bring wide inspiration, and it can also bring a mind full of other people's questions.\n\nIt often helps to ask whether a question is yours before trying to answer it."
  },
  "Ajna": {
-  "summary": "The Ajna is how you make sense of things: sorting, comparing, forming opinions. It turns the Head's questions into ideas and concepts. It's great for thinking things through. It isn't built to make your life decisions, which is the job of your [Authority](#authority).",
+  "summary": "The Ajna is how you make sense of things: sorting, comparing, forming opinions. It turns the Head's questions into ideas and concepts. It's great for thinking things through. It isn't built to make your life decisions, which is the job of your [authority](#authority).",
   "defined": "You have a fixed way of processing: logical, abstract or insight-led, and it stays the same. Others can count on how you think.\n\nThe risk is getting attached to your own certainty. Your way of thinking is reliable, though other ways exist too.",
   "undefined": "You can see many sides of a question and take on other people's ways of thinking. That makes you open-minded and often wise about ideas.\n\nThe trap is pretending to be certain to fit in. Not being sure is often your strength.",
   "open": "Your mind is very flexible and doesn't hold one fixed view. You can understand almost anyone's way of thinking.\n\nPressure to have a firm opinion can feel uncomfortable. Being open is a real gift here, not a lack."
@@ -145,7 +145,7 @@ export const CTRTXT: Record<string, CenterText> = {
  },
  "Spleen": {
   "summary": "The Spleen is instinct: quick, quiet knowing about what's safe and healthy, right now. It speaks once, in the moment, and doesn't repeat itself. It's also linked to health and the immune system. It looks after your well-being in the present.",
-  "defined": "You have a steady sense of well-being and a reliable instinct. It speaks quietly, in the moment.\n\nIf your [Authority](#authority) is Splenic, that quiet first knowing is how you decide.",
+  "defined": "You have a steady sense of well-being and a reliable instinct. It speaks quietly, in the moment.\n\nIf your [authority](#authority) is Splenic, that quiet first knowing is how you decide.",
   "undefined": "You're sensitive to how others feel, physically and emotionally. You can sense when someone is unwell.\n\nThe trap is holding on to things, people or situations that aren't good for you, out of fear of letting go.",
   "open": "You can be very sensitive to other people's health and fears. Being around someone who feels good can make you feel good too.\n\nIt often helps to notice which feelings of fear or comfort are actually yours."
  },
@@ -156,7 +156,7 @@ export const CTRTXT: Record<string, CenterText> = {
   "open": "You take in the energy of people around you, sometimes more than they have themselves. Being around busy people can make you feel busy.\n\nYour body tends to know its limits before your mind does. Stopping early is often wiser than pushing through."
  },
  "Solar Plexus": {
-  "summary": "The Solar Plexus is emotions, and they move in waves: up, down, and back again. It's also where feelings, moods, desire and sensitivity live. Clarity here comes with time, not in the moment. If it's colored in, your [Authority](#authority) is Emotional.",
+  "summary": "The Solar Plexus is emotions, and they move in waves: up, down, and back again. It's also where feelings, moods, desire and sensitivity live. Clarity here comes with time, not in the moment. If it's colored in, your [authority](#authority) is Emotional.",
   "defined": "You have your own emotional wave. Your feelings move through highs and lows, whatever is happening around you.\n\nBig decisions tend to go better when you wait through the wave until you feel calm and clear about them.",
   "undefined": "You feel other people's emotions, often more strongly than they do. You can be very empathic.\n\nThe trap is avoiding conflict or hard truths to keep the peace. It helps to ask, \"Is this feeling mine, or someone else's?\"",
   "open": "You take in every emotion in the room and can feel it strongly. Alone, you may feel calm and clear.\n\nTime alone helps you tell which feelings are yours. Your sensitivity can be a real gift for reading people."
@@ -182,15 +182,15 @@ export const DEFTXT: Record<string, DefText> = {
   "day": "You may take a little longer to process things, as if two parts of you are catching up with each other. That's normal for you.\n\nTime and conversation help the two halves meet.",
   "others": "People whose charts join your two groups can feel deeply familiar, or magnetic. That pull is real, and it's about the bridge, not always about the person.\n\nKnowing this can make relationships calmer. Feeling complete with someone doesn't mean you're incomplete alone."
  },
- "Triple split": {
+ "Triple Split": {
   "glance": "Three separate groups, joined up by time and different people.",
-  "summary": "In Triple split definition, your colored-in centers form three separate groups. About one in ten people have it. No single person bridges all three, so variety helps: different people, different places. Taking your time over decisions helps everything connect.",
+  "summary": "In Triple Split definition, your colored-in centers form three separate groups. About one in ten people have it. No single person bridges all three, so variety helps: different people, different places. Taking your time over decisions helps everything connect.",
   "day": "Being around many people, like in a café or a busy shop, can help your thoughts come together. Too long with one person can feel stuck.\n\nYou may take longer than others to reach a decision.",
   "others": "Different people bridge different gaps, so a wide circle suits you. No one person has to be everything.\n\nOthers might read your need for variety as restlessness. It's how you're built."
  },
- "Quadruple split": {
+ "Quadruple Split": {
   "glance": "Four separate groups. Rare, and steady once it's had time.",
-  "summary": "In Quadruple split definition, your colored-in centers form four separate groups. It's rare, well under one in a hundred people. It takes time and many different people for everything to connect. Once it has, you can be very steady and hard to sway.",
+  "summary": "In Quadruple Split definition, your colored-in centers form four separate groups. It's rare, well under one in a hundred people. It takes time and many different people for everything to connect. Once it has, you can be very steady and hard to sway.",
   "day": "Decisions and understanding come slowly, and that's fine. Rushing rarely works for you.\n\nOnce you're clear, you tend to stay clear.",
   "others": "Many different people each bridge a little. A large and varied circle tends to suit you.\n\nThose close to you may not understand your pace. Patience from both sides helps."
  },
@@ -213,7 +213,7 @@ export const PROF: { lines: Record<string, LineText>; profiles: Record<string, P
   "2": {
    "glance": "Natural talent that grows best in time alone, until someone calls it out.",
    "summary": "Line 2 has gifts it didn't study for and often can't explain. It does its best work left alone, in its own space and rhythm. Other people tend to spot the gift before the 2 does, and they come knocking. The quiet is where the talent grows. The knock is how it gets used.",
-   "first": "You may not see your own gifts clearly. Things come easily to you, so they don't feel special. You also need real time alone, not as a reward but as part of how you work. Too much company can leave you drained or scattered.\n\nWhen someone asks for what you do naturally, it can feel like an interruption. Often it's the right one. The calls worth answering are the ones your [Authority](#authority) says yes to.",
+   "first": "You may not see your own gifts clearly. Things come easily to you, so they don't feel special. You also need real time alone, not as a reward but as part of how you work. Too much company can leave you drained or scattered.\n\nWhen someone asks for what you do naturally, it can feel like an interruption. Often it's the right one. The calls worth answering are the ones your [authority](#authority) says yes to.",
    "second": "Others see a talent in you that you don't fully see. They may invite you out to use it, which can feel like being pulled out of your cave.\n\nIt's also how the gift finds its people. Not every call is yours, though. Turning down the ones that don't fit protects the quiet the gift needs."
   },
   "3": {
@@ -260,7 +260,7 @@ export const PROF: { lines: Record<string, LineText>; profiles: Record<string, P
   "2/5": {
    "glance": "A private talent that others see as the one who can fix it.",
    "summary": "A 2/5 wants to be left alone with its gifts, yet strangers keep seeing a rescuer in it. The 2 needs quiet. The 5 draws people's hopes. When a call fits, it can step in, solve the problem and step back out. When it doesn't, the expectation can feel like a weight it never asked for.",
-   "together": "You may feel both hidden and watched. You'd rather be left alone, yet people keep showing up expecting help. The calls worth answering are usually practical ones you can actually deliver.\n\nAfterwards the 2 wants to go back inside, and that retreat also protects the 5's reputation."
+   "together": "You may feel both hidden and watched. You'd rather be left alone, yet people keep showing up expecting help. The calls worth answering are usually practical ones you can actually deliver.\n\nAfterward the 2 wants to go back inside, and that retreat also protects the 5's reputation."
   },
   "3/5": {
    "glance": "Learns by trial and error, then turns lessons into practical fixes for others.",

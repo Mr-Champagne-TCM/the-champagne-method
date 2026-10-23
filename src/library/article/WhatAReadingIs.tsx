@@ -303,9 +303,9 @@ export default function WhatAReadingIs() {
         >
           <p className="mt-6 max-w-[62ch] text-[16px] leading-relaxed text-brand-muted">
             Every paragraph names the feature of your chart it rests on, so
-            nothing in it could have been written about somebody else. Two of the
-            eleven sections from the same chart as everything else on this page,
-            word for word:
+            nothing in it could have been written about somebody else. Here are two
+            of the eleven sections from the same chart as everything else on this
+            page, word for word:
           </p>
 
           <div className="mt-6 space-y-7 rounded-2xl border border-brand-gold/25 bg-white/[0.04] p-5 sm:p-7">
