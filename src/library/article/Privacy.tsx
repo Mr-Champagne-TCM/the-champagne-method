@@ -412,6 +412,10 @@ export default function Privacy() {
             'The times of your tries in the last day, under your IP address scrambled with a secret, so the form can&rsquo;t be tried over and over. The address itself is never stored. Each count runs for a day, and a monthly clean-up clears the ones that have run out',
           ],
           [
+            '<strong>A record of what happens on that site</strong>, so a problem can be found and fixed',
+            'What happened and when &mdash; a link that had expired or wasn&rsquo;t complete, a code that didn&rsquo;t match, a birth time added, a failure &mdash; with, where there is one, the first six characters of the link it was about. Never your name, your code, your birth details or a birth time. Each record runs for fourteen days, and a monthly clean-up clears the ones that have run out',
+          ],
+          [
             '<strong>Occasional emails</strong>',
             'Only if you checked the box for them',
           ],
