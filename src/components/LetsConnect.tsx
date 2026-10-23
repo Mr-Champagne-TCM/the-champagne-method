@@ -126,7 +126,7 @@ export default function LetsConnect() {
                   id="tried"
                   name="tried"
                   rows={3}
-                  placeholder="Even the things that didn't work — especially those."
+                  placeholder="Even the things that didn’t work — especially those."
                   className={`${fieldClass} resize-none`}
                 />
               </div>
@@ -139,7 +139,7 @@ export default function LetsConnect() {
                   id="different"
                   name="different"
                   rows={3}
-                  placeholder="If this were resolved six months from now, what's changed?"
+                  placeholder="If this were resolved six months from now, what’s changed?"
                   className={`${fieldClass} resize-none`}
                 />
               </div>

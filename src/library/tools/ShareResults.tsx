@@ -70,7 +70,7 @@ export default function ShareResults({ quiz, summary }: { quiz: string; summary:
           <textarea
             name="note"
             rows={2}
-            placeholder="Anything you'd like to add (optional)"
+            placeholder="Anything you’d like to add (optional)"
             className="w-full px-3.5 py-2.5 rounded-xl border border-brand-gold/25 bg-white/5 text-brand-paper placeholder-brand-muted/60 text-[15px] resize-none focus:outline-none focus:ring-2 focus:ring-brand-teal/40"
           />
           {state === 'error' && (

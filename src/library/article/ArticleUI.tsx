@@ -2,6 +2,7 @@ import { useState, useEffect, type ReactNode } from 'react';
 import Background from '../../components/Background';
 import { SITE_VERSION } from '../../site/version';
 import { useHashScroll } from '../../site/useHashScroll';
+import { HINT, hint } from '../../site/linkHints';
 
 /** Shared chrome and primitives for the long-form library articles.
  *
@@ -60,8 +61,10 @@ export function Nav() {
             Design by" above the name, "Coaching and Consulting" under it; "by"
             always lowercase. The two small lines shrink on a phone so they never
             run wider than the name, and follow it down when the bar compacts. */}
+        {/* Link labels (Jeremy 10/23): the brand says "Human Design by", and opens the coaching home page. */}
         <a
           href="/"
+          {...hint('Human Design by The Champagne Method Coaching and Consulting', HINT.home)}
           className={`font-display font-medium tracking-tight whitespace-nowrap text-brand-paper transition-all duration-300 ${
             scrolled ? 'text-[18px] sm:text-[19px]' : 'text-[20px] sm:text-[26px] md:text-[30px]'
           }`}
@@ -78,6 +81,7 @@ export function Nav() {
         </a>
         <a
           href="/#connect"
+          {...hint('Start a conversation', HINT.connect)}
           className="font-sans text-[14px] sm:text-[15px] whitespace-nowrap shrink-0 text-brand-muted hover:text-brand-teal transition-colors"
         >
           Start a conversation
@@ -156,6 +160,7 @@ export function Footer({ note, hd = false }: { note?: ReactNode; hd?: boolean })
           </a>
           <a
             href="/#connect"
+            {...hint('Start a conversation', HINT.connect)}
             className="text-[15px] text-brand-muted hover:text-brand-teal transition-colors"
           >
             Start a conversation
@@ -389,12 +394,24 @@ export function ClosingBox({
 }
 
 /** A quiet inline link — the text link inside the closing box uses this.
- *  `download` names the saved file when the link is a file to keep. */
-export function TextLink({ href, download, children }: { href: string; download?: string; children: ReactNode }) {
+ *  `download` names the saved file when the link is a file to keep.
+ *  `where` is the hover hint when the words alone do not say where it goes (link labels, Jeremy 10/23). */
+export function TextLink({
+  href,
+  download,
+  where,
+  children,
+}: {
+  href: string;
+  download?: string;
+  where?: string;
+  children: ReactNode;
+}) {
   return (
     <a
       href={href}
       download={download}
+      {...(where && typeof children === 'string' ? hint(children, where) : where ? { title: where } : {})}
       className="text-brand-teal underline underline-offset-4 decoration-brand-teal/40 hover:decoration-brand-teal transition-colors"
     >
       {children}

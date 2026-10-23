@@ -36,7 +36,7 @@ export default function ServesMeCheck() {
           setBelief(e.target.value);
           setDone(false);
         }}
-        placeholder={'The belief, as it sounds in your head. ("I’m not someone who…", "People always…", "I have to…")'}
+        placeholder="The belief, as it sounds in your head. (“I’m not someone who…”, “People always…”, “I have to…”)"
         className={`${field} resize-none mb-3`}
       />
       {started &&

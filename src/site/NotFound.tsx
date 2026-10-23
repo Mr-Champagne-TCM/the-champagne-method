@@ -1,5 +1,6 @@
 import Background from '../components/Background';
 import { Nav, Footer, ArticleHeader, TextLink } from '../library/article/ArticleUI';
+import { HINT } from './linkHints';
 
 /**
  * The page GitHub Pages serves for any address that does not exist.
@@ -60,7 +61,9 @@ export default function NotFound() {
             </div>
             <p className="mt-9 text-[16px] leading-relaxed text-brand-muted">
               If a link on this site brought you here, I&rsquo;d be grateful to hear which one.{' '}
-              <TextLink href="/#connect">Start a conversation</TextLink>
+              <TextLink href="/#connect" where={HINT.connect}>
+                Start a conversation
+              </TextLink>
             </p>
           </div>
         </main>

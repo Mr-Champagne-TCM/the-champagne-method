@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ArticlePage, ArticleHeader, BrandEyebrow, H2, P, TextLink } from './ArticleUI';
+import { HINT, hint } from '../../site/linkHints';
 
 /**
  * What the three readings actually are.
@@ -114,7 +115,7 @@ const ALL_SECTIONS = [
   'How you meet the world',
   'What is consistently yours',
   'What you take in from others',
-  "When it's on track, and when it's off track",
+  'When it’s on track, and when it’s off track',
   'Things to experiment with',
 ];
 
@@ -294,7 +295,8 @@ export default function WhatAReadingIs() {
           price="$44.44"
           standfirst="Everything in the chart, and the written interpretation — the part that says what any of it means for the person holding it."
           contains={[
-            'All twenty-six activations, with the planet behind each one.',
+            // Planet numbers (Jeremy 10/23: "be consistent. I like planet numbers better"), in the readings' own words.
+            'All twenty-six planet numbers, each with the planet that lit it.',
             'Your incarnation cross, your definition, your channels and your profile lines, each written out.',
             'Six sections on how your energy starts, how you decide, how you meet people, what is constant in you, what you take in from others, and what it feels like when it is working.',
             'Four things to experiment with, each naming the part of your chart it comes from.',
@@ -378,6 +380,7 @@ export default function WhatAReadingIs() {
         <p className="mt-8">
           <a
             href={SHOP}
+            {...hint('See the three ways in', HINT.readings)}
             className="inline-block rounded-full bg-brand-teal px-6 py-3 font-sans text-[16px] font-semibold text-[#0d1b1a] shadow-lg shadow-brand-teal/25 transition-all duration-200 hover:-translate-y-0.5"
           >
             See the three ways in

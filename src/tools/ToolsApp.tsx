@@ -3,6 +3,7 @@ import Background from '../components/Background';
 import { TOOLS } from './toolList';
 import { SITE_VERSION } from '../site/version';
 import { useHashScroll } from '../site/useHashScroll';
+import { HINT, hint } from '../site/linkHints';
 
 /**
  * The six interactive pieces, on a page of their own.
@@ -222,6 +223,7 @@ export default function ToolsApp() {
                   </a>
                   <a
                     href="/#connect"
+                    {...hint('Start a conversation', HINT.connect)}
                     className="inline-block rounded-full px-6 py-3.5 font-sans text-[16px] font-semibold bg-brand-teal text-[#0d1b1a] shadow-lg shadow-brand-teal/25 transition-all duration-200 hover:-translate-y-0.5"
                   >
                     Start a conversation
@@ -244,6 +246,7 @@ export default function ToolsApp() {
                 <a
                   key={href}
                   href={href}
+                  {...(href === '/#connect' ? hint(label, HINT.connect) : {})}
                   className="text-[15px] text-brand-muted hover:text-brand-teal transition-colors"
                 >
                   {label}

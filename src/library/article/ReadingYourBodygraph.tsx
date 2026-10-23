@@ -95,7 +95,7 @@ export default function ReadingYourBodygraph() {
     <ArticlePage
       hd
       crumb="Reading your bodygraph"
-      footerNote="Your chart was cast for your exact birth moment. If the birth time on your reading is wrong, the Type, Authority and Profile can change — tell us and we will recast it."
+      footerNote="Your chart was cast for your exact birth moment. If the birth time on your reading is wrong, the Type, Authority and Profile can change — you’re welcome to let me know, and I’ll recast it."
     >
       <ArticleHeader
         title="Reading your bodygraph"
@@ -111,7 +111,8 @@ export default function ReadingYourBodygraph() {
 
       <H2>Start with what it is not</H2>
       <P>
-        <strong className="text-brand-paper">More is not better.</strong> Every activation on
+        {/* Planet numbers (Jeremy 10/23: "be consistent. I like planet numbers better"). */}
+        <strong className="text-brand-paper">More is not better.</strong> Every planet number on
         this chart adds <em className="text-brand-paper">detail</em>, not value. A page with
         more color on it is not a better page, and nobody is scoring yours.
       </P>
@@ -315,46 +316,51 @@ export default function ReadingYourBodygraph() {
         people who complete the circuit.
       </P>
 
-      <H2>Do this with it</H2>
+      {/* IN JEREMY'S VOICE (10/23, GO PDF: "good, bring into our voice"). This list used to read
+          as commands ("Pick the line that stung", "Give it exactly one real decision...",
+          "Bring your notes."); the same three steps are now requests and observations, in "I". */}
+      <H2>What you might do with it</H2>
       <P>
         A reading you agree with and then file away changes nothing. Here is the week that makes
         it worth what you paid for it.
       </P>
 
-      <H3>1. Pick the line that stung</H3>
+      <H3>1. The line that stung</H3>
       <P>
-        Go back through your reading and find the sentence you either recognized instantly or
-        wanted to argue with. Both reactions mean the same thing. Write that one sentence
-        somewhere you will see it &mdash; not the whole reading, one line.
+        You&rsquo;re welcome to go back through your reading and find the sentence you either
+        recognized instantly or wanted to argue with. Both reactions mean the same thing. It can
+        help to write that one sentence somewhere you will see it &mdash; not the whole reading,
+        one line.
       </P>
 
-      <H3>2. Run your Authority once, on purpose</H3>
+      <H3>2. Your Authority, once, on purpose</H3>
       <P>
-        Your reading names an Authority. Give it exactly one real decision this week and
-        actually follow it. If yours is <strong className="text-brand-paper">Sacral</strong>,
-        answer something out loud in the first two seconds and do not revise it. If yours is{' '}
-        <strong className="text-brand-paper">Emotional</strong>, take a decision you would
-        normally close today and deliberately sleep on it. If yours is{' '}
-        <strong className="text-brand-paper">Splenic</strong>, act on the first quiet read you
-        get and do not wait for it to repeat &mdash; it will not.
+        Your reading names an Authority. I&rsquo;d invite you to give it exactly one real decision
+        this week and actually follow it. If yours is{' '}
+        <strong className="text-brand-paper">Sacral</strong>, that could mean answering something
+        out loud in the first two seconds and not revising it. If yours is{' '}
+        <strong className="text-brand-paper">Emotional</strong>, it could mean taking a decision
+        you would normally close today and deliberately sleeping on it. If yours is{' '}
+        <strong className="text-brand-paper">Splenic</strong>, it could mean acting on the first
+        quiet read you get, without waiting for it to repeat &mdash; it will not.
       </P>
       <P>One decision. Not your career. Something with real stakes and a short fuse.</P>
 
-      <H3>3. Write down what happened</H3>
+      <H3>3. A note of what happened</H3>
       <P>
-        Two lines is enough. What you decided, and how it landed. Do that for a week and you
-        will have something the chart could never give you on its own: your own evidence.
+        Two lines is enough. What you decided, and how it landed. A week of those gives you
+        something the chart could never give you on its own: your own evidence.
       </P>
 
       {/* The mock's closing aside, ported verbatim. Its placeholder link pointed at the
           site root with a comment saying both the href and the visible text change once
           the HD 101 entry exists. It exists now, so both are updated here. */}
       <Callout>
-        <strong className="font-semibold">Then go further.</strong> One week tells you whether
+        <strong className="font-semibold">Going further.</strong> One week tells you whether
         this is real for you. If it is, the rest of the work &mdash; the experiments, the
         library, and the readings that go deeper than one page &mdash; starts with{' '}
         {/* Fix 19, option A (Jeremy 10/20 "2A"): one library named, not "the library and the library". */}
-        <TextLink href="/library/human-design/">The Human Design library</TextLink>. Bring your notes.
+        <TextLink href="/library/human-design/">The Human Design library</TextLink>. You&rsquo;re welcome to bring your notes.
       </Callout>
 
       <P>If it holds up, it was never information. It was a mirror, and you already knew.</P>

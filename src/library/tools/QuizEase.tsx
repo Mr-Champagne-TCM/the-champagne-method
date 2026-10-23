@@ -121,7 +121,7 @@ export default function QuizEase() {
           <p className="text-[14px] text-brand-muted">
             The health continuum and the three points of ease, above, are the map behind this.
           </p>
-          <ShareResults quiz="Where's your ease?" summary={summary} />
+          <ShareResults quiz="Where’s your ease?" summary={summary} />
         </div>
       )}
     </div>

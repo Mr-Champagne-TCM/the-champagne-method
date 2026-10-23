@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     quote:
-      "I came into this conversation feeling anxious and overwhelmed. After our 1-hour discussion, I feel confident, motivated and relieved. I'm ready to get started on my project!",
+      'I came into this conversation feeling anxious and overwhelmed. After our 1-hour discussion, I feel confident, motivated and relieved. I’m ready to get started on my project!',
     name: 'Charley S.',
     role: 'Confidence & Efficacy',
   },

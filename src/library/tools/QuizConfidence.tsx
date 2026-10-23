@@ -5,10 +5,10 @@ import ShareResults from './ShareResults';
  *  the question is only the direction. */
 const STATEMENTS = [
   { text: 'When something matters to me, some part of me expects it to work out.', dir: 'can' },
-  { text: "I can list the reasons a thing won't work before I've tried it.", dir: 'cant' },
+  { text: 'I can list the reasons a thing won’t work before I’ve tried it.', dir: 'cant' },
   { text: 'New situations feel like places I can figure out.', dir: 'can' },
-  { text: "There are things I've quietly decided are just not for people like me.", dir: 'cant' },
-  { text: "When I picture attempting the hard thing, I picture how it fails.", dir: 'cant' },
+  { text: 'There are things I’ve quietly decided are just not for people like me.', dir: 'cant' },
+  { text: 'When I picture attempting the hard thing, I picture how it fails.', dir: 'cant' },
 ] as const;
 
 export default function QuizConfidence() {
@@ -21,13 +21,13 @@ export default function QuizConfidence() {
 
   const read =
     cantVotes > canVotes
-      ? "A good share of your confidence is currently pointed at can't — with a well-kept file of evidence. That's not a lack of confidence. It's aim."
+      ? 'A good share of your confidence is currently pointed at can’t — with a well-kept file of evidence. That’s not a lack of confidence. It’s aim.'
       : canVotes > cantVotes
         ? 'Most of your confidence is currently pointed at can — the reaches are getting attempted. Worth noticing where the exceptions live.'
-        : "Your confidence points both ways, depending on the territory. Worth noticing which areas get the can't.";
+        : 'Your confidence points both ways, depending on the territory. Worth noticing which areas get the can’t.';
 
-  const summary = `can-pointed: ${canVotes}, can't-pointed: ${cantVotes}. ${
-    cantVotes > canVotes ? "leaning can't" : canVotes > cantVotes ? 'leaning can' : 'split'
+  const summary = `can-pointed: ${canVotes}, can’t-pointed: ${cantVotes}. ${
+    cantVotes > canVotes ? 'leaning can’t' : canVotes > cantVotes ? 'leaning can' : 'split'
   }`;
 
   return (
@@ -77,7 +77,7 @@ export default function QuizConfidence() {
             The move isn&rsquo;t acquiring confidence &mdash; it&rsquo;s sliding where it
             points. The confidence continuum, above, is the map behind this.
           </p>
-          <ShareResults quiz="Where's your confidence pointed?" summary={summary} />
+          <ShareResults quiz="Where’s your confidence pointed?" summary={summary} />
         </div>
       )}
     </div>

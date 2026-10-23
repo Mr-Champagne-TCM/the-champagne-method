@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { HINT, hint } from '../../site/linkHints';
 
 /**
  * 4-7-8 breathing pacer. In for 4, hold for 7, out for 8.
@@ -118,6 +119,7 @@ export default function Breather() {
           href="https://www.youtube.com/watch?v=Gb9YxCC5WBw&t=4s"
           target="_blank"
           rel="noopener noreferrer"
+          {...hint('A favorite of mine to go deeper: breathwork with Sandi', HINT.video)}
           className="text-brand-teal underline underline-offset-4 hover:text-brand-gold"
         >
           A favorite of mine to go deeper: breathwork with Sandi &rarr;

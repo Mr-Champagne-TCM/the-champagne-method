@@ -20,6 +20,7 @@
  */
 import { AUTHTXT, CHAN, CRIX, CRTXT, CTRTXT, DEFTXT, GATETXT, PROF, TYPETXT, type CrossText } from './data';
 import { GATE, HEADC, LBL, LBLBIG, NUDGE, ROBE, SHAPE, SOLAR2 } from './geometry';
+import { HINT as LINK_HINT } from '../../site/linkHints';
 
 export const SHOP = 'https://humandesign.thechampagnemethod.co';
 const SAMPLE = '/samples/the-chart.pdf';
@@ -628,14 +629,15 @@ export function initHdLibrary(root: HTMLElement): () => void {
     /* phones have no hover, so the words carry it (call 43) */
     if (noHover) a.textContent = 'an example chart';
   });
-  /* every shop link says what you get and the price (call 40) */
+  /* every shop link says what you get and the price (call 40), and first where it goes (link labels, Jeremy 10/23):
+     "See yours →" and "Get yours!" open the readings' front page, not a chart */
   $$<HTMLAnchorElement>(`a[href="${SHOP}"]`).forEach((a) => {
     const t = a.textContent!.trim(), sec = a.closest('section.topic');
-    a.dataset.tip =
+    a.dataset.tip = `${LINK_HINT.readings}. ` + (
       t === 'The summary' ? 'Type, strategy, authority, profile, definition, centers, cross · $1.11'
       : t === 'The chart' ? 'Your drawing, channels and gates · $11.11'
       : sec && TIP_TOPIC[sec.id] ? TIP_TOPIC[sec.id]
-      : TIP_ALL;
+      : TIP_ALL);
   });
   /* marked example-chart links read "an example chart" on phones (call 43) */
   if (noHover) $$('a.exchart').forEach((a) => (a.textContent = 'an example chart'));
@@ -662,7 +664,8 @@ export function initHdLibrary(root: HTMLElement): () => void {
       tip.classList.remove('on');
     };
     $$<HTMLAnchorElement>('a[data-tip]').forEach((a) => {
-      a.setAttribute('aria-label', a.textContent + ' (' + a.dataset.tip + ')');
+      /* the visible words, then the hint; the arrow is decoration, not something to read aloud */
+      a.setAttribute('aria-label', a.textContent!.replace(/\s*[→←]\s*/g, ' ').trim() + ' (' + a.dataset.tip + ')');
       a.addEventListener('mouseenter', () => show(a), sig);
       a.addEventListener('mousemove', () => {
         if (cur !== a || !tip.classList.contains('on')) show(a);
@@ -948,7 +951,7 @@ export function initHdLibrary(root: HTMLElement): () => void {
     if ((m = /^([1-6])\s*\/\s*([1-6])$/.exec(v))) {
       const a = +m[1], b = +m[2];
       if (!VALID[a].includes(b)) {
-        $('#qhint').textContent = `${a}/${b} isn't one of the 12 profiles.`;
+        $('#qhint').textContent = `${a}/${b} isn’t one of the 12 profiles.`;
         return;
       }
       setProfile(a, b);
@@ -958,7 +961,7 @@ export function initHdLibrary(root: HTMLElement): () => void {
     if ((m = /^(\d+)\s*-\s*(\d+)$/.exec(v))) {
       const k = `${Math.min(+m[1], +m[2])}-${Math.max(+m[1], +m[2])}`;
       if (!CH.find((c) => c.k === k)) {
-        $('#qhint').textContent = `${k} isn't a channel.`;
+        $('#qhint').textContent = `${k} isn’t a channel.`;
         return;
       }
       chanPick(k);

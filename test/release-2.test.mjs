@@ -63,7 +63,8 @@ test("2A: all eleven sections, the two shown above in gold", () => {
 });
 
 test("2A: the bodygraph page ends '...starts with The Human Design library.' -- one library, not two", () => {
-  assert.match(bg, /starts with\{' '\}\s*\n?\s*(\{\/\*[\s\S]*?\*\/\}\s*)?<TextLink href="\/library\/human-design\/">The Human Design library<\/TextLink>\. Bring your notes\./);
+  // 10/23 ("bring into our voice"): the closing "Bring your notes." is a request now.
+  assert.match(bg, /starts with\{' '\}\s*\n?\s*(\{\/\*[\s\S]*?\*\/\}\s*)?<TextLink href="\/library\/human-design\/">The Human Design library<\/TextLink>\. You&rsquo;re welcome to bring your notes\./);
   assert.doesNotMatch(bg, /<TextLink href="\/library\/">/);
 });
 

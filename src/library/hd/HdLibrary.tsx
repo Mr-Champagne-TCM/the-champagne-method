@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import Background from '../../components/Background';
 import { Nav, Footer } from '../article/ArticleUI';
 import { initHdLibrary, SHOP } from './engine';
+import { HINT } from '../../site/linkHints';
 
 /**
  * The Human Design library: every part of a chart, one layer at a time.
@@ -485,7 +486,8 @@ export default function HdLibrary() {
                 <a className="btn" href={SHOP}>
                   Get your reading &rarr;
                 </a>{' '}
-                <a className="btn ghost" href="/#connect">
+                {/* Link labels (Jeremy 10/23): the hover box says where it goes; engine.ts gives it its aria-label. */}
+                <a className="btn ghost" href="/#connect" data-tip={HINT.connect}>
                   Start a conversation
                 </a>
               </div>
