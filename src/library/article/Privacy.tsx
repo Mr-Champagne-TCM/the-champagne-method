@@ -115,18 +115,26 @@ export default function Privacy() {
         and its written reading, in `history`, seen only by Jeremy), and the
         callout says it plainly with the first three. "After a year" no longer
         tells every tier to download a PDF: a summary has none.
+
+        CHANGED 24 OCTOBER 2026 (Claude writer, Jeremy 10/23: "This is the new
+        approach"): Anthropic's Claude writes the interpretation, on the shop
+        (hd-site writer.mjs) and on the readings app; Google's Gemini writes it
+        only when Claude cannot. Both still get chart values only. Anthropic's
+        API terms: no training on it, deleted within 30 days. WORDS PENDING
+        JEREMY'S GO; SHIP WITH THE hd-site deploy that carries claude-writer-1024
+        -- not before. Set the date above (and copyfix-1023.test.mjs) on the day this goes live.
       */}
       <Callout>
         The birth details you type — date, time, place and time zone — are used to work out your
         chart, and they are kept with your chart so your page and PDF can show when and where you
-        were born. They are kept for the same year as your chart, and they are never sent to Google,
-        who writes the interpretation. The summary keeps them too, so going a step further never
+        were born. They are kept for the same year as your chart, and they are never sent to Anthropic
+        or Google, who write the interpretation. The summary keeps them too, so going a step further never
         means typing them again.
         <span className="mt-3 block">
           The form also asks whose chart it will be, if you&rsquo;d like to give a name. It becomes the
           title of your page and your PDF (&ldquo;Alex&rsquo;s Human Design&rdquo;), and it is kept with
           your chart in the same way as your birth details: in the same place, for the same year, and
-          deleted with them. Google never sees it.
+          deleted with them. Neither of them ever sees it.
         </span>
         <span className="mt-3 block">
           If your chart was made without a birth time, you&rsquo;re welcome to add it later, once and
@@ -256,7 +264,7 @@ export default function Privacy() {
         items={[
           <>
             <strong>Everything travels encrypted.</strong> Every connection to this site, and
-            every connection from it to Stripe, Google, Resend and the chart calculator, is over
+            every connection from it to Stripe, Anthropic, Google, Resend and the chart calculator, is over
             HTTPS.
           </>,
           <>
@@ -295,11 +303,13 @@ export default function Privacy() {
             the message says.
           </>,
           <>
-            <strong>Google</strong> writes the interpretation on the reading tier, using their
-            Gemini model. <strong>They receive the values of your chart and nothing else</strong> —
+            <strong>Anthropic</strong> writes the interpretation on the reading tier, using their
+            Claude model; if Claude can&rsquo;t answer, <strong>Google</strong>&rsquo;s Gemini model
+            writes it instead. <strong>They receive the values of your chart and nothing else</strong> —
             no name (not yours, and not the one you gave the chart), no email, no birth date, no
             birth time, no place. What is sent looks like
-            “Projector, 1/3, Self-Projected, channels 11-56 and 1-8”, attached to nobody.
+            “Projector, 1/3, Self-Projected, channels 11-56 and 1-8”, attached to nobody. Anthropic
+            doesn&rsquo;t use it to train their models and deletes it within 30 days.
           </>,
           <>
             <strong>Netlify</strong> hosts the site and stores your reading.
@@ -422,7 +432,7 @@ export default function Privacy() {
         ]}
       />
       <P>
-        Google writes the interpretation for these too, from the values of your chart only &mdash;
+        Anthropic writes the interpretation for these too (Google&rsquo;s Gemini as a backup), from the values of your chart only &mdash;
         no name, no birth date, no birth time, no place. A copy, a correction or deletion works
         the same way as above: one email to{' '}
         <TextLink href={`mailto:${CONTACT}`}>{CONTACT}</TextLink>.
