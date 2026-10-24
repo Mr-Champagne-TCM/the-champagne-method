@@ -1,0 +1,1 @@
+const a={readings:"Opens Human Design readings",connect:"Opens the contact section on the home page",home:"Opens The Champagne Method home page",video:"Opens a YouTube video in a new tab"},o=(n,e)=>({title:e,"aria-label":`${n} (${e})`});export{a as H,o as h};
