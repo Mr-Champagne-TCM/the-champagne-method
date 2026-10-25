@@ -73,7 +73,7 @@ export default function Privacy() {
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated October 23, 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated October 24, 2026.</p>
 
       {/*
         CHANGED 16 OCTOBER 2026 (Jeremy: "a veer from our initial approach.
@@ -122,7 +122,7 @@ export default function Privacy() {
         only when Claude cannot. Both still get chart values only. Anthropic's
         API terms: no training on it, deleted within 30 days. WORDS PENDING
         JEREMY'S GO; SHIP WITH THE hd-site deploy that carries claude-writer-1024
-        -- not before. Set the date above (and copyfix-1023.test.mjs) on the day this goes live.
+        -- not before. The date above is the day it goes live (set 10/24).
       */}
       <Callout>
         The birth details you type — date, time, place and time zone — are used to work out your
