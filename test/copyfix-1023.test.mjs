@@ -29,7 +29,7 @@ test("S3: the privacy page's lead names the fourth change, adding a birth time l
     ),
   );
   // 10/24: the Claude writer changed the page again (claude-writer-words.test.mjs); the date moves with it.
-  assert.ok(privacy.includes("Last updated October 24, 2026."));
+  assert.ok(privacy.includes("Last updated October 25, 2026."));
 });
 
 test("S7: 'after a year' is true for every tier, and asks nothing of the reader", () => {
