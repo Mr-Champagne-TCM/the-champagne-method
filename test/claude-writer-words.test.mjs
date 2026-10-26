@@ -7,7 +7,8 @@ import fs from "node:fs";
  * gemini. fix related wording affected"). Anthropic's Claude is the only writer; the privacy page says who
  * gets the chart values, and Google -- which no longer gets anything -- is on none of its lists.
  */
-const privacy = fs.readFileSync("src/library/article/Privacy.tsx", "utf8");
+// Line endings as checked out (CRLF on this Windows checkout) never decide a test.
+const privacy = fs.readFileSync("src/library/article/Privacy.tsx", "utf8").replace(/\r\n/g, "\n");
 const said = privacy.replace(/\{\/\*[\s\S]*?\*\/\}/g, "");
 
 test("the privacy page names Anthropic as the writer, and only Anthropic", () => {
