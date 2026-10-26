@@ -3,23 +3,22 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 
 /**
- * THE CLAUDE WRITER, SAID PLAINLY (Jeremy 10/23: "This is the new approach"). Anthropic's Claude writes
- * the interpretation and Google's Gemini only steps in when Claude cannot; the privacy page must say who
- * gets the chart values, and must never again say Google alone writes it.
+ * THE CLAUDE WRITER, SAID PLAINLY (Jeremy 10/23: "This is the new approach"; Gemini dropped 10/25: "drop
+ * gemini. fix related wording affected"). Anthropic's Claude is the only writer; the privacy page says who
+ * gets the chart values, and Google -- which no longer gets anything -- is on none of its lists.
  */
 const privacy = fs.readFileSync("src/library/article/Privacy.tsx", "utf8");
 const said = privacy.replace(/\{\/\*[\s\S]*?\*\/\}/g, "");
 
-test("the privacy page names Anthropic as the writer and Gemini as the backup", () => {
-  assert.ok(said.includes("<strong>Anthropic</strong> writes the interpretation on the reading tier"));
-  assert.ok(said.includes("Gemini model\n            writes it instead"));
-  assert.ok(said.includes("never sent to Anthropic\n        or Google, who write the interpretation"));
-  assert.ok(said.includes("Stripe, Anthropic, Google, Resend"));
+test("the privacy page names Anthropic as the writer, and only Anthropic", () => {
+  assert.ok(said.includes("<strong>Anthropic</strong> writes the interpretation on the reading tier, using their\n            Claude model. <strong>They receive the values of your chart and nothing else</strong>"));
+  assert.ok(said.includes("never sent to Anthropic,\n        who writes the interpretation"));
+  assert.ok(said.includes("Anthropic never sees it."));
+  assert.ok(said.includes("Stripe, Anthropic, Resend and the chart calculator"));
+  assert.ok(said.includes("Anthropic writes the interpretation for these too, from the values of your chart only"));
   assert.ok(said.includes("doesn&rsquo;t use it to train their models and deletes it within 30 days"));
 });
 
-test("no sentence still says Google alone writes it", () => {
-  assert.ok(!/<strong>Google<\/strong> writes the interpretation/.test(said));
-  assert.ok(!/\n\s*Google writes the interpretation/.test(said));
-  assert.ok(!said.includes("Google never sees it"));
+test("Google and Gemini are named nowhere a reader sees", () => {
+  assert.ok(!/Google|Gemini/.test(said), (said.match(/.{0,60}(Google|Gemini).{0,60}/) ?? [""])[0]);
 });

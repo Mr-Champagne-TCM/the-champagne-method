@@ -73,7 +73,7 @@ export default function Privacy() {
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated October 25, 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated October 26, 2026.</p>
 
       {/*
         CHANGED 16 OCTOBER 2026 (Jeremy: "a veer from our initial approach.
@@ -123,18 +123,23 @@ export default function Privacy() {
         API terms: no training on it, deleted within 30 days. WORDS PENDING
         JEREMY'S GO; SHIP WITH THE hd-site deploy that carries claude-writer-1024
         -- not before. The date above is the day it goes live (set 10/24).
+
+        CHANGED OCTOBER 26, 2026 (Jeremy 10/25: "drop gemini. fix related
+        wording affected"): Claude is the only writer, on the shop and on the
+        readings app. Google no longer receives anything, so it leaves every list
+        here: the callout, the HTTPS list, who sees what, the in-person section.
       */}
       <Callout>
         The birth details you type — date, time, place and time zone — are used to work out your
         chart, and they are kept with your chart so your page and PDF can show when and where you
-        were born. They are kept for the same year as your chart, and they are never sent to Anthropic
-        or Google, who write the interpretation. The summary keeps them too, so going a step further never
+        were born. They are kept for the same year as your chart, and they are never sent to Anthropic,
+        who writes the interpretation. The summary keeps them too, so going a step further never
         means typing them again.
         <span className="mt-3 block">
           The form also asks whose chart it will be, if you&rsquo;d like to give a name. It becomes the
           title of your page and your PDF (&ldquo;Alex&rsquo;s Human Design&rdquo;), and it is kept with
           your chart in the same way as your birth details: in the same place, for the same year, and
-          deleted with them. Neither of them ever sees it.
+          deleted with them. Anthropic never sees it.
         </span>
         <span className="mt-3 block">
           If your chart was made without a birth time, you&rsquo;re welcome to add it later, once and
@@ -264,7 +269,7 @@ export default function Privacy() {
         items={[
           <>
             <strong>Everything travels encrypted.</strong> Every connection to this site, and
-            every connection from it to Stripe, Anthropic, Google, Resend and the chart calculator, is over
+            every connection from it to Stripe, Anthropic, Resend and the chart calculator, is over
             HTTPS.
           </>,
           <>
@@ -304,8 +309,7 @@ export default function Privacy() {
           </>,
           <>
             <strong>Anthropic</strong> writes the interpretation on the reading tier, using their
-            Claude model; if Claude can&rsquo;t answer, <strong>Google</strong>&rsquo;s Gemini model
-            writes it instead. <strong>They receive the values of your chart and nothing else</strong> —
+            Claude model. <strong>They receive the values of your chart and nothing else</strong> —
             no name (not yours, and not the one you gave the chart), no email, no birth date, no
             birth time, no place. What is sent looks like
             “Projector, 1/3, Self-Projected, channels 11-56 and 1-8”, attached to nobody. Anthropic
@@ -432,7 +436,7 @@ export default function Privacy() {
         ]}
       />
       <P>
-        Anthropic writes the interpretation for these too (Google&rsquo;s Gemini as a backup), from the values of your chart only &mdash;
+        Anthropic writes the interpretation for these too, from the values of your chart only &mdash;
         no name, no birth date, no birth time, no place. A copy, a correction or deletion works
         the same way as above: one email to{' '}
         <TextLink href={`mailto:${CONTACT}`}>{CONTACT}</TextLink>.
