@@ -73,11 +73,15 @@ export function Nav() {
             scrolled ? 'text-[18px] sm:text-[19px]' : 'text-[20px] sm:text-[26px] md:text-[30px]'
           }`}
         >
-          <span className={`${BRAND_SMALL} ${scrolled ? BRAND_SMALL_SCROLLED : BRAND_SMALL_TOP}`}>
-            Human Design <span className="normal-case">by</span>
-          </span>
+          {/* THE NAME FLIPPED (Jeremy 11/16: "branding for HD is now HD by TCM"; "HUMAN DESIGN is bigger,
+              TCM is smaller. Accent the HD not the TCM"): "Human Design" is the big name and carries the
+              gold; "by The Champagne Method / Coaching and Consulting" are the two small lines under it,
+              with no gold. This replaces the 10/16 order (small "Human Design by" above the big name). */}
           <span className="block">
-            The <span className="text-brand-gold">Champagne</span> Method
+            Human <span className="text-brand-gold">Design</span>
+          </span>
+          <span className={`${BRAND_SMALL} ${scrolled ? BRAND_SMALL_SCROLLED : BRAND_SMALL_TOP}`}>
+            <span className="normal-case">by</span> The Champagne Method
           </span>
           <span className={`${BRAND_SMALL} ${scrolled ? BRAND_SMALL_SCROLLED : BRAND_SMALL_TOP}`}>
             Coaching and Consulting
