@@ -73,7 +73,7 @@ export default function Privacy() {
         title="Privacy"
         standfirst="What is collected when you buy a Human Design reading, what is kept, for how long, and who else ever sees it."
       />
-      <p className="text-[15px] text-brand-muted">Last updated October 26, 2026.</p>
+      <p className="text-[15px] text-brand-muted">Last updated November 16, 2026.</p>
 
       {/*
         CHANGED 16 OCTOBER 2026 (Jeremy: "a veer from our initial approach.
@@ -128,6 +128,14 @@ export default function Privacy() {
         wording affected"): Claude is the only writer, on the shop and on the
         readings app. Google no longer receives anything, so it leaves every list
         here: the callout, the HTTPS list, who sees what, the in-person section.
+
+        CHANGED NOVEMBER 16, 2026 (Jeremy 10/26: "a yes" to the counts; 11/16: "All
+        accepted Q1-12"): the readings' front page keeps two plain daily counts on
+        its own server (hd-site netlify/lib/counts.mjs: a visit, a click on Buy, one
+        word for the source; no cookie, no address, no device; ninety days). So "no
+        analytics at all" leaves the callout and the counts get a row in "what is
+        kept". SHIP WITH the hd-site deploy that carries the counts -- not before.
+        The date above is the day it goes live.
       */}
       <Callout>
         The birth details you type — date, time, place and time zone — are used to work out your
@@ -204,7 +212,11 @@ export default function Privacy() {
       />
 
       <Callout>
-        Human Design readings have no cookies, no trackers and no analytics at all. These library pages count
+        Human Design readings have no cookies and no trackers. Their front page keeps two plain daily
+        counts on its own server: a visit, and a click on Buy, each with one word for where the visit
+        came from (like &ldquo;instagram&rdquo; or &ldquo;google&rdquo;). Nothing about you goes with
+        them &mdash; no address, no device, no cookie &mdash; and no other company sees them. They are
+        kept for 90 days. These library pages count
         visits with Umami, which sets no cookie, records no personal data, and cannot follow you
         to another site &mdash; it counts that a page was read, not who read it. Nothing follows
         you here from anywhere else. The only thing kept in your browser is a short-lived token
@@ -232,6 +244,7 @@ export default function Privacy() {
             'As long as the chart is kept. It does one thing only: add a birth time to that chart, once',
           ],
           ['The scrambled IP hash', 'One week'],
+          ['The front page’s two daily counts: a visit, a click on Buy, and one word for where the visit came from', 'Ninety days'],
           ['A record of a technical failure, so it can be fixed', 'Fourteen days'],
         ]}
       />

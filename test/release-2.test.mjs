@@ -53,7 +53,9 @@ test("NO 'SHOP' WHERE A READER LOOKS: the Human Design pages", () => {
     const words = prose(src).replace(/\bSHOP\b/g, "");
     assert.doesNotMatch(words, /\bthe shop\b|\bshop's\b|\bshop’s\b/i, name);
   }
-  assert.match(prose(privacy), /Human Design readings have no cookies, no trackers and no analytics at all\./);
+  // 11/16: the front page's two daily counts (hd-site counts.mjs) replaced "no analytics at all".
+  assert.match(prose(privacy), /Human Design readings have no cookies and no trackers\. Their front page keeps two plain daily\s+counts on its own server/);
+  assert.doesNotMatch(prose(privacy), /no analytics at all/);
 });
 
 test("2A: all eleven sections, the two shown above in gold", () => {
