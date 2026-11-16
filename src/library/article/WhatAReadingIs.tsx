@@ -297,7 +297,7 @@ export default function WhatAReadingIs() {
             'Your incarnation cross, your definition, your channels and your profile lines, each written out.',
             'Six sections on how your energy starts, how you decide, how you meet people, what is constant in you, what you take in from others, and what it feels like when it is working.',
             'Four things to experiment with, each naming the part of your chart it comes from.',
-            'Around 1,200 words, written to your chart and no one else’s.',
+            'Around 1,700 words, written to your chart and no one else’s.',
           ]}
         >
           <p className="mt-6 max-w-[62ch] text-[16px] leading-relaxed text-brand-muted">
@@ -330,7 +330,7 @@ export default function WhatAReadingIs() {
             ))}
           </div>
           <NotYours>
-            an excerpt. The full reading has all eleven sections, around 1,200
+            an excerpt. The full reading has all eleven sections, around 1,700
             words, and is written to one chart only.
           </NotYours>
 

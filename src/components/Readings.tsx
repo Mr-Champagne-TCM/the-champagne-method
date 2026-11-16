@@ -35,7 +35,7 @@ export default function Readings() {
       <Body>
         There are two sizes. The chart: yours drawn as a picture, with every value on it, as
         a page you keep and a document you can print. And the reading: the same chart with
-        about 1,200 words written to it, every section naming the feature of your chart it
+        about 1,700 words written to it, every section naming the feature of your chart it
         rests on. Nothing is held back from the chart to make the reading look better.
       </Body>
       <Body>
