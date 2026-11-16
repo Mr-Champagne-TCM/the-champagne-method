@@ -46,9 +46,9 @@ const SHOP = 'https://humandesign.thechampagnemethod.co';
 /**
  * THE ONE-TO-ONE (Jeremy 11/16): shown here only once the shop sells it, which
  * it does only once the booking link exists (hd-site shared/booking.mjs).
- * TODO(Jeremy): true in the same release that sets the shop's BOOKING_URL.
+ * ON since 11/16 (Jeremy: "google!"): ships in the same release that sets the shop's HD_BOOKING_URL.
  */
-const ONE_TO_ONE_LIVE = false;
+const ONE_TO_ONE_LIVE = true;
 
 /**
  * The example's own values: Jeremy Champagne's chart, copied from his shop
