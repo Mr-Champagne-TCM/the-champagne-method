@@ -3,7 +3,9 @@ import { ArticlePage, ArticleHeader, BrandEyebrow, H2, P, TextLink } from './Art
 import { HINT, hint } from '../../site/linkHints';
 
 /**
- * What the three readings actually are.
+ * What the two sizes actually are (three tiers until Jeremy's 11/16 change:
+ * the chart at $1.11 holds everything the summary did and the drawing; the
+ * reading is $11.11; $44.44 is thirty minutes one to one, the reading with it).
  *
  * Jeremy asked for this after walking his own upgrade path: "We need a page
  * that they can access that describes the tiers in more detail." The offer page
@@ -40,6 +42,13 @@ import { HINT, hint } from '../../site/linkHints';
  */
 
 const SHOP = 'https://humandesign.thechampagnemethod.co';
+
+/**
+ * THE ONE-TO-ONE (Jeremy 11/16): shown here only once the shop sells it, which
+ * it does only once the booking link exists (hd-site shared/booking.mjs).
+ * TODO(Jeremy): true in the same release that sets the shop's BOOKING_URL.
+ */
+const ONE_TO_ONE_LIVE = false;
 
 /**
  * The example's own values: Jeremy Champagne's chart, copied from his shop
@@ -224,27 +233,28 @@ export default function WhatAReadingIs() {
       <ArticleHeader
         eyebrow={<BrandEyebrow lead="Human Design readings" />}
         title="What each reading actually is"
-        standfirst="Three ways in, and what arrives with each. Every sample on this page is real output from one real chart — the drawing, the document and the writing all came out of the machine exactly as you see them."
+        standfirst="Two sizes, and what arrives with each. Every sample on this page is real output from one real chart — the drawing, the document and the writing all came out of the machine exactly as you see them."
       />
 
       <P>
-        The same person is described three times, in more detail each time.
-        Nothing is withheld from the smaller ones to make the larger ones look
-        better — a summary is the whole summary, and what the others add is more
-        of the chart rather than the rest of it.
+        The same person is described twice, in more detail the second time.
+        Nothing is withheld from the chart to make the reading look better — the
+        chart is the whole chart, and what the reading adds is words written to
+        it rather than the rest of it.
       </P>
 
       <div className="mt-10">
         <Tier
-          name="The summary"
+          name="The chart"
           price="$1.11"
-          standfirst="The named parts of a chart, as words. No picture, and nothing blurred out."
+          standfirst="Your chart drawn as a picture (the bodygraph), with every value on it — the picture people mean when they say they have seen their chart. Nothing blurred out."
           contains={[
             'Type, Strategy and Authority — how your energy works, what it responds to, and how a decision settles.',
             'Profile and Definition, and how it feels when it is on track and when it is off track.',
             'Your incarnation cross, and which centers are defined, which are undefined, and which are open.',
             'Your channels and your activated gates, listed as values — the library explains each one.',
-            'A page you can come back to for a year.',
+            'Your bodygraph, drawn: the nine centers, which ones are colored in, and every channel running between them.',
+            'A page you can share and come back to for a year, and a PDF you keep, with the drawing at print size.',
           ]}
         >
           <div className="mt-6 overflow-hidden rounded-2xl border border-brand-gold/25 bg-white/[0.04]">
@@ -262,19 +272,6 @@ export default function WhatAReadingIs() {
           <NotYours>
             {WHOSE}. Every sample on this page comes from it.
           </NotYours>
-        </Tier>
-
-        <Tier
-          name="The chart"
-          price="$11.11"
-          standfirst="Everything in the summary, and the bodygraph itself — the picture people mean when they say they have seen their chart."
-          contains={[
-            'Your bodygraph, drawn: the nine centers, which ones are colored in, and every channel running between them.',
-            'Every channel and gate from the summary, in its place on the drawing.',
-            'A page you can share, and a PDF you keep.',
-            'The same drawing at print size, so it is readable on paper.',
-          ]}
-        >
           <div className="mt-6">
             <SampleBodygraph />
           </div>
@@ -292,7 +289,7 @@ export default function WhatAReadingIs() {
 
         <Tier
           name="The reading"
-          price="$44.44"
+          price="$11.11"
           standfirst="Everything in the chart, and the written interpretation — the part that says what any of it means for the person holding it."
           contains={[
             // Planet numbers (Jeremy 10/23: "be consistent. I like planet numbers better"), in the readings' own words.
@@ -360,30 +357,42 @@ export default function WhatAReadingIs() {
             })}
           </ul>
         </Tier>
+
+        {ONE_TO_ONE_LIVE && (
+          <Tier
+            name="Go through it with Jeremy, one to one"
+            price="$44.44"
+            standfirst="Thirty minutes on a video call, your chart on screen. Your written reading comes with it, ready before you meet."
+            contains={[
+              'Everything in the reading: the drawing, the PDF and the written interpretation.',
+              'Thirty minutes with Jeremy on Google Meet, going through it together.',
+              'After paying, you pick a time on Jeremy’s calendar. The Meet link is in the invite.',
+            ]}
+          />
+        )}
       </div>
 
       <div className="mt-14 border-t border-brand-gold/15 pt-10">
-        <H2>Every route costs the same</H2>
+        <H2>Nobody pays twice</H2>
         <P>
-          Start with the summary and move up later, or go straight to the
-          reading: the total is identical either way. What you have already paid
-          comes off what you pay next — nobody pays twice for the same thing. The
-          link in your email is what proves it, so opening the next step from
-          there means the credit is already on the price.
+          Start with the chart, or go straight to the reading. Already have the
+          chart? Its $1.11 comes off the reading. The link in your email is what
+          proves it, so opening the next step from there means the credit is
+          already on the price.
         </P>
         <P>
           Your reading is kept for a year. Nothing is stored that you did not
-          buy: the birth details are kept with your summary, your chart and your
-          reading, so moving up never means typing them again, and your PDF can
+          buy: the birth details are kept with your chart and your reading, so
+          moving up never means typing them again, and your PDF can
           show when and where you were born.
         </P>
         <p className="mt-8">
           <a
             href={SHOP}
-            {...hint('See the three ways in', HINT.readings)}
+            {...hint('See the two sizes', HINT.readings)}
             className="inline-block rounded-full bg-brand-teal px-6 py-3 font-sans text-[16px] font-semibold text-[#0d1b1a] shadow-lg shadow-brand-teal/25 transition-all duration-200 hover:-translate-y-0.5"
           >
-            See the three ways in
+            See the two sizes
           </a>
         </p>
       </div>

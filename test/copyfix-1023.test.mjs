@@ -40,7 +40,8 @@ test("S7: 'after a year' is true for every tier, and asks nothing of the reader"
 test("S4: the readings page says the credit in the site's one sentence", () => {
   assert.ok(
     readings.includes(
-      "What you have already paid comes off what you pay next — nobody pays twice for the same thing. The link in your email is what proves it, so opening the next step from there means the credit is already on the price.",
+      // Two sizes (Jeremy 11/16): the shop's line under the cards, then where the credit lives.
+      "Start with the chart, or go straight to the reading. Already have the chart? Its $1.11 comes off the reading. The link in your email is what proves it, so opening the next step from there means the credit is already on the price.",
     ),
   );
 });

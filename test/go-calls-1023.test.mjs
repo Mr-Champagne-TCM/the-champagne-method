@@ -46,14 +46,15 @@ test("2: link labels -- every link to the readings, the home page or its contact
   ]) assert.ok(hints.includes(w), w);
   // The library's own hover box (calls 39, 40): the destination first, then what you get and the price.
   assert.match(engine, /a\.dataset\.tip = `\$\{LINK_HINT\.readings\}\. ` \+ \(/);
-  assert.ok(engine.includes("'Your profile is in the summary · $1.11'"), "call 40 wording kept");
-  // "The summary" hover names everything the summary lists, channels and gates included (since 10/22).
-  assert.ok(engine.includes("'Type, strategy, authority, profile, definition, centers, cross, channels, gates · $1.11'"), "summary hover");
+  // Call 40's wording, two sizes (Jeremy 11/16): the $1.11 chart holds what the summary did, and the drawing.
+  assert.ok(engine.includes("'Your profile is in the chart · $1.11'"), "call 40 wording kept");
+  assert.ok(engine.includes("'Your drawing, with type, strategy, authority, profile, definition, centers, cross, channels, gates · $1.11'"), "chart hover");
   assert.match(lib, /href="\/#connect" data-tip=\{HINT\.connect\}/);
   // Site chrome on the Human Design pages and the 404.
   assert.match(ui, /hint\('Human Design by The Champagne Method Coaching and Consulting', HINT\.home\)/);
   assert.equal((ui.match(/hint\('Start a conversation', HINT\.connect\)/g) || []).length, 2, "nav + footer");
-  assert.match(readings, /hint\('See the three ways in', HINT\.readings\)/);
+  // Two sizes (Jeremy 11/16).
+  assert.match(readings, /hint\('See the two sizes', HINT\.readings\)/);
   assert.match(read("src/site/NotFound.tsx"), /<TextLink href="\/#connect" where=\{HINT\.connect\}>/);
   // Every "/#connect" link off the home page carries the hint.
   for (const f of ["src/library/LibraryApp.tsx", "src/tools/ToolsApp.tsx", "src/library/article/ArticleUI.tsx"]) {

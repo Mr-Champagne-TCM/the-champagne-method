@@ -23,7 +23,7 @@ const WAYS: { title: string; line: string; href: string; link: string }[] = [
   },
   {
     title: 'Readings',
-    line: 'The summary, the chart and the reading: what arrives with each.',
+    line: 'The chart and the reading: what arrives with each.',
     href: '/readings/',
     link: 'The three readings',
   },

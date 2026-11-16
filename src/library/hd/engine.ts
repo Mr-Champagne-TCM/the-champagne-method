@@ -93,16 +93,17 @@ const VALID: Record<number, number[]> = { 1: [3, 4], 2: [4, 5], 3: [5, 6], 4: [6
 
 /* Where-on-your-chart strips (call 26), each linking its own marked example chart (call 52). */
 const YC = `<a href="${SAMPLE}">your chart</a>`;
-const SUM = `<a href="${SHOP}">The summary</a> ($1.11) and up.`;
+/* Two sizes (Jeremy 11/16): the $1.11 chart holds every value and the drawing; the reading is $11.11. */
+const SUM = `<a href="${SHOP}">The chart</a> ($1.11) and up.`;
 /* Channels and gates since 10/22: the summary lists both (values only), so they read like Centers (A7). */
 const WHERE: Record<string, [string, string]> = {
   types: [`The Type line at the top of ${YC}. It comes from which <a class="xref" href="#centers">centers</a> are colored in.`, SUM],
   authority: [`The Authority line on ${YC}. It comes from your colored-in <a class="xref" href="#centers">centers</a>.`, SUM],
-  centers: [`The nine shapes on the drawing of ${YC}. Gold means colored in.`, SUM + ' The chart draws them.'],
+  centers: [`The nine shapes on the drawing of ${YC}. Gold means colored in.`, SUM],
   definition: [`The Definition line on ${YC}.`, SUM],
   profiles: [`The Profile line on ${YC}, like 2/4.`, SUM + ' The reading explains both lines.'],
-  channels: [`The colored-in lines joining two shapes on the drawing of ${YC}.`, SUM + ' The chart draws them.'],
-  gates: [`The numbered circles on the drawing of ${YC}. Yours are lit.`, SUM + ' The chart draws them. The reading ($44.44) adds the planet behind each.'],
+  channels: [`The colored-in lines joining two shapes on the drawing of ${YC}.`, SUM],
+  gates: [`The numbered circles on the drawing of ${YC}. Yours are lit.`, SUM + ' The reading ($11.11) adds the planet behind each.'],
   crosses: [`The Incarnation Cross line on ${YC}.`, SUM],
 };
 /** The name each marked example chart saves under (parked items v2, 4b, Jeremy 10/15): the business name, not the file's. */
@@ -110,11 +111,11 @@ const DLNAME = (k: string) => `TCM-Example-Chart-${k[0].toUpperCase()}${k.slice(
 const XNAME: Record<string, string> = { types: 'your type', authority: 'your authority', centers: 'the centers', definition: 'your definition', profiles: 'your profile', channels: 'the channels', gates: 'the gates', crosses: 'the cross' };
 
 /* Hovers (calls 39, 40) */
-const TIP_ALL = 'Summary $1.11 · Chart $11.11 · Reading $44.44';
+const TIP_ALL = 'Chart $1.11 · Reading $11.11';
 const TIP_TOPIC: Record<string, string> = {
-  types: 'Your type is in the summary · $1.11', authority: 'Your authority is in the summary · $1.11', centers: 'Your centers are in the summary · $1.11',
-  definition: 'Your definition is in the summary · $1.11', profiles: 'Your profile is in the summary · $1.11', channels: 'Your channels are in the summary · $1.11',
-  gates: 'Your gates are in the summary · $1.11', crosses: 'Your cross is in the summary · $1.11',
+  types: 'Your type is in the chart · $1.11', authority: 'Your authority is in the chart · $1.11', centers: 'Your centers are in the chart · $1.11',
+  definition: 'Your definition is in the chart · $1.11', profiles: 'Your profile is in the chart · $1.11', channels: 'Your channels are in the chart · $1.11',
+  gates: 'Your gates are in the chart · $1.11', crosses: 'Your cross is in the chart · $1.11',
 };
 
 /* Crosses (calls 25, 60) */
@@ -635,8 +636,7 @@ export function initHdLibrary(root: HTMLElement): () => void {
     const t = a.textContent!.trim(), sec = a.closest('section.topic');
     a.dataset.tip = `${LINK_HINT.readings}. ` + (
       /* the summary lists channels and activated gates too, since 10/22 (WhatAReadingIs.tsx EXAMPLE) */
-      t === 'The summary' ? 'Type, strategy, authority, profile, definition, centers, cross, channels, gates · $1.11'
-      : t === 'The chart' ? 'Your drawing, channels and gates · $11.11'
+      t === 'The summary' || t === 'The chart' ? 'Your drawing, with type, strategy, authority, profile, definition, centers, cross, channels, gates · $1.11'
       : sec && TIP_TOPIC[sec.id] ? TIP_TOPIC[sec.id]
       : TIP_ALL);
   });

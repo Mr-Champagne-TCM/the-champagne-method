@@ -36,8 +36,8 @@ const REQUIRED = [
   ["Download example chart", 39],
   ["an example chart", 43],
   ["Where the two numbers come from:", 42],
-  ["Your profile is in the summary · $1.11", 40],
-  ["Summary $1.11 · Chart $11.11 · Reading $44.44", 40],
+  ["Your profile is in the chart · $1.11", 40],
+  ["Chart $1.11 · Reading $11.11", 40],
   ["Opens in Channels.", 53],
   // Call 9 as Jeremy locked it (the 10/23 copy fix's request form reverted, picks-1023, pending his answer).
   ["A reading names yours.{' '}", 9],

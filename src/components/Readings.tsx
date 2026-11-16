@@ -25,17 +25,18 @@ export default function Readings() {
   return (
     <Section id="readings">
       <Eyebrow>Human Design readings</Eyebrow>
-      <SectionTitle>Your chart, read three ways.</SectionTitle>
+      {/* Jeremy 11/16 (two sizes; the 10/31 audit called "read three ways" a riddle). */}
+      <SectionTitle>Learn how you&rsquo;re built, from your birth date, time and place.</SectionTitle>
       <Lede>
         Human Design is a map of how your energy works &mdash; how it starts, how a
         decision settles, what you take in from the people around you. A reading is that
         map, drawn from your birth moment and written to your chart alone.
       </Lede>
       <Body>
-        There are three ways in. A written summary of the named parts of your chart; the
-        chart itself, drawn, as a page you keep and a document you can print; and the full
-        reading, where every section names the feature of your chart it rests on. Nothing
-        is held back from the smaller ones to make the larger ones look better.
+        There are two sizes. The chart: yours drawn as a picture, with every value on it, as
+        a page you keep and a document you can print. And the reading: the same chart with
+        about 1,200 words written to it, every section naming the feature of your chart it
+        rests on. Nothing is held back from the chart to make the reading look better.
       </Body>
       <Body>
         Two pieces in the library explain every word of it, and both are free and always
