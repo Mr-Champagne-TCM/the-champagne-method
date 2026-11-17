@@ -5,7 +5,7 @@ import { HINT, hint } from '../../site/linkHints';
 /**
  * What the two sizes actually are (three tiers until Jeremy's 11/16 change:
  * the chart at $1.11 holds everything the summary did and the drawing; the
- * reading is $11.11; $44.44 is thirty minutes one to one, the reading with it).
+ * reading is $11.11; $44.44 is thirty minutes one on one, the reading with it).
  *
  * Jeremy asked for this after walking his own upgrade path: "We need a page
  * that they can access that describes the tiers in more detail." The offer page
@@ -360,7 +360,7 @@ export default function WhatAReadingIs() {
 
         {ONE_TO_ONE_LIVE && (
           <Tier
-            name="Go through it with Jeremy, one to one"
+            name="Go through it with Jeremy, one on one"
             price="$44.44"
             standfirst="Thirty minutes on a video call, your chart on screen. Your written reading comes with it, ready before you meet."
             contains={[
