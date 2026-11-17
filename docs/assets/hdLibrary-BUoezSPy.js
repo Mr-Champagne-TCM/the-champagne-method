@@ -32,7 +32,7 @@ The Moon’s monthly cycle is the one steady rhythm. More under [Authority](#aut
 
 It shows up as surprise: life keeps delighting them.`,notworking:`This happens when they’re in places or with people that don’t suit them, or rush a big decision.
 
-It shows up as disappointment, and the feeling of having become whatever the room was. The feeling is a signal, pointing back to a better setting, or more time.`}},jt={Emotional:{glance:"Clarity comes over time, once the emotional wave has settled.",summary:"Emotional authority belongs to anyone whose Solar Plexus is colored in, about half of people. Feelings move in waves, so how you feel about a choice today may change tomorrow. The truth shows up as a calm, steady clarity after riding the wave. There’s rarely truth in the heat of the moment.",feels:`A yes can feel exciting one day and flat the next. Neither is the final answer.
+It shows up as disappointment, and the feeling of having become whatever the room was. The feeling is a signal, pointing back to a better setting, or more time.`}},jt={Emotional:{glance:"Clarity comes after your emotional wave settles. Wait for it, then decide.",summary:"Emotional authority belongs to anyone whose Solar Plexus is colored in, about half of people. Feelings move in waves, so how you feel about a choice today may change tomorrow. The truth shows up as a calm, steady clarity after riding the wave. There’s rarely truth in the heat of the moment.",feels:`A yes can feel exciting one day and flat the next. Neither is the final answer.
 
 Over days, sometimes longer, a quieter feeling settles in. That steady feeling is the one to trust.`,timing:`Big choices tend to go better with time: sleeping on it, sometimes many times. Small ones need less.
 

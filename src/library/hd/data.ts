@@ -62,7 +62,7 @@ export const TYPETXT: Record<string, TypeText> = {
 
 export const AUTHTXT: Record<string, AuthText> = {
  "Emotional": {
-  "glance": "Clarity comes over time, once the emotional wave has settled.",
+  "glance": "Clarity comes after your emotional wave settles. Wait for it, then decide.",
   "summary": "Emotional authority belongs to anyone whose Solar Plexus is colored in, about half of people. Feelings move in waves, so how you feel about a choice today may change tomorrow. The truth shows up as a calm, steady clarity after riding the wave. There’s rarely truth in the heat of the moment.",
   "feels": "A yes can feel exciting one day and flat the next. Neither is the final answer.\n\nOver days, sometimes longer, a quieter feeling settles in. That steady feeling is the one to trust.",
   "timing": "Big choices tend to go better with time: sleeping on it, sometimes many times. Small ones need less.\n\nPeople around you may want a fast answer. “I’ll come back to you” is a full answer.",
