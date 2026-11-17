@@ -69,7 +69,7 @@ export const AUTHTXT: Record<string, AuthText> = {
   "mixups": "Deciding at the top of a high or the bottom of a low. Both feel certain in the moment.\n\nWaiting for perfect calm. Clarity here is a steady sense, not the absence of all feeling."
  },
  "Sacral": {
-  "glance": "A gut response in the moment: a sound before a thought.",
+  "glance": "A gut yes or no, on the spot. The first sound is the one to trust.",
   "summary": "Sacral authority belongs to Generators and Manifesting Generators whose Solar Plexus isn’t colored in. The body answers right away, often with a sound like “uh-huh” or “unh-unh”. That gut response knows what you have energy for. It works best answering something in front of you, like a question someone asks. More under [Types](#types).",
   "feels": "A pull toward something, or a pulling back, felt in the belly. It often comes out as a sound before you’ve thought about it.\n\nIt’s simple: yes or no, not maybe.",
   "timing": "It answers in the moment. If there’s no clear response, it’s usually a no for now.\n\nYes-or-no questions from someone you trust can help it speak.",
@@ -104,7 +104,7 @@ export const AUTHTXT: Record<string, AuthText> = {
   "mixups": "Letting other people decide for you. They’re a sounding board, not the authority.\n\nTrusting the mind on its own to make the call."
  },
  "Lunar": {
-  "glance": "About a month: letting the Moon’s cycle show the answer.",
+  "glance": "Waiting one full Moon cycle, about a month, shows the answer.",
   "summary": "Lunar authority is for Reflectors, who have no centers colored in. The Moon moves through all 64 gates in about 29 days, and a Reflector feels the whole range over that time. Big choices go better with that full cycle, talking them over with different people along the way.",
   "feels": "How a choice feels will change through the month. Seeing it from all those angles is the point.\n\nSlowly, a sense of what’s right settles in.",
   "timing": "About a month for big decisions. Small ones need much less.\n\nThe people and places you’re with during that time shape what you see.",
